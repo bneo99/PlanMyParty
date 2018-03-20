@@ -3,30 +3,18 @@
 	<head>
 		<title>Plan My Party!</title>
 		<meta charset="UTF-8"/>
-		<style>
-			table, th, td {
-				border: 1px solid black;
-				}
-		</style>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 	
 		<header>
-			<a href="index.html"><img src="images/plan_my_party.jpg" alt="logo" /></a>
+			<a href="index.html"><img src="images/pmp_logo.png" alt="logo" style="width:10%;" /></a>
+			
+			<!-- Button to open the modal login form -->
+			<button style="float:right;" onclick="document.getElementById('loginbox').style.display='block'">Login</button>
+		
 		</header>
-		
-		<nav>
-			<ul>
-				<li><a href="no.html">Contact Us</a> |</li>
-				<li><a href="no.html">Jobs at Plan My Party!</a> |</li>
-				<li><a href="no.html">Copyright and disclaimer</a> |</li>
-				<li><a href="no.html">Privacy</a> |</li>
-				<li><a href="no.html">Accessibility</a> |</li>
-				<li><a href="no.html">Feedback</a> |</li>
-				<li><a href="no.html">Plan Your Party!</a> |</li>
-			</ul>
-		</nav>
-		
+
 		<article>
 			<h1>About</h1>
 			<p>Wanna plan your perfect party? Search no further! Here at Plan My Party!, we make sure your party is <strong>purr</strong>-fect!</p>
@@ -40,9 +28,49 @@
 			
 		</aside>
 
+		<!-- Login Modal -->
+		<div id="loginbox" class="modal">
+			<span onclick="document.getElementById('loginbox').style.display='none'"
+			class="close" title="Close Modal">&times;</span>
+
+			<!-- Modal Content -->
+			<form class="modal-content animate" action="/action_page.php">
+
+				<div class="container">
+					<label for="uname"><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+					<label>
+						<input type="checkbox" checked="checked" name="remember"> Remember me
+					</label>
+					<br />
+					<button type="submit">Login</button>
+				  
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('loginbox').style.display='none'" class="cancelbtn">Cancel</button>
+					<span class="psw"><a href="#">Forgot password?</a></span>
+				</div>
+			</form>
+		 <script>
+			// Get the modal
+			var modal = document.getElementById('loginbox');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script> 
+		</div> 
+		
 		<footer>
-			<p>Posted by: Bryan Neo</p>
-			<p>Contact information: <a href="mailto:100087197@students.swinburne.edu.my">100087197@students.swinburne.edu.my</a></p>
+		<a href="no.html">Contact Us</a> | <a href="no.html">Jobs at Plan My Party!</a> | <a href="no.html">Copyright and disclaimer</a> | <a href="no.html">Privacy</a> | <a href="no.html">Accessibility</a> | <a href="no.html">Feedback</a> | <a href="no.html">Plan Your Party!</a> | <a href="signup.html">Sign Up</a>
+			<p>Posted by: <a href="mailto:100087197@students.swinburne.edu.my">Bryan Neo</a></p>
 		</footer>
 		
 	</body>
