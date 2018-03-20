@@ -1,33 +1,23 @@
+
+* {
+	font-family: "Arial", Arial, san-serif;
+}
+
  /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
 }
 
 footer {
+	position:fixed;
 	width: auto;
-    border: 10px solid lightgrey;
-	background-color: lightgrey;
+	bottom: 0;
 }
 
- /* unvisited link */
-a:link {
-    color: black;
-}
-
-/* visited link */
-a:visited {
-    color: black;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
-
-/* selected link */
-a:active {
-    color: red;
-} 
+a:link {color: black;}  /* unvisited link */
+a:visited {color: black;}  /* visited link */
+a:hover {color: hotpink;}  /* mouse over link */
+a:active {color: red;}  /* selected link */
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
@@ -39,12 +29,17 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
+/* Set a style for top bar buttons */
+.topbar{
+    color: white;
+}
+
 /* Set a style for all buttons */
-button {
+button{
     background-color: #58d68d;
     color: white;
     padding: 10px 0;
-    margin: 8px 0;
+    margin: 8px 5px;
     border: none;
     cursor: pointer;
     width: 100px;
@@ -96,14 +91,16 @@ span.psw {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-	width: 50%; 
+	width: auto; 
     background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
+	margin-top: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
     border: 1px solid #888;
 }
 
@@ -113,7 +110,7 @@ span.psw {
     position: absolute;
     right: 25px;
     top: 0;
-    color: #000;
+    color: red;
     font-size: 35px;
     font-weight: bold;
 }

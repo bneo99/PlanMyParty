@@ -1,23 +1,46 @@
  <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w3-pale-blue">
 	<head>
 		<title>Plan My Party!</title>
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles/styles.css">
+		<link rel="stylesheet" href="styles/w3.css">
+		
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="faviconfavicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 	
 		<header>
-			<a href="index.html"><img src="images/pmp_logo.png" alt="logo" style="width:10%;" /></a>
-			
-			<!-- Button to open the modal login form -->
-			<button style="float:right;" onclick="document.getElementById('loginbox').style.display='block'">Login</button>
+			<div class="w3-bar w3-cyan">
+				<!-- Button to open the modal login form -->
+				<a onclick="document.getElementById('loginbox').style.display='block'" class="w3-bar-item topbar w3-button w3-right">Login</a>
+				<!-- Button to open signup page -->
+				<a href="signup.html" class="w3-bar-item topbar w3-button w3-right">Sign Up</a>
+
+			</div> 
+			<a href="."><img src="images/pmp_logo.png" alt="logo" style="height:3cm;" /></a>
 		
 		</header>
 
 		<article>
-			<h1>About</h1>
-			<p>Wanna plan your perfect party? Search no further! Here at Plan My Party!, we make sure your party is <strong>purr</strong>-fect!</p>
+			
 		</article>
 		
 		<section>
@@ -30,8 +53,7 @@
 
 		<!-- Login Modal -->
 		<div id="loginbox" class="modal">
-			<span onclick="document.getElementById('loginbox').style.display='none'"
-			class="close" title="Close Modal">&times;</span>
+			<span onclick="document.getElementById('loginbox').style.display='none'" class="close" title="Close">&times;</span>
 
 			<!-- Modal Content -->
 			<form class="modal-content animate" action="/action_page.php">
@@ -47,7 +69,6 @@
 					</label>
 					<br />
 					<button type="submit">Login</button>
-				  
 				</div>
 
 				<div class="container" style="background-color:#f1f1f1">
@@ -55,22 +76,25 @@
 					<span class="psw"><a href="#">Forgot password?</a></span>
 				</div>
 			</form>
-		 <script>
-			// Get the modal
-			var modal = document.getElementById('loginbox');
+			<script>
+				// Get the modal
+				var modal = document.getElementById('loginbox');
 
-			// When the user clicks anywhere outside of the modal, close it
-			window.onclick = function(event) {
-				if (event.target == modal) {
-					modal.style.display = "none";
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
 				}
-			}
-		</script> 
+			</script> 
 		</div> 
-		
-		<footer>
-		<a href="no.html">Contact Us</a> | <a href="no.html">Jobs at Plan My Party!</a> | <a href="no.html">Copyright and disclaimer</a> | <a href="no.html">Privacy</a> | <a href="no.html">Accessibility</a> | <a href="no.html">Feedback</a> | <a href="no.html">Plan Your Party!</a> | <a href="signup.html">Sign Up</a>
-			<p>Posted by: <a href="mailto:100087197@students.swinburne.edu.my">Bryan Neo</a></p>
+
+		<footer class="w3-bar w3-grey">
+			<a class="w3-bar-item w3-button w3-mobile" href="mailto:100087197@students.swinburne.edu.my">Contact Us</a>
+			<a class="w3-bar-item w3-button w3-mobile" href="careers.html">Jobs at Plan My Party!</a>
+			<a class="w3-bar-item w3-button w3-mobile" href="copyright.html">Copyright and disclaimer</a>
+			<a class="w3-bar-item w3-button w3-mobile" href="privacy.html">Privacy</a>
+			<a class="w3-bar-item w3-button w3-mobile" href="feedback.html">Feedback</a>
 		</footer>
 		
 	</body>
