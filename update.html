@@ -37,7 +37,7 @@
 			</div> 
 			<a href="."><img src="images/pmp_logo.png" alt="logo" style="height:3cm;" /></a>
 		
-			<!-- Login Modal -->
+				<!-- Login Modal -->
 			<div id="loginbox" class="modal">
 				<span onclick="document.getElementById('loginbox').style.display='none'" class="close" title="Close">&times;</span>
 
@@ -62,8 +62,7 @@
 						<span class="psw"><a href="#">Forgot password?</a></span>
 					</div>
 				</form>
-				<script type="text/javascript">
-
+				<script>
 					// Get the modal
 					var modal = document.getElementById('loginbox');
 
@@ -75,10 +74,27 @@
 					}
 				</script> 
 			</div> 
+	
 		</header>
 
 		<article>
-			
+		<h1> Update webpages from github repo </h1>
+		<p> Note: This is for updating the latest changes from the github repository, the underlying script is written in bash. 
+		</br>
+		Press the button below or refresh to update.
+		</p>
+		<button type="button" onclick="updatePage()" class="w3-button w3-pale-red">Update</button>
+		<p>
+		<iframe src="/update.php" >
+			<p>Your browser does not support iframes.</p>
+		</iframe>
+		</p>
+		<script>
+			function updatePage() {
+				window.location.assign('/update.html');//there are many ways to do this
+			}
+		</script>
+		
 		</article>
 		
 		<section>
@@ -88,6 +104,7 @@
 		<aside>
 			
 		</aside>
+
 
 		<footer class="w3-bar w3-grey">
 			<a class="w3-bar-item w3-button w3-mobile" href="mailto:100087197@students.swinburne.edu.my">Contact Us</a>
