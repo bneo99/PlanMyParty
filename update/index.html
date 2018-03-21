@@ -4,8 +4,8 @@
 		<title>Plan My Party!</title>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styles/styles.css">
-		<link rel="stylesheet" href="styles/w3.css">
+		<link rel="stylesheet" href="/styles/styles.css">
+		<link rel="stylesheet" href="/styles/w3.css">
 		
 		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -35,7 +35,7 @@
 				<a href="signup.html" class="w3-bar-item topbar w3-button w3-right">Sign Up</a>
 
 			</div> 
-			<a href="."><img src="images/pmp_logo.png" alt="logo" style="height:3cm;" /></a>
+			<a href="."><img src="/images/pmp_logo.png" alt="logo" style="height:3cm;" /></a>
 		
 				<!-- Login Modal -->
 			<div id="loginbox" class="modal">
@@ -85,13 +85,13 @@
 		</p>
 		<button type="button" onclick="updatePage()" class="w3-button w3-pale-red">Update</button>
 		<p>
-		<iframe src="/update.php" >
+		<iframe src="/update/update.php" class="w3-light-grey">
 			<p>Your browser does not support iframes.</p>
 		</iframe>
 		</p>
 		<script>
 			function updatePage() {
-				window.location.assign('/update.html');//there are many ways to do this
+				window.location.assign('/update/');//there are many ways to do this
 			}
 		</script>
 		
