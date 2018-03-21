@@ -14,11 +14,6 @@ footer {
 	bottom: 0;
 }
 
-a:link {color: black;}  /* unvisited link */
-a:visited {color: black;}  /* visited link */
-a:hover {color: hotpink;}  /* mouse over link */
-a:active {color: red;}  /* selected link */
-
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
@@ -27,11 +22,6 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-/* Set a style for top bar buttons */
-.topbar{
-    color: white;
 }
 
 /* Set a style for all buttons */

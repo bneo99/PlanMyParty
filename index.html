@@ -1,9 +1,10 @@
  <!DOCTYPE html>
-<html lang="en" class="w3-pale-blue">
+<html lang="en" class="w3-light-grey">
 	<head>
 		<title>Plan My Party!</title>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex nofollow">
 		<link rel="stylesheet" href="/styles/styles.css">
 		<link rel="stylesheet" href="/styles/w3.css">
 		
@@ -27,15 +28,28 @@
 	</head>
 	<body>
 	
-		<header>
-			<div class="w3-bar w3-cyan">
+		<nav>
+			<div class="w3-bar w3-top w3-black">
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="expandNav()">&#9776;</a>
+				<a href="#" class="w3-bar-item w3-button">Home</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">Review</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
+				<a href="#" class="w3-bar-item w3-button w3-hide-small">Contact Us</a>
 				<!-- Button to open the modal login form -->
-				<a onclick="document.getElementById('loginbox').style.display='block'" class="w3-bar-item topbar w3-button w3-right">Login</a>
-				<!-- Button to open signup page -->
-				<a href="/signup.html" class="w3-bar-item topbar w3-button w3-right">Sign Up</a>
-
+				<a onclick="document.getElementById('loginbox').style.display='block'" class="w3-bar-item w3-button w3-right">Login | Sign Up</a>
 			</div> 
-			<a href="/"><img src="/images/pmp_logo.png" alt="logo" style="height:3cm;" /></a>
+			
+			<div id="navbar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+				<a href="#" class="w3-bar-item w3-button">Pricing</a>
+				<a href="#" class="w3-bar-item w3-button">My Bookings</a>
+				<a href="#" class="w3-bar-item w3-button">Review</a>
+				<a href="#" class="w3-bar-item w3-button">About</a>
+				<a href="#" class="w3-bar-item w3-button">Contact Us</a>
+			</div>
+			
+			<a href="/"><img src="/images/pmp_logo.png" alt="logo" style="height:3cm; margin-top:50px;" /></a>
 		
 			<!-- Login Modal -->
 			<div id="loginbox" class="modal">
@@ -63,6 +77,15 @@
 					</div>
 				</form>
 				<script type="text/javascript">
+					function expandNav() {
+						var x = document.getElementById("navbar");
+						if (x.className.indexOf("w3-show") == -1) {
+							x.className += " w3-show";
+						} else { 
+							x.className = x.className.replace(" w3-show", "");
+						}
+					}
+				
 					// Get the modal
 					var modal = document.getElementById('loginbox');
 
@@ -74,7 +97,7 @@
 					}
 				</script> 
 			</div> 
-		</header>
+		</nav>
 
 		<article>
 			
