@@ -1,11 +1,13 @@
  <!DOCTYPE html>
-<html lang="en" class="w3-pale-blue">
+<html lang="en" class="w3-theme-light">
 	<head>
 		<title>Plan My Party!</title>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex nofollow">
 		<link rel="stylesheet" href="/styles/styles.css">
 		<link rel="stylesheet" href="/styles/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-cyan.css">
 		
 		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -27,86 +29,129 @@
 	</head>
 	<body>
 	
-		<header>
-			<div class="w3-bar w3-cyan">
+		<nav>
+			<div class="w3-bar w3-theme ">
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="expandNav()">&#9776;</a>
+				<a href="/" class="w3-bar-item w3-button">Home</a>
+				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
+				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
+				<a href="/review" class="w3-bar-item w3-button w3-hide-small">Review</a>
+				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small">About</a>
+				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small">Contact Us</a>
 				<!-- Button to open the modal login form -->
-				<a onclick="document.getElementById('loginbox').style.display='block'" class="w3-bar-item topbar w3-button w3-right">Login</a>
-				<!-- Button to open signup page -->
-				<a href="/signup.html" class="w3-bar-item topbar w3-button w3-right">Sign Up</a>
-
+				<a onclick="document.getElementById('loginbox').style.display='block'" class="w3-bar-item w3-button w3-right">Login | Sign Up</a>
 			</div> 
-			<a href="/"><img src="/images/pmp_logo.png" alt="logo" style="height:3cm;" /></a>
-		
+			
+			<div id="navbar" class="w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
+				<a href="#" class="w3-bar-item w3-button">Pricing</a>
+				<a href="#" class="w3-bar-item w3-button">My Bookings</a>
+				<a href="#" class="w3-bar-item w3-button">Review</a>
+				<a href="#" class="w3-bar-item w3-button">About</a>
+				<a href="#" class="w3-bar-item w3-button">Contact Us</a>
+			</div>
+			
 			<!-- Login Modal -->
-			<div id="loginbox" class="modal">
-				<span onclick="document.getElementById('loginbox').style.display='none'" class="close" title="Close">&times;</span>
-
+			<div id="loginbox" class="w3-modal">
 				<!-- Modal Content -->
-				<form class="modal-content animate" action="/login.php">
+				<form class="w3-modal-content w3-animate-zoom " action="/login.php">
+					<header class="w3-container w3-theme">
+						<span onclick="document.getElementById('loginbox').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
+						
+						<h2>Login</h2>
+					</header>
+					<div class="w3-container w3-theme-light w3-padding ">
+						<label for="uname" >Username</label>
+						<input type="text" name="uname" class="w3-input w3-border" required />
 
-					<div class="container">
-						<label for="uname"><b>Username</b></label>
-						<input type="text" placeholder="Enter Username" name="uname" required />
-
-						<label for="psw"><b>Password</b></label>
-						<input type="password" placeholder="Enter Password" name="psw" required />
+						<label for="psw" >Password</label>
+						<input type="password" class="w3-input w3-border" name="psw" required />
 						<label>
 							<input type="checkbox" checked="checked" name="remember" /> Remember me
 						</label>
-						<br />
-						<button type="submit">Login</button>
-					</div>
-
-					<div class="container" style="background-color:#f1f1f1">
-						<button type="button" onclick="document.getElementById('loginbox').style.display='none'" class="cancelbtn">Cancel</button>
-						<span class="psw"><a href="#">Forgot password?</a></span>
+						<br /> 
+						<button type="submit" class="w3-button w3-theme-d1" >Login</button>
+						<span> <a href="#">Forgot password?</a> </span>
+						<a onclick="openSignupBox()" class="w3-button w3-theme-d1" style="float:right;" >Sign Up</a>
 					</div>
 				</form>
-				<script type="text/javascript">
-					// Get the modal
-					var modal = document.getElementById('loginbox');
-
-					// When the user clicks anywhere outside of the modal, close it
-					window.onclick = function(event) {
-						if (event.target == modal) {
-							modal.style.display = "none";
-						}
-					}
-				</script> 
 			</div> 
-		</header>
-
-		<article>
-		<h1> Update webpages from github repo </h1>
-		<p> Note: This is for updating the latest changes from the github repository, the underlying script is written in bash. 
-		</br>
-		Press the button below or refresh to update.
-		</p>
-		<button type="button" onclick="updatePage()" class="w3-button w3-pale-red">Update</button>
-		<p>
-		<iframe src="update.php" class="w3-light-grey" width="500px">
-			<p>Your browser does not support iframes.</p>
-		</iframe>
-		</p>
-		<script>
-			function updatePage() {
-				window.location.assign('.');//there are many ways to do this
-			}
-		</script>
-		
-		</article>
-		
-		<section>
+			<div id="signupbox" class="w3-modal">
+				<!-- Modal Content -->
+				<form class="w3-modal-content w3-animate-zoom" action="/login.php">
+					<header class="w3-container w3-theme">
+						<span onclick="document.getElementById('signupbox').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
+						
+						<h2>Sign Up</h2>
+					</header>
+					<div class="w3-container w3-theme-light w3-padding ">
+						<label for="uname" >Username</label>
+						<input type="text" name="uname" class="w3-input w3-border" required />
+						<label for="email" >Email</label>
+						<input type="text" name="email" class="w3-input w3-border" required />
+						<label for="psw" >Password</label>
+						<input type="password" class="w3-input w3-border" name="psw" required />
+						<label>
+						<label for="cpsw" >Confirm Password</label>
+						<input type="password" class="w3-input w3-border" name="cpsw" required />
+						<label>
+							<input type="checkbox" checked="checked" name="remember" /> Remember me
+						</label>
+						<br /> 
+						<button type="submit" class="w3-button w3-theme-d1" >Submit</button>
+					</div>
+				</form>
+			</div> 
+			<script>
+				function expandNav() {
+					var x = document.getElementById("navbar");
+					if (x.className.indexOf("w3-show") == -1) {
+						x.className += " w3-show";
+					} else { 
+						x.className = x.className.replace(" w3-show", "");
+					}
+				}
+				
+				function openSignupBox() {
+					document.getElementById("loginbox").style.display='none';
+					document.getElementById("signupbox").style.display='block';
+				}
+				
+				// Get the modal
+				var modal = document.getElementById('loginbox');
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script> 
 			
-		</section>
+		</nav>
 		
-		<aside>
-			
-		</aside>
-
-
-		<footer">
-
+		<div class="w3-container" >
+			<h1> Update webpages from github repo </h1>
+			<p> Note: This is for updating the latest changes from the github repository, the underlying script is written in bash. 
+			</br>
+			Press the button below or refresh to update.
+			</p>
+			<button type="button" onclick="updatePage()" class="w3-button w3-pale-red">Update</button>
+			<p>
+			<iframe src="update.php" class="w3-light-grey" width="500px">
+				<p>Your browser does not support iframes.</p>
+			</iframe>
+			</p>
+			<script>
+				function updatePage() {
+					window.location.assign('.');//there are many ways to do this
+				}
+			</script>
+		
+		</div>
+		<!-- Footer -->
+		<footer class="w3-container w3-theme-dark">
+			<p>&copy; Plan My Party 2018</p>
+			<p>Last updated: WhatDay, dd-mm-yy at hh:mm am/pm  (get a script to read modification time perhaps)</p>
+			<p>Maintained by: Webmaster (webmaster@planmyparty.ofcoursethisisfakedotcom)</p>
 		</footer>
 		
 	</body>
