@@ -3,29 +3,30 @@
 	<head>
 		<title>Plan My Party!</title>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="noindex nofollow">
-		<link rel="stylesheet" href="/styles/styles.css">
-		<link rel="stylesheet" href="/styles/w3.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-cyan.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="robots" content="noindex nofollow"/>
+		<script src="scripts/default.js"></script>
+		<link rel="stylesheet" href="/styles/styles.css"/>
+		<link rel="stylesheet" href="/styles/w3.css"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-cyan.css"/>
 		
-		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/faviconfavicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/favicon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
+		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>
+		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png"/>
+		<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png"/>
+		<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png"/>
+		<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png"/>
+		<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png"/>
+		<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png"/>
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png"/>
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="96x96" href="/faviconfavicon/favicon-96x96.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+		<link rel="manifest" href="/favicon/manifest.json"/>
+		<meta name="msapplication-TileColor" content="#ffffff"/>
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png"/>
+		<meta name="theme-color" content="#ffffff"/>
 	</head>
 	<body>
 	
@@ -87,50 +88,27 @@
 						<label for="uname" >Username</label>
 						<input type="text" name="uname" class="w3-input w3-border" required />
 						<label for="email" >Email</label>
-						<input type="text" name="email" class="w3-input w3-border" required />
+						<input type="text" name="email" pattern="^.+@.+\..{2,3}$" class="w3-input w3-border" required />
 						<label for="psw" >Password</label>
 						<input type="password" class="w3-input w3-border" name="psw" required />
-						<label>
 						<label for="cpsw" >Confirm Password</label>
 						<input type="password" class="w3-input w3-border" name="cpsw" required />
 						<label>
-							<input type="checkbox" checked="checked" name="remember" /> Remember me
+						
+							<input type="checkbox" required="required" name="accepttnc" /> I accept the Terms and Conditions.
 						</label>
 						<br /> 
 						<button type="submit" class="w3-button w3-theme-d1" >Submit</button>
 					</div>
 				</form>
 			</div> 
-			<script>
-				function expandNav() {
-					var x = document.getElementById("navbar");
-					if (x.className.indexOf("w3-show") == -1) {
-						x.className += " w3-show";
-					} else { 
-						x.className = x.className.replace(" w3-show", "");
-					}
-				}
-				
-				function openSignupBox() {
-					document.getElementById("loginbox").style.display='none';
-					document.getElementById("signupbox").style.display='block';
-				}
-				
-				// Get the modal
-				var modal = document.getElementById('loginbox');
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-				}
-			</script> 
-			
 		</nav>
 		
 		<div style="margin-top:5%;">
 		<!-- Put the contents here -->
-		<h1 class="any">Plan My Party</h1>
+		<h1>You are logged in!</h1>
+		Welcome <?php echo $_GET["name"]; ?><br>
+		Your email address is: <?php echo $_GET["email"]; ?>
 		</div>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		
