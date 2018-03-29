@@ -5,9 +5,12 @@ hr{
 }
 
 /* CSS for index_2.html navigation */
-.index nav .main_nav li, .index nav .second_nav li{
+.index nav .main_nav li, .second_nav li{
+	background-color: #ccf5ff;
+	padding: 1%;
 	display: inline;
 	margin: 0 1%;
+	border: 2px solid black;
 }
 
 .index nav .main_nav li{
@@ -17,23 +20,40 @@ hr{
 .index nav .second_nav li{
 	float: right;
 }
-
 /* CSS for index_2.html header */
 .index header img{
-	width: 30%;
-	float: left;
-	border: 1px solid black;
+	float:left;
+	width: 10%;
 }
 
 .index header h1{
 	text-align: center;
+	clear: left;
 }
 
 .index header .options{
 	float: right;
+	clear: left;
 }
 
 .index header .options p{
-	border: 2px solid black;
-	padding: 10%;
+}
+
+/* CSS for index_2.html pax selection section */
+.index .pax_selection .pax_1 img{
+	width: 50%;
+}
+
+.index .pax_selection .pax_2 img{
+	width: 30%;
+}
+
+.index .pax_selection .pax_3 img{
+	width: 20%;
+}
+
+.index .pax_selection ul li{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 0 auto;
 }
