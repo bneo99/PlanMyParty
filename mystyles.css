@@ -10,6 +10,7 @@ hr{
 	padding: 1%;
 	display: inline;
 	margin: 0 1%;
+	margin-bottom: 1%;
 	border: 2px solid black;
 }
 
@@ -20,40 +21,90 @@ hr{
 .index nav .second_nav li{
 	float: right;
 }
+
 /* CSS for index_2.html header */
-.index header img{
-	float:left;
-	width: 10%;
+.index header img, h1, .options{
+	float: left;
+	margin: 0 10%;
 }
 
 .index header h1{
-	text-align: center;
-	clear: left;
-}
-
-.index header .options{
-	float: right;
-	clear: left;
+	margin-top: 5%;
 }
 
 .index header .options p{
+	text-align: center;
+	padding: 20%;
+	border: 2px solid black;
+	background-color: #ccf5ff;
 }
+
+/* CSS for index_2.html slideshow section */
+.index .slideshow h2{
+	text-align: center;
+}
+
+
+/* CSS for index_2.html reviews section */
+.index .reviews h2{
+	text-align: center;
+}
+
 
 /* CSS for index_2.html pax selection section */
-.index .pax_selection .pax_1 img{
-	width: 50%;
+.index .pax_selection h2{
+	text-align: center;
 }
 
-.index .pax_selection .pax_2 img{
-	width: 30%;
+.index .pax_selection .pax_1, .pax_2, .pax_3{
+	float: left;
+	text-align: center;
+	margin: 0 6%;
 }
 
-.index .pax_selection .pax_3 img{
-	width: 20%;
+/* CSS for index_2.html partners section */
+.index .partners h2, .index .partners p{
+	text-align: center;
 }
 
-.index .pax_selection ul li{
-	display: inline-block;
-	border: 1px solid black;
-	padding: 0 auto;
+.index .partners img{
+	width: 10%;
+	float: left;
+	margin: 3% 3.2%;
+}
+
+.index .partners .seventh_pic{
+	clear: left;
+}
+
+.index .partners span img{
+	float: left;
+	margin: 3% 5%;
+}
+
+/* CSS for index_2.html footer */
+.index footer .social{
+	float: left;
+}
+
+.index footer .social p{
+	margin-left: 1%;
+}
+
+.index footer .social img{
+	width: 5%;
+	margin: 0 1%;
+}
+
+.index footer ul{
+	float: right;
+}
+
+.index footer ul li{
+	list-style-type: none;
+	margin: 10% 0;
+}
+
+.index footer p{
+	clear: both;
 }
