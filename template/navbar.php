@@ -35,7 +35,7 @@
 	
 		<nav>
 			<div id="topbar" class="w3-bar w3-theme">
-				<a href="javascript:void(0)" class="w3-bar-item w3-button  w3-hide-large w3-hide-medium" onclick="expandNav()">&#9776;</a>
+				<a href="javascript:void(0)" class="w3-dropdown-click w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="expandNav()">&#9776;</a>
 				<a href="/" class="w3-bar-item w3-button">Home</a>
 				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
@@ -63,7 +63,7 @@
 				</div>
 			</div> 
 			
-			<div id="navbar" class="w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
+			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
 				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
 				<a href="/review" class="w3-bar-item w3-button">Review</a>
@@ -131,123 +131,3 @@
 			
 		</nav>
 		
-		<!-- Put the contents here -->
-		<h1 class="">Plan My Party</h1>
-		
-		<br/><br/>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		
-		<!-- Footer -->
-		<footer class="w3-container w3-theme-dark">
-			<p>&copy; Plan My Party 2018</p>
-			<p>Last updated: WhatDay, dd-mm-yy at hh:mm am/pm  (get a script to read modification time perhaps)</p>
-			<p>Maintained by: Webmaster (webmaster@planmyparty.ofcoursethisisfakedotcom)</p>
-		</footer>
-		
-	</body>
-</html> 
-
-<script>
-function expandNav() {
-	var x = document.getElementById("navbar");
-	if (x.className.indexOf("w3-show") == -1) {
-		x.className += " w3-show";
-	} else { 
-		x.className = x.className.replace(" w3-show", "");
-	}
-}
-
-window.onscroll = function (e) {  
-	var topBar = document.getElementById("topbar");
-	var userButton = document.getElementById("userbutton");
-	var userMenu = document.getElementById('usermenu');
-	var toTopButton = document.getElementById('totopbutton');
-
-
-	if ($(window).scrollTop() <= 10){
-		topBar.className = topBar.className.replace(" w3-top", "");
-		
-		if (userButton.className.indexOf("w3-show") == -1) {
-			userButton.className += " w3-show";
-		}
-		
-		toTopButton.className = toTopButton.className.replace(" w3-show", "");
-	} else { 
-		if (topBar.className.indexOf("w3-top") == -1) {
-			topBar.className += " w3-top";
-		}
-		
-		userButton.className = userButton.className.replace(" w3-show", "");
-		userMenu.className = userMenu.className.replace(" w3-show", "");
-		
-		if (toTopButton.className.indexOf("w3-show") == -1) {
-			toTopButton.className += " w3-show";
-		}
-	}
-}
-
-function openSignupBox() {
-	document.getElementById("loginbox").style.display='none';
-	document.getElementById("signupbox").style.display='block';
-}
-
-var loginModal = document.getElementById('loginbox');
-var signupModal = document.getElementById('signupbox');
-var userMenu = document.getElementById('usermenu');
-
-// When the user clicks anywhere outside of the element, close it
-window.onclick = function(event) {
-	if (event.target == loginModal) {
-		loginModal.style.display = "none";
-	}
-	if (event.target == signupModal) {
-		signupModal.style.display = "none";
-	}
-	if (event.target == userMenu) {
-		userMenu.style.display = "none";
-	}
-
-}
-
-function openDropDownMenu() {
-	var x = document.getElementById("usermenu");
-	if (x.className.indexOf("w3-show") == -1) {
-		x.className += " w3-show";
-	} else { 
-		x.className = x.className.replace(" w3-show", "");
-	}
-}
-
-$(document).ready(function(){
-	
-   $("#login").click(function(){
-		username=$("#uname").val();
-        password=$("#passwd").val();
-
-        $.ajax({
-			type: "POST",
-			url: "login.php",
-            data: "uname="+username+"&passwd="+password,
-
-            success: function(html){
-			
-			  if(html=='true')
-              {
-                document.getElementById('loginbox').style.display='none';
-				location.reload(true);
-              }
-              else
-              {
-                    $("#add_err").html("Your username or password is incorrect, please try again.");
-              }
-            },
-            beforeSend:function()
-			{
-                 $("#add_err").html("Loading...")
-            }
-        });
-         return false;
-    });
-});
-
-</script>
