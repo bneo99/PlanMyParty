@@ -35,14 +35,13 @@
 	
 		<nav>
 			<div id="topbar" class="w3-bar w3-theme">
-				<a href="javascript:void(0)" class="w3-bar-item w3-button  w3-hide-large w3-hide-medium" onclick="expandNav()">&#9776;</a>
-				<a href="/" class="w3-bar-item w3-button">Home</a>
-				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
-				<a href="/review" class="w3-bar-item w3-button w3-hide-small">Review</a>
-				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small">About</a>
-				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small">Contact Us</a>
-				<a href="/disclaimer" class="w3-bar-item w3-button w3-hide-small">Disclaimer</a>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button  w3-hide-large w3-hide-medium" onclick="expandNav()" >&#9776;</a>
+				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
+				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
+				<a href="/review" class="w3-bar-item w3-button">Review</a>
+				<a href="/aboutus" class="w3-bar-item w3-button">About</a>
+				<a href="/contactus" class="w3-bar-item w3-button">Contact Us</a>
+				<a href="/disclaimer" class="w3-bar-item w3-button">Disclaimer</a>
 				<!-- Button to open the modal login form -->
 				<div id="profile">
 					<?php if(empty($_SESSION['userName'])){?>
@@ -64,12 +63,12 @@
 			</div> 
 			
 			<div id="navbar" class="w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
-				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
-				<a href="/review" class="w3-bar-item w3-button">Review</a>
-				<a href="/aboutus" class="w3-bar-item w3-button">About</a>
-				<a href="/contactus" class="w3-bar-item w3-button">Contact Us</a>
-				<a href="/disclaimer" class="w3-bar-item w3-button">Disclaimer</a>
+				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
+				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
+				<a href="/review" class="w3-bar-item w3-button w3-hide-small">Review</a>
+				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small">About</a>
+				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small">Contact Us</a>
+				<a href="/disclaimer" class="w3-bar-item w3-button w3-hide-small">Disclaimer</a>
 			</div>
 			
 			<!-- Login Modal -->
@@ -132,11 +131,14 @@
 		</nav>
 		
 		<!-- Put the contents here -->
-		<h1 class="">Plan My Party</h1>
 		
-		<br/><br/>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		
+		<h1 class="">Disclaimer</h1>
+		<ul>
+			<li>This website is created mainly for educational and non‐commercial use only. It is a partial fulfilment for completion of unit COS20001 ‐ User Centered Design offered in Swinburne University of Technology, Sarawak Campus for Semester 1, 2018. </li>
+			<li>The web‐master and author(s) do not represent the business entity.</li>
+			<li>The content of the pages of this website might be out‐dated or inaccurate, thus, the author(s) and web‐master does not take any responsibility for incorrect information disseminate or cited from this website.</li>
+			<li>If you believe that information of any kind on this website is an infringement of copyright in material in which you either own copyright or are authorized to exercise the rights of a copyright owner, kindly contact the web‐master (100087197@students.swinburne.edu.my) for removal.</li>
+		</ul>
 		<!-- Footer -->
 		<footer class="w3-container w3-theme-dark">
 			<p>&copy; Plan My Party 2018</p>
