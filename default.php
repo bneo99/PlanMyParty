@@ -50,7 +50,7 @@
 					<?php if(isset($_SESSION['userName'])){?>
 
 					<div class="w3-dropdown-click w3-right">
-						<a id="userbutton" onclick="openDropDownMenu()" class="w3-button w3-theme w3-hide w3-show">user</a>
+						<a id="userbutton" onclick="openDropDownMenu()" class="w3-button w3-theme w3-hide w3-show"><?php echo $_SESSION['userName'] ?></a>
 						<div id="usermenu" class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
 							<a href="/myaccount" class="w3-bar-item w3-button">My Account</a>
 							<a href="/settings" class="w3-bar-item w3-button">Settings</a>
@@ -162,25 +162,22 @@ window.onscroll = function (e) {
 	var toTopButton = document.getElementById('totopbutton');
 
 
-	if ($(window).scrollTop() == 0){
+	if ($(window).scrollTop() <= 10){
 		topBar.className = topBar.className.replace(" w3-top", "");
-	} else { 
-		if (topBar.className.indexOf("w3-top") == -1) {
-			topBar.className += " w3-top";
-		}
-	}
-	if ($(window).scrollTop() == 0){
+		
 		if (userButton.className.indexOf("w3-show") == -1) {
 			userButton.className += " w3-show";
 		}
 		
-	} else { 
-		userButton.className = userButton.className.replace(" w3-show", "");
-		userMenu.className = userMenu.className.replace(" w3-show", "");
-	}
-	if ($(window).scrollTop() == 0){
 		toTopButton.className = toTopButton.className.replace(" w3-show", "");
 	} else { 
+		if (topBar.className.indexOf("w3-top") == -1) {
+			topBar.className += " w3-top";
+		}
+		
+		userButton.className = userButton.className.replace(" w3-show", "");
+		userMenu.className = userMenu.className.replace(" w3-show", "");
+		
 		if (toTopButton.className.indexOf("w3-show") == -1) {
 			toTopButton.className += " w3-show";
 		}
