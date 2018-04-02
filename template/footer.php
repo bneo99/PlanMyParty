@@ -4,6 +4,5 @@
 			<p>Last updated: WhatDay, dd-mm-yy at hh:mm am/pm  (get a script to read modification time perhaps)</p>
 			<p>Maintained by: Webmaster (webmaster@planmyparty.ofcoursethisisfakedotcom)</p>
 		</footer>
-		
 	</body>
 </html> 

@@ -35,7 +35,7 @@
 	
 		<nav>
 			<div id="topbar" class="w3-bar w3-theme">
-				<a href="javascript:void(0)" class="w3-dropdown-click w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="expandNav()">&#9776;</a>
+				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="showHideByID('navbar')">&#9776;</a>
 				<a href="/" class="w3-bar-item w3-button">Home</a>
 				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
@@ -46,19 +46,26 @@
 				<!-- Button to open the modal login form -->
 				<div id="profile">
 					<?php if(empty($_SESSION['userName'])){?>
-					<a onclick="document.getElementById('loginbox').style.display='block'" class="w3-bar-item w3-button w3-right">Login | Sign Up</a>
+					<a onclick="showHideByID('loginbox')" class="w3-bar-item w3-button w3-right">Login | Sign Up</a>
 					<?php }?>	
 					<?php if(isset($_SESSION['userName'])){?>
 
 					<div class="w3-dropdown-click w3-right">
-						<a id="userbutton" onclick="openDropDownMenu()" class="w3-button w3-theme w3-hide w3-show"><?php echo $_SESSION['userName'] ?></a>
+						<a id="userbutton" onclick="showHideByID('usermenu')" class="w3-button w3-theme w3-hide w3-show"><?php echo $_SESSION['userName']; ?></a>
 						<div id="usermenu" class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
 							<a href="/myaccount" class="w3-bar-item w3-button">My Account</a>
 							<a href="/settings" class="w3-bar-item w3-button">Settings</a>
+							<a onclick="showHideByID('themepicker')" class="w3-bar-item w3-button">Themes</a>
 							<a href="/logout.php" class="w3-bar-item w3-button">Logout</a>
 						</div>
 					</div>
 					<a id="totopbutton" class="w3-bar-item w3-button w3-right w3-hide" onclick="window.scrollTo(0, 0);">Top</a>
+						<?php if(isset($_SESSION['themeName'])){?>
+							<script>
+								var themeLink = document.getElementById('theme');
+								themeLink.href = themeLink.href.replace("indigo", '<?php echo $_SESSION['themeName']; ?>');
+							</script>
+						<?php }?>
 					<?php }?>
 				</div>
 			</div> 
@@ -75,9 +82,9 @@
 			<!-- Login Modal -->
 			<div id="loginbox" class="w3-modal">
 				<!-- Modal Content -->
-				<form class="w3-modal-content w3-animate-zoom" action="login.php">
+				<form class="w3-modal-content w3-animate-zoom" >
 					<header class="w3-container w3-theme">
-						<span onclick="document.getElementById('loginbox').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
+						<span onclick="showHideByID('loginbox')" class="w3-button w3-display-topright" >&times;</span>
 						
 						<h2>Login</h2>
 					</header>
@@ -88,7 +95,7 @@
 						<label for="passwd" >Password</label>
 						<input type="password" class="w3-input w3-border" id="passwd" name="passwd" required />
 						<br />
-						<div class="err" id="add_err"></div>
+						<div id="add_err"></div>
 						<br />
 						<button id="login" type="submit" class="w3-button w3-theme-d1" >Login</button>
 						
@@ -101,7 +108,7 @@
 			
 			<div id="signupbox" class="w3-modal">
 				<!-- Modal Content -->
-				<form class="w3-modal-content w3-animate-zoom" action="/signup.php">
+				<form class="w3-modal-content w3-animate-zoom" >
 					<header class="w3-container w3-theme">
 						<span onclick="document.getElementById('signupbox').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
 						
@@ -124,7 +131,50 @@
 					</div>
 				</form>
 			</div> 
-
+			
+			<!-- Theme Modal -->
+			<div id="themepicker" class="w3-modal">
+				<!-- Modal Content -->
+				<form id="selecttheme" class="w3-modal-content w3-animate-zoom" >
+					<header class="w3-container w3-theme">
+						<span onclick="showHideByID('themepicker')" class="w3-button w3-display-topright" >&times;</span>
+							
+						<h2>Theme Picker</h2>
+						</header>
+					<div class="w3-container w3-theme-light w3-padding ">
+						<p>These are predefined themes from W3.</p>
+						<p>	<select class="w3-select" form="selecttheme" id="themename" name="themename">
+								<option value="" selected disabled>Choose a theme</option>
+								<option value="red">Red</option>
+								<option value="pink">Pink</option>
+								<option value="purple">Purple</option>
+								<option value="deep-purple">Deep Purple</option>
+								<option value="indigo">Indigo</option>
+								<option value="blue">Blue</option>
+								<option value="light-blue">Light Blue</option>
+								<option value="cyan">Cyan</option>
+								<option value="teal">Teal</option>
+								<option value="green">Green</option>
+								<option value="light-green">Light Green</option>
+								<option value="lime">Lime</option>
+								<option value="khaki">Khaki</option>
+								<option value="yellow">Yellow</option>
+								<option value="amber">Amber</option>
+								<option value="orange">Orange</option><option value="deep-orange">Deep Orange</option>
+								<option value="blue-grey">Blue Grey</option>
+								<option value="brown">Brown</option>
+								<option value="grey">Grey</option>
+								<option value="dark-grey">Dark Grey</option>
+								<option value="black">Black</option>
+								<option value="w3schools">W3Schools</option>
+							</select> 
+						</p>
+						<p id="theme_status"></p>
+						<button type="submit" id="changetheme" class="w3-button w3-theme-d1">Set Theme</button>
+					</div>
+				</form>
+			</div> 
+			
 			<div id="usermenu" class="w3-dropdown-content w3-bar-block w3-theme w3-hide" style="right:0;">
 				
 			</div> 

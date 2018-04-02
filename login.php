@@ -26,4 +26,10 @@ $num_row = mysqli_num_rows($result);
 		else{
 			echo 'false';
 		}
+		
+//gets theme setting from database whenever user logs in
+$query = "SELECT theme FROM user_settings WHERE uname LIKE '$username' ";
+$result = mysqli_query($con, $query)or die(mysqli_error($con));
+$row = mysqli_fetch_array($result);
+$_SESSION['themeName']= $row['theme'];
 ?>

@@ -1,10 +1,11 @@
 <script>
-	function expandNav() {
-		var x = document.getElementById("navbar");
-		if (x.className.indexOf("w3-show") == -1) {
-			x.className += " w3-show";
+	function showHideByID(divID) {
+		var element = document.getElementById(divID);
+		
+		if (element.className.indexOf("w3-show") == -1) {
+			element.className += " w3-show";
 		} else { 
-			x.className = x.className.replace(" w3-show", "");
+			element.className = element.className.replace(" w3-show", "");
 		}
 	}
 
@@ -38,37 +39,24 @@
 	}
 
 	function openSignupBox() {
-		document.getElementById("loginbox").style.display='none';
-		document.getElementById("signupbox").style.display='block';
+		showHideByID('loginbox');
+		showHideByID('signupbox');
 	}
 
 	var loginModal = document.getElementById('loginbox');
 	var signupModal = document.getElementById('signupbox');
-	var userMenu = document.getElementById('usermenu');
 
 	// When the user clicks anywhere outside of the element, close it
 	window.onclick = function(event) {
 		if (event.target == loginModal) {
-			loginModal.style.display = "none";
+			loginModal.className = loginModal.className.replace(" w3-show", "");
 		}
 		if (event.target == signupModal) {
-			signupModal.style.display = "none";
-		}
-		if (event.target == userMenu) {
-			userMenu.style.display = "none";
+			signupModal.className = signupModal.className.replace(" w3-show", "");
 		}
 
 	}
-
-	function openDropDownMenu() {
-		var x = document.getElementById("usermenu");
-		if (x.className.indexOf("w3-show") == -1) {
-			x.className += " w3-show";
-		} else { 
-			x.className = x.className.replace(" w3-show", "");
-		}
-	}
-
+	
 	$(document).ready(function(){
 		
 	   $("#login").click(function(){
@@ -77,7 +65,7 @@
 
 			$.ajax({
 				type: "POST",
-				url: "login.php",
+				url: "/login.php",
 				data: "uname="+username+"&passwd="+password,
 
 				success: function(html){
@@ -89,12 +77,42 @@
 				  }
 				  else
 				  {
-						$("#add_err").html("Your username or password is incorrect, please try again.");
+						/* $("#add_err").html("Your username or password is incorrect, please try again."); */
+						$("#add_err").html(html);
 				  }
 				},
 				beforeSend:function()
 				{
 					 $("#add_err").html("Loading...")
+				}
+			});
+			 return false;
+		});
+		
+		$("#changetheme").click(function(){
+			themename=$("#themename").val();
+			
+			$.ajax({
+				type: "POST",
+				url: "/changetheme.php",
+				data: "theme="+themename,
+
+				success: function(html){
+				
+				  if(html=='ok')
+				  {
+					$("#theme_status").html("Theme changed, refreshing page");
+					location.reload("true");
+				  }
+				  else
+				  {
+						//$("#theme_status").html("Error, try again.");
+						("#theme_status").html(html);
+				  }
+				},
+				beforeSend:function()
+				{
+					 $("#theme_status").html("Changing theme...");
 				}
 			});
 			 return false;
