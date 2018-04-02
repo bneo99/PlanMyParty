@@ -77,8 +77,8 @@
 				  }
 				  else
 				  {
-						/* $("#add_err").html("Your username or password is incorrect, please try again."); */
-						$("#add_err").html(html);
+						$("#add_err").html("Your username or password is incorrect, please try again.");
+
 				  }
 				},
 				beforeSend:function()
@@ -106,8 +106,7 @@
 				  }
 				  else
 				  {
-						//$("#theme_status").html("Error, try again.");
-						("#theme_status").html(html);
+						$("#theme_status").html("Error, try again.");
 				  }
 				},
 				beforeSend:function()
