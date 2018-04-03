@@ -34,14 +34,14 @@
 	
 		<nav>
 			<div id="topbar" class="w3-bar w3-theme">
-				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="showHideByID('navbar')">&#9776;</a>
+				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large" onclick="showHideByID('navbar')">&#9776;</a>
 				<a href="/" class="w3-bar-item w3-button">Home</a>
-				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small">My Bookings</a>
-				<a href="/review" class="w3-bar-item w3-button w3-hide-small">Review</a>
-				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small">About</a>
-				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small">Contact Us</a>
-				<a href="/disclaimer" class="w3-bar-item w3-button w3-hide-small">Disclaimer</a>
+				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
+				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
+				<a href="/review" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Review</a>
+				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">About</a>
+				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Contact Us</a>
+				<a href="/disclaimer" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Disclaimer</a>
 				<!-- Button to open the modal login form -->
 				<div id="profile">
 					<?php if(empty($_SESSION['userName'])){?>
@@ -58,7 +58,6 @@
 							<a href="/logout.php" class="w3-bar-item w3-button">Logout</a>
 						</div>
 					</div>
-					<a id="totopbutton" class="w3-bar-item w3-button w3-right w3-hide" onclick="window.scrollTo(0, 0);">Top</a>
 						<?php if(isset($_SESSION['themeName'])){?>
 							<script>
 								var themeLink = document.getElementById('theme');
@@ -69,7 +68,7 @@
 				</div>
 			</div> 
 			
-			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
+			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large">
 				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
 				<a href="/review" class="w3-bar-item w3-button">Review</a>
