@@ -1,8 +1,8 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 ?>
-
-<!-- Put the contents here -->
+<!-- Set page title-->
+<title>Disclaimer | Plan My Party!</title>
 
 <h1 class="">Disclaimer</h1>
 <ul>

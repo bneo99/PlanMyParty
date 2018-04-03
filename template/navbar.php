@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="w3-theme-light">
 	<head>
-		<title>Plan My Party! | Home</title>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="robots" content="noindex nofollow"/>
@@ -110,7 +109,7 @@
 				<!-- Modal Content -->
 				<form class="w3-modal-content w3-animate-zoom" >
 					<header class="w3-container w3-theme">
-						<span onclick="document.getElementById('signupbox').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
+						<span onclick="showHideByID('signupbox').style.display='none'" class="w3-button w3-display-topright" >&times;</span>
 						
 						<h2>Sign Up</h2>
 					</header>

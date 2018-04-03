@@ -1,8 +1,8 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 ?>
-
-<!-- Add contents here-->
+<!-- Set page title-->
+<title>Home | Plan My Party!</title>
 
 <h1>Plan My Party</h1>
 <p>testing</p>
