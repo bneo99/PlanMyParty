@@ -9,5 +9,3 @@
 			<p>Last updated: <?php echo $mod_time; ?></p>
 			<p>Maintained by: Webmaster (webmaster@planmyparty.ofcoursethisisfakedotcom)</p>
 		</footer>
-	</body>
-</html> 

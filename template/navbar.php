@@ -113,13 +113,13 @@
 						<h2>Sign Up</h2>
 					</header>
 					<div class="w3-container w3-theme-light w3-padding ">
-						<label for="uname" >Username</label>
+						<label>Username</label>
 						<input type="text" name="uname" class="w3-input w3-border" required />
-						<label for="email" >Email</label>
+						<label>Email</label>
 						<input type="text" name="email" pattern="^.+@.+\..{2,3}$" class="w3-input w3-border" required />
-						<label for="passwd" >Password</label>
+						<label>Password</label>
 						<input type="password" class="w3-input w3-border" name="passwd" required />
-						<label for="cpasswd" >Confirm Password</label>
+						<label>Confirm Password</label>
 						<input type="password" class="w3-input w3-border" name="cpasswd" required />
 						<label>
 							<input type="checkbox" required="required" name="accepttnc" /> I accept the Terms and Conditions.
@@ -171,10 +171,6 @@
 						<button type="submit" id="changetheme" class="w3-button w3-theme-d1">Set Theme</button>
 					</div>
 				</form>
-			</div> 
-			
-			<div id="usermenu" class="w3-dropdown-content w3-bar-block w3-theme w3-hide" style="right:0;">
-				
 			</div> 
 		</nav>
 		<button id="totopbutton" style="position:fixed;" class="w3-margin w3-display-bottomright w3-btn w3-round-large w3-theme-d3 w3-hide" onclick="window.scrollTo(0, 0);">Top</button>
