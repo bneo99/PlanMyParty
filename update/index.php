@@ -1,7 +1,9 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 ?>
-		
+<!-- Set page title-->
+<title>Update | Plan My Party!</title>
+
 <div class="w3-container" >
 	<h1> Update webpages from github repo </h1>
 	<p> Note: This is for updating the latest changes from the github repository, the underlying script is written in bash. 
