@@ -5,7 +5,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <!-- Add contents here-->
 
 <h1>Plan My Party</h1>
-<p>dsjasdhajkkjdsa</p>
+<p>testing</p>
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 <?php
