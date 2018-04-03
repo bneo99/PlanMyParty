@@ -1,4 +1,3 @@
-		</div>
 		<!-- Footer -->
 		<footer class="w3-container w3-theme-dark">
 			<p>&copy; Plan My Party 2018</p>
