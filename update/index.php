@@ -10,7 +10,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	</br>
 	Press the button below or refresh to update.
 	</p>
-	<button type="button" onclick="updatePage()" class="w3-button w3-pale-red">Update</button>
+	<button type="button" onclick="updatePage()" class="w3-button w3-theme-d1">Update</button>
 	<p>
 	<iframe src="update.php" class="w3-light-grey w3-threequarter w3-mobile">
 		<p>Your browser does not support iframes.</p>
