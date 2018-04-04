@@ -5,7 +5,7 @@ hr{
 }
 
 /* CSS for index_2.html navigation */
-.index nav .main_nav li, .second_nav li{
+nav .main_nav li, .second_nav li{
 	background-color: #ccf5ff;
 	padding: 1%;
 	display: inline;
@@ -23,21 +23,7 @@ hr{
 }
 
 /* CSS for index_2.html header */
-.index header img, h1, .options{
-	float: left;
-	margin: 0 10%;
-}
 
-.index header h1{
-	margin-top: 5%;
-}
-
-.index header .options p{
-	text-align: center;
-	padding: 20%;
-	border: 2px solid black;
-	background-color: #ccf5ff;
-}
 
 /* CSS for index_2.html slideshow section */
 .index .slideshow h2{
