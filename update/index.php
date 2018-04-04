@@ -2,7 +2,9 @@
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 ?>
 <!-- Set page title-->
-<title>Update | Plan My Party!</title>
+<script>
+	document.title = "Update | Plan My Party!";
+</script>
 
 <div class="w3-container" >
 	<h1> Update webpages from github repo </h1>

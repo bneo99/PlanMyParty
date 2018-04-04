@@ -2,7 +2,9 @@
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 ?>
 <!-- Set page title-->
-<title>Disclaimer | Plan My Party!</title>
+<script>
+	document.title = "Disclaimer | Plan My Party!";
+</script>
 
 <h1 class="">Disclaimer</h1>
 <ul>
