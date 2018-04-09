@@ -91,7 +91,7 @@
 				  if(html=='ok')
 				  {
 					$("#theme_status").html("Theme changed, refreshing page");
-					location.reload("true");
+					location.reload();
 				  }
 				  else
 				  {
