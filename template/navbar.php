@@ -9,6 +9,7 @@
 		<script src="/scripts/jquery-3.3.1.js"></script>
 		<link rel="stylesheet" href="/styles/styles.css"/>
 		<link rel="stylesheet" href="/styles/w3.css"/>
+		<link rel="stylesheet" href="/styles/w3-theme-indigo.css"/>
 		<link rel="stylesheet" id="theme" href="https://www.w3schools.com/lib/w3-theme-indigo.css"/>
 		
 		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>
@@ -141,7 +142,7 @@
 						<h2>Theme Picker</h2>
 						</header>
 					<div class="w3-container w3-theme-light w3-padding ">
-						<p>These are predefined themes from W3.</p>
+						<p>These are predefined themes from W3Schools.</p>
 						<p>	<select class="w3-select" form="selecttheme" id="themename" name="themename">
 								<option value="" selected disabled>Choose a theme</option>
 								<option value="red">Red</option>
