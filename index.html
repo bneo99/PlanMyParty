@@ -6,7 +6,7 @@
 	<meta name="author" content="Jason Ang Chia Wuen">
 	<meta name="description" content="Website for PMP">
 	<meta name="keywords" content="PMP, party">
-	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<link rel="stylesheet" type="text/css" href="index_style.css">
 	<title>Plan My Party Homepage</title>
 </head>
 
@@ -43,15 +43,33 @@
 	<hr>
 	
 	<article>
-		<section class="slideshow">
-			<h2>Your party-planning experts</h2>
-			<p>"From jolly birthday parties, to sweet marriage anniversaries or even unforgettable annual dinners; let us be the one to help you"</p>
-		</section>
-		
-		<hr>
-		
 		<section class="reviews">
 			<h2>Our happy customers</h2>
+			<div class="slideshow-container">
+
+			<div class="mySlides fade">
+				<img src="pictures/review_1.jpg">
+				<div class="text">"Was a very special party for me. Definently a solid 4 out of 5."</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="pictures/review_2.jpg">
+				<div class="text">"Had the best time of my life. Thank you PMP!!"</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="pictures/review_3.jpg">
+				<div class="text">"My girls and I enjoyed ourselves that night. 5 out of 5 for me."</div>
+			</div>
+
+			</div>
+			<br>
+
+			<div style="text-align:center">
+				<span class="dot"></span> 
+				<span class="dot"></span> 
+				<span class="dot"></span> 
+			</div>
 		</section>
 		
 		<hr>
@@ -127,6 +145,30 @@
 		
 		<p>&copy; 2018 <strong>PlanMyParty.com.</strong> Made in Malaysia. All Rights Reserved</p>
 	</footer>
+	
+	<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides,4000); // Change image every 4 seconds
+	}
+	
+	
+	</script>
 
 </body>
 
