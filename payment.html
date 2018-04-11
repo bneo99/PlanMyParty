@@ -6,45 +6,110 @@
 	<meta name="author" content="Jason Ang Chia Wuen">
 	<meta name="description" content="Website for PMP">
 	<meta name="keywords" content="PMP, party">
-	<link rel="stylesheet" type="text/css" href="mystyles.css">
+	<link rel="stylesheet" type="text/css" href="payment_style.css">
 	<title>Plan My Party Homepage</title>
 </head>
 
 <body class="payment">
-	<nav>
-		<ul class="main_nav">
-			<li>Pricing</li>
-			<li>My bookings</li>
-			<li>Review</li>
-			<li>About</li>
-			<li>Contact us</li>
-			<li>Work for us</li>
-		</ul>
-		
-		<ul class="second_nav">
-			<li>Colour themes</li>
-			<li>Log in / Sign up</li>
-		</ul>
-	</nav>
-	
-	<hr>
-	
 	<header>
-		<h2>Payment</h2>
+		<h1>Payment</h1>
 		<p>In PMP, we accept a deposit of 50% prior to the event for first time customers and 30% for regular customers.</p>
 	</header>
 	
 	<hr>
 	
 	<form name="payment_method" method="post" enctype="text/plain">
-		<p>Choose Payment Method:</p>
+	<fieldset>
+		<legend>Choose Payment Method:</legend>
 		
-		<p>Visa, MasterCard, PayPal</p>
+		<div class="payment_method1">
+		<img src="pictures/paypal.png" alt="paypal">
+		<p>PayPal<input type="radio" name="payment" value="paypal"></p>
+		</div>
 		
-		<p>Name on card:</p>
-		<input type="text" name="name">
+		<div class="payment_method2">
+		<img src="pictures/visa.png" alt="visa">
+		<p>Visa<input type="radio" name="payment" value="visa"></p>
+		</div>
 		
-
+		<div class="payment_method3">
+		<img src="pictures/mastercard.jpg" alt="mastercard">
+		<p>MasterCard<input type="radio" name="payment" value="mastercard"></p>
+		</div>
+		
+		<p>Name on card:<input type="text" name="card_name"></p>
+		
+		<p>Card Number:<input type="text" name="number"></p>
+		
+		<p>CW:<input type="text" name="CW"></p>
+		
+		<p>Expiry:<input type="date" name="expiry"></p>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Biling details:</legend>
+		
+		<p>Title:<select name="title">
+			<option value="mr">Mr</option>
+			<option value="ms">Ms</option>
+			<option value="sir">Sir</option>
+			<option value="dr">Dr</option>
+			<option value="madam">Madam</option>
+			<option value="duke">Duke</option>
+			<option value="duchess">Duchess</option>
+			<option value="earl">Earl</option>
+			<option value="count">Count</option>
+			<option value="countess">Countess</option>
+			<option value="lord">Lord</option>
+			<option value="high_chancellor">High Chancellor</option>
+			</select>
+		</p>
+		</p>
+		
+		<p>First name:<input type="text" name="first_name"></p>
+		
+		<p>Last name:<input type="text" name="last_name"></p>
+		
+		<p>Address:<input type="text" name="address"></p>
+		
+		<p>City:<input type="text" name="city"></p>
+		
+		<p>Postcode:<input type="text" name="postcode"></p>
+		
+		<p>State:<select name="state">
+			<option value="sarawak">Sarawak</option>
+			<option value="sabah">Sabah</option>
+			<option value="penang">Penang</option>
+			<option value="selangor">Selangor</option>
+			<option value="johor">Johor</option>
+			<option value="malacca">Malacca</option>
+			<option value="perak">Perak</option>
+			<option value="kedah">Kedah</option>
+			<option value="pahang">Pahang</option>
+			<option value="kelantan">Kelantan</option>
+			<option value="terengganu">Terengganu</option>
+			<option value="negeri_9">Negeri Sembilan</option>
+			<option value="perlis">Perlis</option>
+			</select>
+		</p>
+		
+		<p>Mobile number:<input type="text" name="mobile_num"></p>
+		
+		<p><input type="checkbox" name="informed" value="yes">Yes, I want to be contacted when needed</p>
+		
+		<p>Email address:<input type="email" name="email"></p>
+		
+		<p>Confirm email address:<input type="email" name="confirm_email"></p>
+		
+	</fieldset>
+	
+	<h2>Terms & Conditions</h2>
+	<p>PMP is not responsible for any damage that may occur during the party planning process. This also includes the time when the party is being conducted. Any claim financially towards PMP will be rejected immediately without reason. If attempt to threaten, PMP will attempt to sue the prosecutor without hesitation. Your understanding is highly appreciated.</p>
+	<p><input type="checkbox" name="t&c" value="read">Yes, I have read the terms and conditions.</p>
+	
+	<input type="reset" value="Cancel booking">
+	
+	<input type="submit" value="Proceed">
 </body>
 
 </html>
