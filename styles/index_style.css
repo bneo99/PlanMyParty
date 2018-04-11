@@ -1,0 +1,133 @@
+
+/* CSS for index.php
+ todo: cleanup, merge into styles.css
+ */
+
+/* CSS for index_2.html navigation */
+nav .main_nav li, .second_nav li{
+	background-color: #ccf5ff;
+	padding: 1%;
+	display: inline;
+	margin: 0 1%;
+	margin-bottom: 1%;
+	border: 2px solid black;
+}
+
+nav .main_nav li{
+	float: left;
+}
+
+nav .second_nav li{
+	float: right;
+}
+
+/* CSS for index_2.html reviews section */
+.reviews h2{
+	text-align: center;
+}
+
+.reviews img{
+	max-height: 400px;
+}
+
+.slideshow-container{
+	text-align: center;
+}
+
+/* Caption text */
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  height:100%;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* CSS for index_2.html pax selection section */
+.pax_selection h2{
+	text-align: center;
+}
+
+.pax_selection .pax_1, .pax_2, .pax_3{
+	float: left;
+	text-align: center;
+	margin: 0 6%;
+}
+
+/* CSS for index_2.html partners section */
+.partners h2, .partners p{
+	text-align: center;
+}
+
+.partners img{
+	width: 200px;
+	float: left;
+	margin: 3% 3.2%;
+}
+
+.partners .seventh_pic{
+	clear: left;
+}
+
+.sponsorlogo{
+	max-height:200px;
+}
+
+.slides{
+	max-height:300px;
+	width:auto;
+}
+
+
+/* CSS for index_2.html footer */
+footer .social{
+	float: left;
+}
+
+footer .social p{
+	margin-left: 1%;
+}
+
+footer .social img{
+	width: 5%;
+	margin: 0 1%;
+}
+
+footer ul{
+	float: right;
+}
+
+footer ul li{
+	list-style-type: none;
+	margin: 10% 0;
+}
+
+footer p{
+	clear: both;
+}
