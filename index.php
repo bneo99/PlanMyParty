@@ -10,7 +10,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	pageCss.id = 'pagecss';
 	pageCss.rel = 'stylesheet';
 	pageCss.type = 'text/css';
-	pageCss.href = '/index_style.css';
+	pageCss.href = '/styles/index_style.css';
 	pageCss.media = 'all';
 	head.appendChild(pageCss);
 	
