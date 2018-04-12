@@ -10,7 +10,7 @@
 	<title>Plan My Party Homepage</title>
 </head>
 
-<body class="payment">
+<body>
 	<header>
 		<h1>Payment</h1>
 		<p>In PMP, we accept a deposit of 50% prior to the event for first time customers and 30% for regular customers.</p>
@@ -22,28 +22,18 @@
 	<fieldset>
 		<legend>Choose Payment Method:</legend>
 		
-		<div class="payment_method1">
-		<img src="pictures/paypal.png" alt="paypal">
-		<p>PayPal<input type="radio" name="payment" value="paypal"></p>
-		</div>
+
+			<p><label for="paypal">PayPal</label><input id="paypal" type="radio" name="payment" value="paypal">,<label for="visa">Visa</label><input id="visa" type="radio" name="payment" value="visa">or <label for="mastercard">MasterCard</label><input id="mastercard" type="radio" name="payment" value="mastercard">
+
 		
-		<div class="payment_method2">
-		<img src="pictures/visa.png" alt="visa">
-		<p>Visa<input type="radio" name="payment" value="visa"></p>
-		</div>
+
+			<p>Name on card:<input type="text" name="card_name"></p>
+			<p>Card Number:<input type="text" name="number"></p>
+
 		
-		<div class="payment_method3">
-		<img src="pictures/mastercard.jpg" alt="mastercard">
-		<p>MasterCard<input type="radio" name="payment" value="mastercard"></p>
-		</div>
-		
-		<p>Name on card:<input type="text" name="card_name"></p>
-		
-		<p>Card Number:<input type="text" name="number"></p>
-		
-		<p>CW:<input type="text" name="CW"></p>
-		
-		<p>Expiry:<input type="date" name="expiry"></p>
+
+			<p>CW:<input type="text" name="CW"></p>
+			<p>Expiry:<input type="date" name="expiry"></p>
 	</fieldset>
 	
 	<fieldset>
@@ -103,13 +93,14 @@
 		
 	</fieldset>
 	
-	<h2>Terms & Conditions</h2>
-	<p>PMP is not responsible for any damage that may occur during the party planning process. This also includes the time when the party is being conducted. Any claim financially towards PMP will be rejected immediately without reason. If attempt to threaten, PMP will attempt to sue the prosecutor without hesitation. Your understanding is highly appreciated.</p>
-	<p><input type="checkbox" name="t&c" value="read">Yes, I have read the terms and conditions.</p>
+	<div class="tnc">
+		<h2>Terms & Conditions</h2>
+		<p>PMP is not responsible for any damage that may occur during the party planning process. This also includes the time when the party is being conducted. Any claim financially towards PMP will be rejected immediately without reason. If attempt to threaten, PMP will attempt to sue the prosecutor without hesitation. Your understanding is highly appreciated.</p>
+		<p><input type="checkbox" name="t&c" value="read">Yes, I have read the terms and conditions.</p>
+	</div>
 	
-	<input type="reset" value="Cancel booking">
-	
-	<input type="submit" value="Proceed">
+	<p><input type="submit" value="Proceed"><input type="reset" value="Cancel booking"></p>
+	</form>
 </body>
 
 </html>
