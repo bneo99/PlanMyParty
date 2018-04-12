@@ -16,7 +16,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 
-	<div class="w3-container w3-theme-d3">
+	<div id="header" class="w3-container w3-theme-d3">
 		<img src="pictures/logo.png" alt="Company Logo" class="w3-image">
 		
 		<h1>Plan My Party</h1>
@@ -27,8 +27,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		</div>
 	</div>
 	
-	<section class="w3-container w3-padding-16 w3-theme-l4" >
-	<div class="w3-display-container reviews" style="margin:auto; max-width:700px;">
+	<section id="review" class="w3-container w3-padding-16 w3-theme-l4" >
+	<div id="slideshow-container" class="w3-display-container reviews" style="margin:auto; max-width:700px;">
 		<h2>Our happy customers</h2>
 		
 		<button class="w3-button w3-theme w3-display-topleft" onclick="changeSlide(-1)">&#10094;</button>

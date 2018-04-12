@@ -5,55 +5,37 @@ hr{
 	clear: both;
 }
 
-/* CSS for index_2.html navigation */
-nav .main_nav li, .second_nav li{
-	background-color: #ccf5ff;
-	padding: 1%;
-	display: inline;
-	margin: 0 1%;
-	margin-bottom: 1%;
-	border: 2px solid black;
-}
-
-.index nav .main_nav li{
-	float: left;
-}
-
-.index nav .second_nav li{
-	float: right;
-}
-
 /* CSS for index_2.html header */
-.index header{
+#header{
 	padding-bottom: 5%;
 }
 
-.index header img{
+#header img{
 	position: absolute;
 	left: 0;
 	width: 10%;
 	min-width: 150px;
 }
 
-.index header h1{
+#header h1{
 	text-align: center;
 }
 
-.index header .options{
+#header .options{
 	float: right;
 }
 
 /* CSS for index_2.html reviews section */
-.index .reviews h2{
+#review h2{
 	text-align: center;
 }
 
-.index .reviews img{
+#review img{
 	width: 50%;
 	max-height: 400px;
 }
 
-.slideshow-container{
+#slideshow-container{
 	text-align: center;
 }
 
@@ -102,59 +84,32 @@ nav .main_nav li, .second_nav li{
 }
 
 /* CSS for index_2.html pax selection section */
-.index .pax_selection h2{
+.pax_selection h2{
 	text-align: center;
 }
 
-.index .pax_selection .pax_1, .pax_2, .pax_3{
+.pax_selection .pax_1, .pax_2, .pax_3{
 	float: left;
 	text-align: center;
 	margin: 0 6%;
 }
 
 /* CSS for index_2.html partners section */
-.index .partners h2, .index .partners p{
+.partners h2, .index .partners p{
 	text-align: center;
 }
 
-.index .partners img{
+.partners img{
 	width: 10%;
 	float: left;
 	margin: 3% 3.2%;
 }
 
-.index .partners .seventh_pic{
+.partners .seventh_pic{
 	clear: left;
 }
 
-.index .partners span img{
+.partners span img{
 	float: left;
 	margin: 3% 5%;
-}
-
-/* CSS for index_2.html footer */
-.index footer .social{
-	float: left;
-}
-
-.index footer .social p{
-	margin-left: 1%;
-}
-
-.index footer .social img{
-	width: 5%;
-	margin: 0 1%;
-}
-
-.index footer ul{
-	float: right;
-}
-
-.index footer ul li{
-	list-style-type: none;
-	margin: 10% 0;
-}
-
-.index footer p{
-	clear: both;
 }
