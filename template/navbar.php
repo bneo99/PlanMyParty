@@ -7,10 +7,6 @@
 		<meta name="robots" content="noindex nofollow"/>
 		<script src="/scripts/default.js"></script>
 		<script src="/scripts/jquery-3.3.1.js"></script>
-		<link rel="stylesheet" href="/styles/styles.css"/>
-		<link rel="stylesheet" href="/styles/w3.css"/>
-		<link rel="stylesheet" href="/styles/w3-theme-indigo.css"/>
-		<link rel="stylesheet" id="theme" href="https://www.w3schools.com/lib/w3-theme-indigo.css"/>
 		
 		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>
 		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png"/>
@@ -29,6 +25,11 @@
 		<meta name="msapplication-TileColor" content="#ffffff"/>
 		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png"/>
 		<meta name="theme-color" content="#ffffff"/>
+		
+		<link rel="stylesheet" href="/styles/styles.css"/>
+		<link rel="stylesheet" href="/styles/w3.css"/>
+		<link rel="stylesheet" href="/styles/w3-theme-indigo.css"/>
+		<link rel="stylesheet" id="theme" href="https://www.w3schools.com/lib/w3-theme-indigo.css"/>
 	</head>
 	<body>
 	
@@ -40,7 +41,7 @@
 				<a href="/" class="w3-bar-item w3-button">Home</a>
 				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
-				<a href="/review" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Review</a>
+				<a href="/reviews" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Reviews</a>
 				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">About</a>
 				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Contact Us</a>
 				<a href="/disclaimer" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Disclaimer</a>
@@ -73,7 +74,7 @@
 			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large">
 				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
-				<a href="/review" class="w3-bar-item w3-button">Review</a>
+				<a href="/reviews" class="w3-bar-item w3-button">Reviews</a>
 				<a href="/aboutus" class="w3-bar-item w3-button">About</a>
 				<a href="/contactus" class="w3-bar-item w3-button">Contact Us</a>
 				<a href="/disclaimer" class="w3-bar-item w3-button">Disclaimer</a>
