@@ -17,7 +17,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 </script>
 
 	<div id="header" class="w3-container w3-theme-d3">
-		<img src="pictures/logo.png" alt="Company Logo" class="w3-image">
+		<img src="images/logo.png" alt="Company Logo" class="w3-image">
 		
 		<h1>Plan My Party</h1>
 		
@@ -40,17 +40,17 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<div class="slideshow-container w3-black">
 
 			<div class="w3-display-container mySlides fade">
-				<img src="pictures/review_1.jpg" class="w3-image slides">
+				<img src="images/review_1.jpg" class="w3-image slides">
 				<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">"Was a very special party for me. Definently a solid 4 out of 5."</div>
 			</div>
 
 			<div class="w3-display-container mySlides fade">
-				<img src="pictures/review_2.jpg" class="w3-image slides">
+				<img src="images/review_2.jpg" class="w3-image slides">
 				<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">"Had the best time of my life. Thank you PMP!!"</div>
 			</div>
 
 			<div class="w3-display-container mySlides fade">
-				<img src="pictures/review_3.jpg" class="w3-image slides">
+				<img src="images/review_3.jpg" class="w3-image slides">
 				<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">"My girls and I enjoyed ourselves that night. 5 out of 5 for me."</div>
 			</div>
 		</div>
@@ -63,15 +63,15 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			
 			<span class="w3-button pax_1">
 
-			<img src="pictures/pax_1.jpg" alt="Simple Plan Image" class="w3-image">
+			<img src="images/pax_1.jpg" alt="Simple Plan Image" class="w3-image">
 			<p>Simple (10-15 pax)</p>
 			</span>
 			<span class="w3-button pax_2">
-			<img src="pictures/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
+			<img src="images/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
 			<p>Regular (16-10 pax)</p>
 			</span>
 			<span class="w3-button pax_3">
-			<img src="pictures/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
+			<img src="images/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
 			<p>Extravagant (>30 pax)</p>
 			</span>
 	</div>
@@ -80,19 +80,19 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<h2>Our partners</h2>
 		<p>The backbone of our services</p>
 		
-		<img src="pictures/sponsor_1.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_2.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_3.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_4.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_5.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_6.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/mobydick.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/foursquares.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/gentinghighlands.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/redridinghood.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/toysrus.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/rotiboy.png" alt="Logo of third party company" class="w3-image sponsorlogo">
 		
 
-		<img src="pictures/sponsor_7.png" alt="Logo of third party company" class="w3-image seventh_pic sponsorlogo">
-		<img src="pictures/sponsor_8.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_9.png" alt="Logo of third party company" class="w3-image sponsorlogo">
-		<img src="pictures/sponsor_10.png" alt="Logo of third party company" class="w3-image sponsorlogo sponsorlogo">
-		<img src="pictures/sponsor_11.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/chickenriceshop.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/pepsi.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/sunway.png" alt="Logo of third party company" class="w3-image sponsorlogo">
+		<img src="images/cocacola.png" alt="Logo of third party company" class="w3-image sponsorlogo sponsorlogo">
+		<img src="images/jamiesequipments.png" alt="Logo of third party company" class="w3-image sponsorlogo">
 
 	</div>
 	
