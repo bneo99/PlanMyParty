@@ -1,0 +1,11 @@
+article a{
+	color: #0000e6;
+}
+
+article a:hover{
+	color: #ffcc99;
+}
+
+article a:active{
+	color: #ff3333;
+}
