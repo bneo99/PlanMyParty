@@ -157,17 +157,6 @@
 								<option value="teal">Teal</option>
 								<option value="green">Green</option>
 								<option value="light-green">Light Green</option>
-								<option value="lime">Lime</option>
-								<option value="khaki">Khaki</option>
-								<option value="yellow">Yellow</option>
-								<option value="amber">Amber</option>
-								<option value="orange">Orange</option><option value="deep-orange">Deep Orange</option>
-								<option value="blue-grey">Blue Grey</option>
-								<option value="brown">Brown</option>
-								<option value="grey">Grey</option>
-								<option value="dark-grey">Dark Grey</option>
-								<option value="black">Black</option>
-								<option value="w3schools">W3Schools</option>
 							</select> 
 						</p>
 						<p id="theme_status"></p>

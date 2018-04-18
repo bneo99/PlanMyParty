@@ -62,7 +62,7 @@
 				  if(html=='true')
 				  {
 					document.getElementById('loginbox').style.display='none';
-					location.reload(true);
+					location.reload();
 				  }
 				  else
 				  {

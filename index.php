@@ -8,8 +8,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 </script>
 
 <div id="header" class="w3-container w3-theme-l5">
-	<img src="images/logo.png" alt="Company Logo" class="w3-image">
-	
+	<img src="/images/logo.png" alt="PMP Logo" align="middle" class="w3-image" style="max-height:400px;"/>
 	<h1>Plan My Party</h1>
 </div>
 
@@ -52,7 +51,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		</span>
 		<span class="w3-button">
 		<img src="/images/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
-		<p>Regular (16-10 pax)</p>
+		<p>Regular (16-30 pax)</p>
 		</span>
 		<span class="w3-button">
 		<img src="/images/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
