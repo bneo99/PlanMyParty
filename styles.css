@@ -9,3 +9,10 @@ article a:hover{
 article a:active{
 	color: #ff3333;
 }
+
+#update{
+	visibility: hidden;
+	margin-top: 1%;
+	border: 1px solid black;
+	background-color: white;
+}
