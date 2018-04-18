@@ -7,23 +7,15 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 
-<div id="header" class="w3-container w3-theme-d3">
+<div id="header" class="w3-container w3-theme-l5">
 	<img src="images/logo.png" alt="Company Logo" class="w3-image">
 	
 	<h1>Plan My Party</h1>
-	
-	<div class="options">
-		<p>Our Packages</p>
-		<p>Customise Events</p>
-	</div>
 </div>
 
 <section id="review" class="w3-container w3-padding-16 w3-theme-l4" >
 <div class="w3-display-container" style="margin:auto; max-width:700px;">
 	<h2>Our happy customers</h2>
-	
-	<button class="w3-button w3-theme w3-display-topleft" onclick="changeSlide(-1)">&#10094;</button>
-	<button class="w3-button w3-theme w3-display-topright" onclick="changeSlide(+1)">&#10095;</button>
 	
 	<!-- todo: change slideshow stuff to directly replace the pics, reviews so the height doesnt change everything the pic has different aspect ratio 
 	
@@ -44,6 +36,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<img src="/images/review_3.jpg" class="w3-image slides">
 			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">"My girls and I enjoyed ourselves that night. 5 out of 5 for me."</div>
 		</div>
+		<button class="w3-button w3-theme w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
+		<button class="w3-button w3-theme w3-display-right" onclick="changeSlide(+1)">&#10095;</button>
 	</div>
 </div>
 </section>
