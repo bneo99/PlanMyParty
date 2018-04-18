@@ -44,8 +44,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<div class="w3-panel w3-margin w3-theme-l3 w3-padding-16">
 	<h2>Social platforms</h2>
 	<p><a href="https://www.facebook.com/" target="_blank">Facebook</a></p>
-	<p><a href="https://www.instagram.com/?hl=en" target="_blank">Instagram</p>
-	<p><a href="https://twitter.com/?lang=en" target="_blank">Twitter</p>
+	<p><a href="https://www.instagram.com/?hl=en" target="_blank">Instagram</a></p>
+	<p><a href="https://twitter.com/?lang=en" target="_blank">Twitter</a></p>
 	</div>
 	</div>
 </article>
