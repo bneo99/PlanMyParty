@@ -20,7 +20,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 	<div style="margin-left: 10%; margin-right: 10%;">
 	<header style="text-align: center;">
-		<img class="w3-image w3-mobile" src="../pictures/logo.png" alt="Logo of PMP" style="width: 30%; max-width: 500px;">
+		<img class="w3-image w3-mobile" src="/images/logo.png" alt="Logo of PMP" style="width: 30%; max-width: 500px;">
 		<h1>About Plan My Party (PMP)</h1>
 	</header>
 		

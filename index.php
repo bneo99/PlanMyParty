@@ -7,12 +7,10 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 
-<div id="header" class="w3-container w3-theme-l5">
-	<img src="/images/logo.png" alt="PMP Logo" align="middle" class="w3-image" style="max-height:400px;"/>
-	<h1>Plan My Party</h1>
+<div class="w3-container w3-padding-16">
+<img src="/images/logo.png" alt="PMP Logo" align="center" class="w3-image" style="text-align:center;"/>
 </div>
-
-<section id="review" class="w3-container w3-padding-16 w3-theme-l4" >
+<section id="review" class="w3-container w3-padding-16 w3-theme-l4">
 <div class="w3-display-container" style="margin:auto; max-width:700px;">
 	<h2>Our happy customers</h2>
 	

@@ -17,7 +17,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <!-- this is supposed to read from database but we havent have the booking stuff setup so meh 
 TODO: 
 - read price from database
-- check for new customers (less than 5 parties)
+- check for new customers (never booked)
+- or just ditch the backend coz whats important is the UI
 -->
 <div class="w3-container w3-padding-16 w3-theme-d4">
 	<h3>Total amount: RM 100.00</h3>
@@ -31,6 +32,7 @@ TODO:
 <form name="payment_details" class="" method="post">
 <div class="w3-container w3-padding-16 w3-theme-l4">
 	<h4>Choose Payment Method</h4>
+	Click on your preferred payment method
 	
 	<div class="w3-bar">
 	<button type="button" onClick="openPayWith('paypal')" class="w3-bar-item w3-button w3-theme-l3">
@@ -159,6 +161,9 @@ function openPayWith(paymentMethod){
 <style>
 .paymentlogo {
 	height:25px;
+}
+input, select {
+	max-width:15cm;
 }
 </style>
 
