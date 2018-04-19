@@ -38,9 +38,18 @@
 		<nav>
 			<div id="topbar" class="w3-bar w3-theme">
 				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large" onclick="showHideByID('navbar')">&#9776;</a>
-				<a href="/" class="w3-bar-item w3-button">Home</a>
+				<a href="/" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Home</a>
+				<?php if(empty($_SESSION['accType'])){?>
 				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
+				<?php }
+				elseif($_SESSION['accType'] == "admin"){?>
+				<a href="/admin" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Admin Dashboard</a>
+				<?php }
+				else {?>
+				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
+				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
+				<?php }?>
 				<a href="/reviews" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Reviews</a>
 				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">About</a>
 				<a href="/contactus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Contact Us</a>
@@ -72,8 +81,18 @@
 			</div> 
 			
 			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large">
+				<a href="/" class="w3-bar-item w3-button">Home</a>
+				<?php if(empty($_SESSION['accType'])){?>
 				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
 				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
+				<?php }
+				elseif($_SESSION['accType'] == "admin"){?>
+				<a href="/admin" class="w3-bar-item w3-button">Admin Dashboard</a>
+				<?php }
+				else {?>
+				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
+				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
+				<?php }?>
 				<a href="/reviews" class="w3-bar-item w3-button">Reviews</a>
 				<a href="/aboutus" class="w3-bar-item w3-button">About</a>
 				<a href="/contactus" class="w3-bar-item w3-button">Contact Us</a>

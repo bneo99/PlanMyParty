@@ -37,7 +37,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<td>000002</td>
 	<td>Anne</td>
 	<td>Josh's Birthday Party</td>
-	<td>10%</td>
+	<td>Waiting for deposit</td>
 	<td><a href="#">Update Progress</a></td>
 </tr>
 <tr>

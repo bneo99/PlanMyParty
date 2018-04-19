@@ -32,8 +32,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <tr>
 	<td>000002</td>
 	<td>Josh's Birthday Party</td>
-	<td>10%</td>
-	<td><a href="#">Check Progress</a> <a href="#">Amend</a> <a href="#">Cancel</a></td>
+	<td>Waiting for deposit</td>
+	<td><a href="/bookings/payment.php">Pay Deposit</a> <a href="#">Amend</a> <a href="#">Cancel</a></td>
 </tr>
 <tr>
 	<td>000001</td>
