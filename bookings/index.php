@@ -22,6 +22,9 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <h1>My Bookings</h1>
 </div>
 
+<div class="w3-container w3-theme-l4">
+<h2>Current Orders</h2>
+
 <table class="w3-table w3-theme-l3 w3-striped w3-bordered w3-border">
 <tr>
 	<th>Order Number</th>
@@ -33,14 +36,13 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<td>000002</td>
 	<td>Josh's Birthday Party</td>
 	<td>Waiting for deposit</td>
-	<td><a href="/bookings/payment.php">Pay Deposit</a> <a href="#">Amend</a> <a href="#">Cancel</a></td>
+	<td><a href="/bookings/payment.php">Pay Deposit</a> <a href="/bookings/amend.php">Amend</a> <a href="/bookings/cancel.php">Cancel</a></td>
 </tr>
 <tr>
 	<td>000001</td>
 	<td>party</td>
 	<td>50%</td>
-	<td><a href="#">Check Progress</a> <a href="#">Amend</a> <a href="#">Cancel</a></td>
-</tr>
+	<td><a href="/bookings/progress.php">Check Progress</a> <a href="/bookings/amend.php">Amend</a> <a href="/bookings/cancel.php">Cancel</a></td>
 </table>
 </div>
 

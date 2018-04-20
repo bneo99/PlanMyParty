@@ -38,14 +38,14 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<td>Anne</td>
 	<td>Josh's Birthday Party</td>
 	<td>Waiting for deposit</td>
-	<td><a href="#">Update Progress</a></td>
+	<td><a href="/admin/progress.php">Update Progress</a></td>
 </tr>
 <tr>
 	<td>000001</td>
 	<td>John</td>
 	<td>party</td>
 	<td>50%</td>
-	<td><a href="#">Update Progress</a></td>
+	<td><a href="/admin/progress.php">Update Progress</a></td>
 </tr>
 </table>
 </div>
