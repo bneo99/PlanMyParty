@@ -24,18 +24,18 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<th>Action</th>
 </tr>
 <tr>
-	<td>000002</td>
+	<td>2</td>
 	<td>Anne</td>
 	<td>Josh's Birthday Party</td>
 	<td>Waiting for deposit</td>
-	<td><a href="/admin/progress.php">Update Progress</a></td>
+	<td><a href="/admin/progress.php?ordernum=2">Update Progress</a></td>
 </tr>
 <tr>
-	<td>000001</td>
+	<td>1</td>
 	<td>John</td>
 	<td>party</td>
 	<td>50%</td>
-	<td><a href="/admin/progress.php">Update Progress</a></td>
+	<td><a href="/admin/progress.php?ordernum=1">Update Progress</a></td>
 </tr>
 </table>
 </div>
