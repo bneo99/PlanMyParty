@@ -13,11 +13,13 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<h1>Confirm Your Order</h1>
 	<p style="text-align:center;">
 	Please read our Terms of Service before you confirm your order.</p>
-	<p style="text-align:center;">
+	<p class="showfornewcustomers" style="text-align:center;">
 	This will not show up anymore on your future orders. No one has time to read this.</p>
 </header>
 
-<div class="w3-container w3-padding-16 w3-theme-l4">
+<div class="w3-theme-l4">
+	<button type="button" onclick="showHideByID('tos')" class="w3-button w3-block w3-theme-l3 showfornewcustomers">View Terms of Service</button>
+	<div id="tos" class="w3-container w3-padding-16 w3-hide">
 	<h2>Terms of Service</h2>
 	<h3 style="text-align:left;">AGREEMENT TO TERMS</h3>
 	<p style="text-align:justify;">These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Plan My Party (“we,” “us” or “our”), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Service. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
@@ -37,11 +39,11 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 	<h3 style="text-align:left;">USER REGISTRATION</h3>
  
-	<p style="text-align:justify;">You may be required to register with the Site. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable.
+	<p style="text-align:justify;">You may be required to register with the Site. You agree to keep your password confidential and will be responsible for all use of your account and password. We reserve the right to remove, reclaim, or change a username you select if we determine, in our sole discretion, that such username is inappropriate, obscene, or otherwise objectionable.</p>
  
 	<h3 style="text-align:left;">PROHIBITED ACTIVITIES</h3>
  
-	<p style="text-align:justify;">You may not access or use the Site for any purpose other than that for which we make the Site available. The Site may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.
+	<p style="text-align:justify;">You may not access or use the Site for any purpose other than that for which we make the Site available. The Site may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
  
 	<p style="text-align:justify;">As a user of the Site, you agree not to:
 
@@ -55,7 +57,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<li>Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Site to you. </li>
 	<li>Copy or adapt the Site’s software, including but not limited to Flash, PHP, HTML, JavaScript, or other code. </li>
 	</ol>
-
+	</p>
+	
 	<h3 style="text-align:left;">GUIDELINES FOR REVIEWS</h3>
  
 	<p style="text-align:justify;">We may provide you areas on the Site to leave reviews or ratings. When posting a review, you must comply with the following criteria: (1) you should have firsthand experience with the person/entity being reviewed; (2) your reviews should not contain offensive profanity, or abusive, racist, offensive, or hate language; (3) your reviews should not contain discriminatory references based on religion, race, gender, national origin, age, marital status, sexual orientation, or disability; (4) your reviews should not contain references to illegal activity; (5) you should not be affiliated with competitors if posting negative reviews; (6) you should not make any conclusions as to the legality of conduct; (7) you may not post any false or misleading statements; and (8) you may not organize a campaign encouraging others to post reviews, whether positive or negative. </p>
@@ -78,13 +81,13 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
  
 	<h3 style="text-align:left;">MODIFICATIONS AND INTERRUPTIONS</h3>
  
-	<p style="text-align:justify;">We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Site. We also reserve the right to modify or discontinue all or part of the Site without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Site.  </p>
+	<p style="text-align:justify;">We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Site. We also reserve the right to modify or discontinue all or part of the Site without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Site. </p>
  
 	<p style="text-align:justify;">We cannot guarantee the Site will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Site, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Site at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Site during any downtime or discontinuance of the Site. Nothing in these Terms of Service will be construed to obligate us to maintain and support the Site or to supply any corrections, updates, or releases in connection therewith.</p>
  
 	<h3 style="text-align:left;">GOVERNING LAW </h3>
  
-	<p style="text-align:justify;">These Terms of Service and your use of the Site are governed by and construed in accordance with the laws of Malaysia applicable to agreements made and to be entirely performed within Malaysia, without regard to its conflict of law principles.  </p>
+	<p style="text-align:justify;">These Terms of Service and your use of the Site are governed by and construed in accordance with the laws of Malaysia applicable to agreements made and to be entirely performed within Malaysia, without regard to its conflict of law principles. </p>
  
 	<h3 style="text-align:left;">DISPUTE RESOLUTION</h3>
  
@@ -148,9 +151,12 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	Asia, Earth, Sol System <br/>
 	Orion Spur, Milky Way <br/>
 	Virgo Supercluster  <br/>
-	The Universe  <br/>
-	/s
+	The Universe 
 	</p>
+	
+	</div>
+</div>
+<div class="w3-container w3-padding-16 w3-theme-l4">
 	<form>
 	<input type="checkbox" name="tnc" class="w3-check" required="required" ><label> Yes, I have read the Terms of Service.</label>
 
@@ -161,14 +167,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	</p>
 	</form>
 </div>
-
-<script>
-
-</script>
-
-<style>
-
-</style>
 
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';
