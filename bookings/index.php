@@ -6,16 +6,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	/* modify this to change the title */
 	document.title = "My Bookings | Plan My Party!";
 	
-	/* modify the href to link to whatever css you want */
-/* 	var head = document.getElementsByTagName('head')[0];
-	var pageCss = document.createElement('link');
-	pageCss.id = 'pagecss';
-	pageCss.rel = 'stylesheet';
-	pageCss.type = 'text/css';
-	pageCss.href = '/index_style.css';
-	pageCss.media = 'all';
-	head.appendChild(pageCss); */
-	
 </script>
 
 <div class="w3-container w3-theme-l3">
