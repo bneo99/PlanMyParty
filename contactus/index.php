@@ -18,7 +18,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 <article>
-	<div style="margin-left: 10%; margin-right: 10%;">
+	<div>
 	<h1 style="text-align:center;">Contact Us</h1>
 	
 	<div class="w3-panel w3-margin w3-theme-l3 w3-padding-16">
