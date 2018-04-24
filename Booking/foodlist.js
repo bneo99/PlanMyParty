@@ -21,7 +21,7 @@ function venue()
 	
 	if (dar.selected == true)
 	{
-		rec.style.display = "none"";
+		rec.style.display = "none";
     } 
 	
 	else
