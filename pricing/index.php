@@ -17,11 +17,13 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	head.appendChild(pageCss);
 	
 </script>
-	<h1>Let's Start Customising !</h1>
-	
+
+<h1>Let's Start Customising !</h1>
+	<div class="parallax2"></div>
+<div class="parallax">	
 	<hr>
 	
-	<form name="booking" method="post" action="mailto:100088828@students.swinburne.edu.my" enctype="text/plain">
+	<form name="booking" method="post" action="#" enctype="text/plain">
 	<p>First off, what's the occasion?</p>
 	<br>
 	<p>
@@ -31,22 +33,27 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<br>
 	<p>Now, what theme would fit the party?</p>
 	<div>
-		<p><img src="theme/cartoon.jpg" alt="This is the CARTOON THEME"></p>
-		<p><img src="theme/nautical.jpg" alt="This is the NAUTICAL THEME"></p>
-		<p><img src="theme/adult.jpg" alt="This is the ADULT THEME"></p>
-		<p><img src="theme/baby.jpg" alt="This is the BABY THEME"></p>
-		<p><img src="theme/carnival.jpg" alt="This is the CARNIVAL THEME"></p>
-		<p><img src="theme/decade.jpg" alt="This is the DECADE THEME"></p>
-		<p><img src="theme/destination.jpg" alt="This is the DESTINATION THEME"></p>
-		<p><img src="theme/homecoming.jpg" alt="This is the HOMECOMING THEME"></p>
+		<p><img class="w3-btn" src="theme/1.jpg" alt="Masquerade Party"></p>
+		<p><img class="w3-btn" src="theme/2.jpg" alt="Pajamas Party"></p>
+		<p><img class="w3-btn" src="theme/3.jpg" alt="Costume Party"></p>
+		<p><img class="w3-btn" src="theme/4.jpg" alt="Casual party"></p>
+		<p><img class="w3-btn" src="theme/5.jpg" alt="Formal party"></p>
+		<p><img class="w3-btn" src="theme/6.jpg" alt="Kids party (Boys)"></p>
+		<p><img class="w3-btn" src="theme/7.jpg" alt="Kids party (Girls)"></p>
+	</div>
 	</div>
 	<hr>
+	<div class="parallax3"></div>
+	<div class="parallax">
 	<p>Hmmm, let's see how many paople you are partying with ...</p>
 	<br>
 	<p>
 		<label for="guest">Number of guests:</label>
 		<input type="text" name="guest" id="guest" size="4" required="required">	
 	</p>
+</div>
+<div class="parallax4"></div>
+	<div class="parallax">
 	<div id="center">
 	<div id="location">
 		<ul class="images">
@@ -59,193 +66,401 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	</div>
 <br/>
 		<table align="center">
+		
 			<tr>
-				<td><input type="radio" name="gender" value="m"/>Use recomemended venues</td>
-				<td><input type="radio" name="gender" value="f"/>Use custom venue</td>
+				<td><input type="radio" name="venue" class="ven"/>Use recomemended venues</td>
+				<td><input type="radio" name="venue" class="ren"/>Use custom venue</td>
 			</tr>
 			<tr>
-				<td>
+				<td id="text" style="display: none">
 				<select>
 						<option>Select</option>
-					<option value="1">Shirt</option>
-					<option value="2">Pant</option>
-					<option value="3">dhoti</option>
+					<option value="Zinc Restaurant">Zinc Restaurant</option>
+					<option value="De Jackie">De Jackie</option>
 						</select>
 				</td>
 				<td></td>
 			</tr>
 		</table>
-	<hr/>
+</div>
+<br/>
 	<p>Do not like our recommendations?</p>
+	<br/>
 	<p>Choose your own!</p>
-
+</br>
 	
-	<p><label for="venue">My own venue's address:</label><input id="venue" type="text" placeholder="No.####, Jalan ########, Poskod, Kuching, Sarawak, Malaysia" size="60">
+	<p><label for="venue">My own venue's address : </label><input id="venue" type="text" placeholder="No.####, Jalan ########, Poskod, Kuching, Sarawak, Malaysia" size="60">
 	
 	<br/>
 	
 	<hr/>
-	
+</form>
+</div>
+<div class="parallax5"></div>
+	<div class="parallax">
 	<p>Time to choose what you would like to eat</p>
 	
 	<br/>
 	
-	<p>Would you like to make things simple by:</p>
-	
-	<p><input type="radio">choosing a food package</p>
-	
-	<p>OR</p>
-	
-	<p><input type="radio">hand-pick the items</p>
-	
-	<p>Food Packages</p>
-	<p>[Lights up when the first option is chosen]</p>
-	
-	
-	<div id="center">
-	<div id="right">
-		<ul class="images">
-				<li><img src="food/1.jpg"></li>
-				<li><img src="food/2.jpg" alt="This is the De Jackie Inspirations"></li>
-				<li><img src="food/3.jpg" alt="This is the See Good Food Centre Sdn Bhd"></li>
-			</ul>
-		</div>
-	</div>
-	
-	<h2>Simple Package</h2>
-	<p>Simple mee and stuff like that</p>
-	<br/><br/><br/><br/><br/>
-	<input type="submit" value="Choose this package">
-</br></br>
-<table align="center" border="1" id="clear" style="margin-top: 150px;">
-	
-	<tr>
-		<td colspan="2" align="center">Hand-picked items</td>
-	</tr>
-	<tr>
-		<td colspan="2" align="center">[Lights up when the second option is chosen]</td>
-	</tr>
-	<tr>
-		<td><table id="dunno">
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-			<td><input type="checkbox">Vegetable</td>
-		</tr>
-	</table>
-</td>
-
-<td>
-	<ul id="haha">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-</td>
-</tr>
-</table>
-</br></br>
-<div id="last">
-<div class="dropdown">
-  <button class="dropbtn">Equipment</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+<div id="crazy">
+	<div class="dropdown">
+<button onclick="myFunction()" class="w3-button w3-theme">Western Cuisine</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="western.html#affordable" target="_blank">Affordable Pack</a>
+    <a href="western.html#regular" target="_blank">Regular Pack</a>
+    <a href="western.html#prestigious" target="_blank">Prestigious Pack</a>
   </div>
-</div>
-<br/><br/>
-<div class="dropdown">
-  <button class="dropbtn">Invitation Cards</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-<br/><br/>
-
-<div class="dropdown">
-  <button class="dropbtn">Bouquets</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-<br/><br/>
-<div class="dropdown">
-  <button class="dropbtn">Entertainment</button>
-  <div class="dropdown-content">
-    <a href="#">Master of ceremony</a>
-    <a href="#">Live band</a>
-    <a href="#">Clown</a>
-	<a href="#">Stand-up comedian</a>
-  </div>
-</div>
-</div>
-		
-	
-	
 </div>
 
+
+	<div class="dropdown">
+<button onclick="myFunction1()" class="w3-button w3-theme">Chinese Cuisine</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <a href="chinese.html#affordable" target="_blank">Affordable Pack</a>
+    <a href="chinese.html#regular" target="_blank">Regular Pack</a>
+    <a href="chinese.html#prestigious" target="_blank">Prestigious Pack</a>
+  </div>
+</div>
+
+	<div class="dropdown">
+<button onclick="myFunction2()" class="w3-button w3-theme">Malay Cuisine</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <a href="malay.html#affordable" target="_blank">Affordable Pack</a>
+    <a href="malay.html#regular" target="_blank">Regular Pack</a>
+    <a href="malay.html#prestigious" target="_blank">Prestigious Pack</a>
+  </div>
+</div>
+
+	<div class="dropdown">
+<button onclick="myFunction3()" class="w3-button w3-theme">Indian Cuisine</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <a href="indian.html#affordable" target="_blank">Affordable Pack</a>
+    <a href="indian.html#regular" target="_blank">Regular Pack</a>
+    <a href="indian.html#prestigious" target="_blank">Prestigious Pack</a>
+  </div>
+</div>
+
+	<div class="dropdown">
+<button onclick="myFunction4()" class="w3-button w3-theme">Japanese Cuisine</button>
+  <div id="myDropdown4" class="dropdown-content">
+    <a href="japanese.html#affordable" target="_blank">Affordable Pack</a>
+    <a href="japanese.html#regular" target="_blank">Regular Pack</a>
+    <a href="japanese.html#prestigious" target="_blank">Prestigious Pack</a>
+  </div>
+</div>
+
+	<div class="dropdown">
+<button onclick="myFunction5()" class="w3-button w3-theme">Korean Cuisine</button>
+  <div id="myDropdown5" class="dropdown-content">
+    <a href="korean.html#affordable" target="_blank">Affordable Pack</a>
+    <a href="korean.html#regular" target="_blank">Regular Pack</a>
+    <a href="korean.html#prestigious" target="_blank">Prestigious Pack</a>
+  </div>
+</div>
+</div>	
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+	<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction5() {
+    document.getElementById("myDropdown5").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</div>
+
+<style>
+body{
+	text-align: center;
+}
+
+img{
+	width: 320px;
+	height: 268.5px;
+}
+
+div p{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+ul.images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  background-color: #ddd;
+}
+ul.images li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+div #location{
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+div #center{
+	text-align: center;
+}
+
+table tr td{
+	padding: 0 5%;
+}
+
+ul .food{
+	margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  background-color: #ddd;
+}
+
+ul .food li{
+	display: inline-block;
+	margin-right: 10px;
+	list-style-type: none;
+}
+
+div #right{
+	max-width: 320px;
+	float: left;
+	margin-left: 300px;
+}
+
+#clear{
+	clear: both;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}	
+
+#crazy{
+	display: inline-block;
+	
+}
+
+.parallax {
+    /* The image used */
+
+    /* Set a specific height */
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2{
+    /* The image used */
+    background-image: url("1.jpg");
+
+    /* Set a specific height */
+
+    min-height:600px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fit;
+}
+
+.parallax3{
+    /* The image used */
+    background-image: url("5.jpg");
+
+    /* Set a specific height */
+
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fit;
+}
+.parallax4{
+    /* The image used */
+    background-image: url("2.jpg");
+
+    /* Set a specific height */
+
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fit;
+}
+.parallax5{
+    /* The image used */
+    background-image: url("3.jpg");
+
+    /* Set a specific height */
+
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fit;
+}
+
+.parallax6{
+    /* The image used */
+    background-image: url(".jpg");
+
+    /* Set a specific height */
+
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fit;
+}
+</style>
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';
 include $_SERVER["DOCUMENT_ROOT"].'/template/script.php';
