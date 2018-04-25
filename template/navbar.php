@@ -29,7 +29,7 @@
 		<link rel="stylesheet" href="/styles/styles.css"/>
 		<link rel="stylesheet" href="/styles/w3.css"/>
 		<link rel="stylesheet" href="/styles/w3-theme-indigo.css"/>
-		<link rel="stylesheet" id="theme" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
+		<link rel="stylesheet" id="theme" href="https://www.w3schools.com/lib/w3-theme-indigo.css"/>
 	</head>
 	<body>
 	
