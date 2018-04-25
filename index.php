@@ -42,25 +42,27 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 </div>
 </section>
 
-<div class="w3-container w3-padding-16">
+<div class="w3-container w3-padding-16 packages">
 	<h2>Too busy to customise?</h2>
 	<h3>Choose from our packages</h3>
 		
 		<span class="w3-button">
-		<img src="/images/pax_1.jpg" alt="Simple Plan Image" class="w3-image">
-		<p>Simple (10-15 pax)</p>
+		<a href="/pricing" title="Click image or text to book instantly"><img src="/images/pax_1.jpg" alt="Simple Plan Image" class="w3-image">
+		<p>Simple (10-15 pax)</p></a>
 		</span>
+		
 		<span class="w3-button">
-		<img src="/images/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
-		<p>Regular (16-30 pax)</p>
+		<a href="/pricing" title="Click image or text to book instantly"><img src="/images/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
+		<p>Regular (16-30 pax)</p></a>
 		</span>
+		
 		<span class="w3-button">
-		<img src="/images/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
-		<p>Extravagant (>30 pax)</p>
+		<a href="/pricing" title="Click image or text to book instantly"><img src="/images/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
+		<p>Extravagant (>30 pax)</p></a>
 		</span>
 </div>
 
-<div class="w3-container w3-theme-l4">
+<div class="w3-container w3-theme-l4 sponsor">
 	<h2>Our partners</h2>
 	<h3>The backbone of our services</h3>
 	
@@ -114,20 +116,15 @@ do styles in the file directly coz its only on this page
 only add to /styles/style.css if its a global css (applies to all/most pages)
 */
 
-#pmp_heading {
-	
-}
-
-.partners img{
-	width: 200px;
-	float: left;
-	margin: 3% 3.2%;
+.sponsor{
+	text-align: center;
 }
 
 .sponsorlogo{
-	height:100px;
-	margin:10px;
-	text-align:center;
+	width: 10%;
+	max-width: 130px;
+	margin-left: %;
+	margin-right: 1%;
 }
 
 .slides{
@@ -135,6 +132,18 @@ only add to /styles/style.css if its a global css (applies to all/most pages)
 	width:auto;
 }
 
+.packages{
+	text-align: center;
+}
+
+.packages .w3-button{
+	margin-left: 6%;
+	margin-right: 6%;
+}
+
+.packages .w3-button a:active{
+	color: red;
+}
 </style>
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';
