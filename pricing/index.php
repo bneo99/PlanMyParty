@@ -364,6 +364,7 @@ div #right{
     position: relative;
     display: inline-block;
     margin-right: 30px;
+	overflow: hidden;
 }
 
 .dropdown-content {
