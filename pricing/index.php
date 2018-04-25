@@ -23,8 +23,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 	<div class="parallax1"></div>
 
-	<div class="parallax">	
-		<hr>
+	<div class="parallax w3-container w3-padding-16 w3-theme-l4">	
 
 		<p>First off, what's the occasion?</p>
 			
@@ -49,12 +48,10 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<p><img class="w3-btn" src="theme/7.jpg" alt="Kids party (Girls)"></p>
 		</div>
 	</div>
-
-	<hr>
 		
 	<div class="parallax2"></div>
 		
-	<div class="parallax">
+	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<p>Hmmm, let's see how many paople you are partying with ...</p>
 		
 		<br>
@@ -67,7 +64,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 	<div class="parallax3"></div>
 
-	<div class="parallax">
+	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<div id="center">
 			<div id="location">
 				<ul class="images">
@@ -84,8 +81,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<table align="center">
 			<tr>
 				<td><input type="radio" name="venue" class="ven"/>Use recomemended venues</td>
-				<td><input type="radio" name="venue" class="ren"/>Use custom venue</td>
-			</tr>
 			<tr>
 				<td id="text" style="display: none">
 				<select>
@@ -112,10 +107,9 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<br/>
 	</div>
 	
-	<hr/>
-	
 	<div class="parallax4"></div>
-	<div class="parallax">
+	
+	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<p>Time to choose what you would like to eat</p>
 	
 		<br/>
@@ -301,7 +295,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 
 <style>
-body{
+form{
 	text-align: center;
 }
 
@@ -395,7 +389,6 @@ div #right{
 
 #crazy{
 	display: inline-block;
-	
 }
 
 .parallax{
@@ -443,6 +436,3 @@ div #right{
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';
 include $_SERVER["DOCUMENT_ROOT"].'/template/script.php';
 ?>
-
-	
-	
