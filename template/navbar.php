@@ -5,7 +5,6 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="robots" content="noindex nofollow"/>
-		<script src="/scripts/default.js"></script>
 		<script src="/scripts/jquery-3.3.1.js"></script>
 		
 		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>

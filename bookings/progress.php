@@ -9,7 +9,7 @@ $ordernum = intval($_GET['ordernum']);
 <!-- Change some head values-->
 <script>
 	/* modify this to change the title */
-	document.title = "Update Progress order<?php echo $ordernum;?> | Plan My Party!";
+	document.title = "Check Party Progress | Plan My Party!";
 </script>
 
 <?php
@@ -27,10 +27,10 @@ mysqli_select_db($con, $mysqli_db_database) or die("Could not select database");
 $query = "SELECT description FROM orders WHERE ordernum=$ordernum ";
 $result = mysqli_query($con, $query)or die(mysqli_error($con));
 $row = mysqli_fetch_array($result);
-$desc = $row['description'];
+$description = $row['description'];
 
 //get data from JSON file
-$jsonfile = file_get_contents("../orders/order_".$ordernum.".json");
+$jsonfile = file_get_contents("http://localhost/orders/order_".$ordernum.".json");
 $json = json_decode($jsonfile, true); // decode the JSON into an associative array
 
 //count the progress of the party based on the data on the JSON file
@@ -46,31 +46,14 @@ foreach ($json["update"] as $value) {
 ?>
 
 <div class="w3-container w3-theme-l3">
-<h1>Update Progress</h1>
+<h1>Check Party Progress</h1>
 </div>
 
 <div class="w3-container w3-padding w3-theme-l4">
-<h2>Event Name: <?php echo $desc; ?></h2>
+<h2>Event Name: <?php echo $description; ?></h2>
 
-<div class="w3-grey w3-margin-bottom">
+<div class="w3-grey w3-margin">
 <div id="progress_bar" class="w3-container w3-theme w3-center w3-padding" style="width:1%; white-space: nowrap;"><span id="progress_num">Progress: 0%</span></div>
-</div>
-
-<div class="w3-card w3-margin-bottom">
-	<div class="w3-container w3-theme">
-		<h3 style="text-align:left;">Post Update</h3>
-	</div>
-	<form id="update_form" class="w3-container w3-padding">
-
-		<label>Description of update</label>
-		<input id="u_desc" class="w3-input" type="text" required="required"/>
-		<!--TODO: input validation, percentage one should only take positive integer, then also the percentage max thing. do a preaddition check and make sure the sum does not exceed 100-->
-		<label>Percentage</label>
-		<input id="u_percent" class="w3-input" type="text" required="required"/>
-		
-		<button id="submit_update" type="submit" class="w3-button w3-theme-d1 w3-margin-top">Submit</button>
-		<span id="err" class="w3-margin"></span>
-	</form>
 </div>
 
 <table class="w3-table w3-theme-l3 w3-striped w3-bordered w3-border">
@@ -79,8 +62,7 @@ foreach ($json["update"] as $value) {
 	<th>Description</th>
 	<th>Progress</th>
 </tr>
-<?php
-//display all updates
+<?php		
 foreach(array_reverse($json["update"]) as $array){
 	$timestamp = $array['time']; //unix time
 	$desc = $array['desc'];
@@ -93,6 +75,7 @@ foreach(array_reverse($json["update"]) as $array){
 }
 ?>
 </table>
+
 </div>
 
 <script>
@@ -111,39 +94,6 @@ function moveBar() {
         }
     }
 }
-
-$(document).ready(function(){
-		
-   $("#update_form").submit(function(){
-		u_desc=$("#u_desc").val();
-		u_percent=$("#u_percent").val();
-
-		$.ajax({
-			type: "POST",
-			url: "/admin/update_progress.php",
-			data: "ordernum="+<?php echo $ordernum ?>+"&udesc="+u_desc+"&upercent="+u_percent,
-
-			success: function(html){
-			
-			  if(html=='true')
-			  {
-				$("#err").html("Update submitted. Refreshing page.")
-				location.reload();
-			  }
-			  else
-			  {
-				$("#err").html(html);
-				//$("#err").html("There is an error. Ask Bryan to fix.");
-			  }
-			},
-			beforeSend:function()
-			{
-				 $("#add_err").html("Loading...")
-			}
-		});
-		 return false;
-	});
-});
 
 window.onload = moveBar;
 </script>
