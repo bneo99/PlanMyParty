@@ -17,9 +17,78 @@ $con = mysqli_connect($mysqli_db_hostname, $mysqli_db_user, $mysqli_db_passwd) o
 mysqli_select_db($con, $mysqli_db_database) or die("Could not select database");
 ?>
 
+
+<style>
+th, td {
+	text-align:center;
+}
+
+.textbox{
+	text-align: center;
+}
+
+.textbox textarea:focus{
+	border: 1px solid blue;
+}
+
+.description{
+	text-align: justify;
+	line-height: 150%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.buttons{
+	text-align: center;
+}
+
+.buttons input{
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+</style>
+
 <div class="w3-container w3-theme-l3">
 <h1>Admin Dashboard</h1>
 </div>
+
+<div class="w3-container w3-padding-16 w3-theme-l4">
+	<h2>Announcement Updates</h2>
+	<form>
+		
+		<div class="textbox"><textarea name="announcements" rows="5" cols="50">Write announcements here to be updated to the sever.</textarea></div>
+		
+		<p class="buttons"><input type="submit" value="Submit Announcements" onclick="submitAnnouncement()" /><input type="reset" value="Reset Text Box" /></p>
+	</form>
+</div>
+
+<div>
+	<h2>Content Management System</h2>
+	<p class="description">PMP uses a Content Management System (CMS) to allow admins to edit contents on the website with ease. One can use this system even without possessing web coding knowledge. To edit contents in the website, simply click on the button below to do so. Once you're done, deactivate CMS by clicking the same button again.</p>
+	<p class="buttons"><button id="button" value="off" onclick="clickCMS()">Enable CMS / Disable CMS</button></p>
+</div>
+
+<script>
+	/* Function for announcement button */
+	function submitAnnouncement(){
+		alert("Announcement details have been submitted and the sever will process the information. ETA for announcement to be displayed on website: 10-20 minutes.");
+	}
+	
+	/* Function for CMS button */
+	function clickCMS(){
+		var cms_status = document.getElementById("button").value;
+		
+		if (cms_status == "off"){
+			document.getElementById("button").value = "on";
+			alert("CMS is activated.");
+		}
+		else{
+			document.getElementById("button").value = "off";
+			alert("CMS is disabled.");
+		}
+	}
+</script>
 
 <div class="w3-container w3-padding-16 w3-theme-l4">
 <h2>Current Orders</h2>
@@ -67,11 +136,6 @@ $result = mysqli_query($con, $query)or die(mysqli_error($con));
 </table>
 </div>
 
-<style>
-th, td {
-	text-align:center;
-}
-</style>
 
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';
