@@ -8,18 +8,15 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 </script>
 
 <div class="w3-container w3-padding-16" style="min-height:100%;">
-<img src="/images/logo.png" alt="PMP Logo" class="w3-images" style="display:block; margin: 0 auto; max-width:100%;"/>
-<h1 id="pmp_heading">Plan My Party</h1> <!-- todo: add custom font-->
-<p style="text-align:center;"> Plan your purr-fect party now! Live party status update, Accomodate from tens to hundreds without all the hassle.</p>
+	<img src="/images/logo.png" alt="PMP Logo" class="w3-images" style="display:block; margin: 0 auto; max-width:100%;"/>
+	<h1 id="pmp_heading">Plan My Party</h1> <!-- todo: add custom font-->
+	<p style="text-align:center;"> Plan your purr-fect party now! Live party status update, Accomodate from tens to hundreds without all the hassle.</p>
 </div>
 
 <section id="review" class="w3-container w3-padding-16 w3-theme-l4">
-<div class="w3-display-container" style="margin:auto; max-width:700px;">
+<div class="w3-display-container slideshow" style="margin:auto; max-width:700px;">
 	<h2>Our happy customers</h2>
 	
-	<!-- todo: change slideshow stuff to directly replace the pics, reviews so the height doesnt change everything the pic has different aspect ratio 
-	
-	once the todo above is done the buttons can be put back to the left/right of the pic-->
 	<div class="w3-black" style="text-align:center;" >
 
 		<div class="w3-display-container mySlides w3-animate-opacity">
@@ -115,6 +112,15 @@ setInterval(nextSlide, 4000);
 do styles in the file directly coz its only on this page 
 only add to /styles/style.css if its a global css (applies to all/most pages)
 */
+
+#pmp_heading{
+	font-family: Verdana, sans-serif;
+}
+
+.slideshow, .packages, .sponsor{
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
 
 .sponsor{
 	text-align: center;
