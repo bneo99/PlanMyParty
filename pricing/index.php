@@ -176,6 +176,65 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			</div>
 		</div>
 	</div>
+	
+	<!-- Lester, do the parallax thing for here too -->
+	<div class="accesories">
+		<ul>
+			<li class="main"><span class="w3-button w3-theme">Additional desserts</span>
+				<ul>
+					<li class="sub_main"><span class="w3-button w3-theme">Cake</span>
+						<ul>
+							<li>Chocolate cake</li>
+							<li>Red velvet cake</li>
+							<li>Vanilla cake</li>
+							<li>Carrot cake</li>
+							<li>Coffee cake</li>
+							<li>Matcha cake</li>
+						</ul>
+					</li>
+					<li class="sub_main"><span class="w3-button w3-theme">Cupcakes</span>
+						<ul>
+							<li>Chocolate cupcake</li>
+							<li>Vanilla cupcake</li>
+							<li>Strawberry cupcake</li>
+							<li>Matcha cupcake</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="main"><span class="w3-button w3-theme">Equipment</span>
+				<ul>
+					<li>Sound system</li>
+					<li>Karaoke machine</li>
+					<li>Spotlights</li>
+					<li>Smoke machine</li>
+					<li>Photo booth with backdrop</li>
+				</ul>
+			</li>
+			<li class="main"><span class="w3-button w3-theme">Ornaments</span>
+				<ul>
+					<li>Balloons</li>
+					<li>Banners</li>
+				</ul>
+			</li>
+			<li class="main"><span class="w3-button w3-theme">Miscellaneous</span>
+				<ul>
+					<li>Invitational cards</li>
+					<li>Confetti</li>
+				</ul>
+			</li>
+			<li class="main"><span class="w3-button w3-theme">Professional personnel</span>
+				<ul>
+					<li>Master of ceremonies</li>
+					<li>DJ</li>
+					<li>Live band</li>
+					<li>Stand-up comedian</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	</div>
 </form>
 
 <br/><br/><br/><br/><br/><br/><br/><br/>
@@ -295,6 +354,20 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 
 <style>
+.accesories{
+	text-align: left;
+}
+
+.accesories li{
+	list-style-type: none;
+}
+
+.main li{
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
 form{
 	text-align: center;
 }
