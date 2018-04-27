@@ -7,9 +7,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	document.title = "Reviews | Plan My Party!";
 	
 </script>
-	<div class="w3-container w3-theme-d3">
 	<h1>Reviews</h1>
-	</div>
 	
 	<article>
 		<div class="w3-panel w3-margin w3-theme-l3 w3-padding-16">
