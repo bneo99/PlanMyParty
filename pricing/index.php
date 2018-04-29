@@ -179,59 +179,58 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 	<!-- Lester, do the parallax thing for here too -->
 	<div class="accesories">
-		<ul>
-			<li class="main"><span class="w3-button w3-theme">Additional desserts</span>
-				<ul>
-					<li class="sub_main"><span class="w3-button w3-theme">Cake</span>
-						<ul>
-							<li>Chocolate cake</li>
-							<li>Red velvet cake</li>
-							<li>Vanilla cake</li>
-							<li>Carrot cake</li>
-							<li>Coffee cake</li>
-							<li>Matcha cake</li>
-						</ul>
-					</li>
-					<li class="sub_main"><span class="w3-button w3-theme">Cupcakes</span>
-						<ul>
-							<li>Chocolate cupcake</li>
-							<li>Vanilla cupcake</li>
-							<li>Strawberry cupcake</li>
-							<li>Matcha cupcake</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li class="main"><span class="w3-button w3-theme">Equipment</span>
-				<ul>
-					<li>Sound system</li>
-					<li>Karaoke machine</li>
-					<li>Spotlights</li>
-					<li>Smoke machine</li>
-					<li>Photo booth with backdrop</li>
-				</ul>
-			</li>
-			<li class="main"><span class="w3-button w3-theme">Ornaments</span>
-				<ul>
-					<li>Balloons</li>
-					<li>Banners</li>
-				</ul>
-			</li>
-			<li class="main"><span class="w3-button w3-theme">Miscellaneous</span>
-				<ul>
-					<li>Invitational cards</li>
-					<li>Confetti</li>
-				</ul>
-			</li>
-			<li class="main"><span class="w3-button w3-theme">Professional personnel</span>
-				<ul>
-					<li>Master of ceremonies</li>
-					<li>DJ</li>
-					<li>Live band</li>
-					<li>Stand-up comedian</li>
-				</ul>
-			</li>
-		</ul>
+		<h2>Additional Accesories</h2>
+	
+		<div class="dessert w3-panel w3-margin w3-theme-l3 w3-padding-16">
+		<h3>Additional desserts</h3><br />
+		<p><input type="checkbox" id="choco_cake" name="desserts" value="choco_cake"><label for="choco_cake">Chocolate Cake</label></p>
+		<p><input type="checkbox" id="redv_cake" name="desserts" value="redv_cake"><label for="redv_cake">Red Velvet Cake</label></p>
+		<p><input type="checkbox" id="vanilla_cake" name="desserts" value="vanilla_cake"><label for="vanilla_cake">Vanilla Cake</label></p>
+		<p><input type="checkbox" id="carrot_cake" name="desserts" value="carrot_cake"><label for="carrot_cake">Carrot Cake</label></p>
+		<p><input type="checkbox" id="coffee_cake" name="desserts" value="coffee_cake"><label for="coffee_cake">Coffee Cake</label></p>
+		<p><input type="checkbox" id="matcha_cake" name="desserts" value="matcha_cake"><label for="matcha_cake">Matcha Cake</label></p>
+		<p><input type="checkbox" id="macarons" name="desserts" value="macarons"><label for="macarons">Macarons</label></p>
+		<p><input type="checkbox" id="choco_cup" name="desserts" value="choco_cup"><label for="choco_cup">Chocolate Cupcake</label></p>
+		<p><input type="checkbox" id="strawberry_cup" name="desserts" value="strawberry_cup"><label for="strawberry_cup">Strawberry Cupcake</label></p>
+		<p><input type="checkbox" id="vanilla_cup" name="desserts" value="vanilla_cup"><label for="vanilla_cup">Vanilla Cupcake</label></p>
+		<p><input type="checkbox" id="matcha_cup" name="desserts" value="matcha_cup"><label for="matcha_cup">Matcha Cupcake</label></p><br />
+		<p><label for="d_quantity">Dessert Quantity:</label><input type="text" id="d_quantity" name="d_quantity" placeholder="Type in quantity for each dessert" size="30"></p>
+		</div>
+		
+		<div class="equipment w3-panel w3-margin w3-theme-l3 w3-padding-16">
+		<h3>Equipment</h3><br />
+		<p><input type="checkbox" id="sound" name="equipment" value="sound"><label for="sound">Sound System</label></p>
+		<p><input type="checkbox" id="karaoke" name="equipment" value="karaoke"><label for="karaoke">Karaoke Machine</label></p>
+		<p><input type="checkbox" id="spotlight" name="equipment" value="spotlight"><label for="spotlight">Spotlights</label></p>
+		<p><input type="checkbox" id="smoke" name="equipment" value="smoke"><label for="smoke">Smoke Machine</label></p>
+		<p><input type="checkbox" id="photo_booth" name="equipment" value="photo_booth"><label for="photo_booth">Photo Booth with Backdrop</label></p>
+		</div>
+		
+		<div class="ornaments w3-panel w3-margin w3-theme-l3 w3-padding-16">
+		<h3>Ornaments</h3><br />
+		<p><input type="checkbox" id="balloons" name="ornaments" value="balloons"><label for="balloons">Balloons</label></p>
+		<p><input type="checkbox" id="banners" name="oranments" value="banners"><label for="banners">Banners</label></p><br />
+		<p><label for="message">Message on balloon and/or banner:</label><input type="text" id="message" name="message"></p>
+		</div>
+		
+		<div class="misc w3-panel w3-margin w3-theme-l3 w3-padding-16">
+		<h3>Miscellaneous</h3><br />
+		<p><input type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti">Confetti</label></p>
+		<p><input type="checkbox" id="card" name="misc" value="card"><label for="card">Invitational cards</label></p><br />
+		<p><label for="cover">Message in cover:</label><br /><textarea id="cover"></textarea></p>
+		<p><label for="content">Content in card:</label><br /><textarea id="content"></textarea></p>
+		<p><label for="address">Address to be sent (sample card):</label><br /><textarea id="address"></textarea></p>
+		</div>
+		
+		<div class="personnel w3-panel w3-margin w3-theme-l3 w3-padding-16">
+		<h3>Professional personnel</h3><br />
+		<p><input type="checkbox" id="master" name="personnel" value="master"><label for="master">Master of ceremonies</label></p>
+		<p><input type="checkbox" id="dj" name="personnel" value="dj"><label for="dj">DJ</p>
+		<p><input type="checkbox" id="band" name="personnel" value="band"><label for="band">Live Band</label></p>
+		<p><input type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian">Stand-up Comedian</label></p><br />
+		<p><label for="language">Language of each session:</label><input type="text" id="language" name="language" placeholder="Type in language of each individual session or all session(s)" size="60"></p>
+		</div>
+		
 	</div>
 	
 	</div>
@@ -354,20 +353,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 
 <style>
-.accesories{
-	text-align: left;
-}
-
-.accesories li{
-	list-style-type: none;
-}
-
-.main li{
-	display: inline-block;
-	margin-left: 2%;
-	margin-right: 2%;
-}
-
 form{
 	text-align: center;
 }
