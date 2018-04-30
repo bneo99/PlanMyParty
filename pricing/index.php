@@ -216,10 +216,10 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<div class="misc w3-panel w3-margin w3-theme-l3 w3-padding-16">
 		<h3>Miscellaneous</h3><br />
 		<p><input type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti">Confetti</label></p>
-		<p><input type="checkbox" id="card" name="misc" value="card"><label for="card">Invitational cards</label></p><br />
-		<p><label for="cover">Message in cover:</label><br /><textarea id="cover"></textarea></p>
-		<p><label for="content">Content in card:</label><br /><textarea id="content"></textarea></p>
-		<p><label for="address">Address to be sent (sample card):</label><br /><textarea id="address"></textarea></p>
+		<p onclick="cardShowBox()"><input type="checkbox" id="card" name="misc" value="card"><label for="card">Invitational cards</label></p><br />
+		<p style="visibility:hidden" id="text1"><label for="cover">Message in cover:</label><br /><textarea id="cover"></textarea></p>
+		<p style="visibility:hidden" id="text2"><label for="content">Content in card:</label><br /><textarea id="content"></textarea></p>
+		<p style="visibility:hidden" id="text3"><label for="address">Address to be sent (sample card):</label><br /><textarea id="address"></textarea></p>
 		</div>
 		
 		<div class="personnel w3-panel w3-margin w3-theme-l3 w3-padding-16">
@@ -230,8 +230,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<p><input type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian">Stand-up Comedian</label></p><br />
 		<p><label for="language">Language of each session:</label><input type="text" id="language" name="language" placeholder="Type in language of each individual session or all session(s)" size="60"></p>
 		</div>
-		
-	</div>
 	
 	</div>
 </form>
@@ -239,6 +237,28 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <br/><br/><br/><br/><br/><br/><br/><br/>
 	
 <script>
+	function cardShowBox(){
+		var x = document.getElementById("card");
+		var text1 = document.getElementById("text1");
+		var text2 = document.getElementById("text2");
+		var text2 = document.getElementById("text2");
+		
+		if (x.checked == true)
+		{
+			text1.style.visibility = "visible";
+			text2.style.visibility = "visible";
+			text3.style.visibility = "visible";
+		}
+		
+		else
+		{
+			text1.style.visibility = "hidden";
+			text2.style.visibility = "hidden";
+			text3.style.visibility = "hidden";
+		}
+		
+	}
+	
 	function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
