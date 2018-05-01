@@ -39,13 +39,13 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<p>Now, what theme would fit the party?</p>
 			
 		<div>
-			<p><img class="w3-btn" src="theme/1.jpg" alt="Masquerade Party"></p>
-			<p><img class="w3-btn" src="theme/2.jpg" alt="Pajamas Party"></p>
-			<p><img class="w3-btn" src="theme/3.jpg" alt="Costume Party"></p>
-			<p><img class="w3-btn" src="theme/4.jpg" alt="Casual party"></p>
-			<p><img class="w3-btn" src="theme/5.jpg" alt="Formal party"></p>
-			<p><img class="w3-btn" src="theme/6.jpg" alt="Kids party (Boys)"></p>
-			<p><img class="w3-btn" src="theme/7.jpg" alt="Kids party (Girls)"></p>
+			<p class="w3-btn" title="Masquerade Party"><label style="display:block" for="masquerade"><img src="theme/1.jpg" alt="Masquerade Party"></label><input type="radio" id="masquerade" name="theme" value="masquerade"></p>
+			<p class="w3-btn" title="Pajamas Party"><label style="display:block" for="pajamas"><img src="theme/2.jpg" alt="Pajamas Party"></label><input type="radio" id="pajamas" name="theme" value="pajamas"></p>
+			<p class="w3-btn" title="Costume Party"><label style="display:block" for="costume"><img src="theme/3.jpg" alt="Costume Party"></label><input type="radio" id="costume" name="theme" value="costume"></p>
+			<p class="w3-btn" title="Casual Party"><label style="display:block" for="casual"><img src="theme/4.jpg" alt="Casual party"></label><input type="radio" id="casual" name="theme" value="casual"></p>
+			<p class="w3-btn" title="Formal Party"><label style="display:block" for="formal"><img src="theme/5.jpg" alt="Formal party"></label><input type="radio" id="formal" name="theme" value="formal"></p>
+			<p class="w3-btn" title="Kids Party (Boys)"><label style="display:block" for="boy_kid"><img src="theme/6.jpg" alt="Kids party (Boys)"></label><input type="radio" id="boy_kid" name="theme" value="boy_kid"></p>
+			<p class="w3-btn" title="Kids Party (Girls)"><label style="display:block" for="girl_kid"><img src="theme/7.jpg" alt="Kids party (Girls)"></label><input type="radio" id="girl_kid" name="theme" value="girl_kid"></p>
 		</div>
 	</div>
 		
@@ -231,6 +231,10 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<p><label for="language">Language of each session:</label><input type="text" id="language" name="language" placeholder="Type in language of each individual session or all session(s)" size="60"></p>
 		</div>
 	
+	</div>
+	
+	<div class="button">
+		<p><input class="w3-button w3-theme" type="submit" value="Submit"></p><p><input class="w3-button w3-theme" type="reset" value="Reset"></p>
 	</div>
 </form>
 
