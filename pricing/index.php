@@ -181,18 +181,56 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 		<div class="dessert w3-panel w3-margin w3-theme-l3 w3-padding-16">
 		<h3>Additional desserts</h3><br />
-		<p><input type="checkbox" id="choco_cake" name="desserts" value="choco_cake"><label for="choco_cake">Chocolate Cake</label></p>
-		<p><input type="checkbox" id="redv_cake" name="desserts" value="redv_cake"><label for="redv_cake">Red Velvet Cake</label></p>
-		<p><input type="checkbox" id="vanilla_cake" name="desserts" value="vanilla_cake"><label for="vanilla_cake">Vanilla Cake</label></p>
-		<p><input type="checkbox" id="carrot_cake" name="desserts" value="carrot_cake"><label for="carrot_cake">Carrot Cake</label></p>
-		<p><input type="checkbox" id="coffee_cake" name="desserts" value="coffee_cake"><label for="coffee_cake">Coffee Cake</label></p>
-		<p><input type="checkbox" id="matcha_cake" name="desserts" value="matcha_cake"><label for="matcha_cake">Matcha Cake</label></p>
-		<p><input type="checkbox" id="macarons" name="desserts" value="macarons"><label for="macarons">Macarons</label></p>
-		<p><input type="checkbox" id="choco_cup" name="desserts" value="choco_cup"><label for="choco_cup">Chocolate Cupcake</label></p>
-		<p><input type="checkbox" id="strawberry_cup" name="desserts" value="strawberry_cup"><label for="strawberry_cup">Strawberry Cupcake</label></p>
-		<p><input type="checkbox" id="vanilla_cup" name="desserts" value="vanilla_cup"><label for="vanilla_cup">Vanilla Cupcake</label></p>
-		<p><input type="checkbox" id="matcha_cup" name="desserts" value="matcha_cup"><label for="matcha_cup">Matcha Cupcake</label></p><br />
-		<p><label for="m_quantity">Macaron Quantity:</label><input type="text" id="m_quantity" name="m_quantity" placeholder="Type in quantity for macarons" size="30"></p>
+		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5">
+			<tr>
+				<th>Types of desserts</th>
+				<th>Quantity</th>
+			</tr>
+			<tr>
+				<td>Chocolate Cake (RM40/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="5"></td>
+			</tr>
+			<tr>
+				<td>Red Velvet Cake (RM40/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="5"></td>
+			</tr>
+			<tr>
+				<td>Vanilla Cake (RM40/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="5"></td>
+			</tr>
+			<tr>
+				<td>Carrot Cake (RM40/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="5"></td>
+			</tr>
+			<tr>
+				<td>Coffee Cake (RM40/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="5"></td>
+			</tr>
+			<tr>
+				<td>Matcha Cake (RM40/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="5"></td>
+			</tr>
+			<tr>
+				<td>Macarons (RM5/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="100"></td>
+			</tr>
+			<tr>
+				<td>Chocolate Cupcake (RM5/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="100"></td>
+			</tr>
+			<tr>
+				<td>Strawberry Cupcake (RM5/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="100"></td>
+			</tr>
+			<tr>
+				<td>Vanilla Cupcake (RM5/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="100"></td>
+			</tr>
+			<tr>
+				<td>Matcha Cupcake (RM5/unit)</td>
+				<td><input type="number" name="quantity" min="0" max="100"></td>
+			</tr>
+		</table>
 		</div>
 		
 		<div class="equipment w3-panel w3-margin w3-theme-l3 w3-padding-16">
@@ -231,11 +269,11 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 	</div>
 	
-	<div>
+	<div class="w3-theme-l4 w3-padding-16">
 		<h2>Cost Break-down</h2>
 		<div class="w3-panel w3-margin w3-theme-l3 w3-padding-16">
 		<h3>All prices are based on Malaysian Currency (RM)</h3>
-		<table class="table">
+		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5">
 			<tr>
 				<td>Theme Cost:</td>
 				<td><span></span></td>
@@ -269,7 +307,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 				<td><span></span></td>
 			</tr>
 		</table>
-			<button class="w3-button w3-theme">Calculate</button>
+			<button class="w3-button w3-theme" style="margin-top: 1%;">Calculate</button>
 		</div>
 	</div>
 	
@@ -451,6 +489,11 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <style>
 form{
 	text-align: center;
+}
+
+.table{
+	max-width: 500px;
+	margin: 0 auto;
 }
 
 img{
