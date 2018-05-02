@@ -23,20 +23,12 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 	<div class="parallax1"></div>
 
-	<div class="parallax w3-container w3-padding-16 w3-theme-l4">	
-
-		<p>First off, what's the occasion?</p>
-			
-		<br/>
-			
-		<p>
-			<label for="event">Event Title:</label>
-			<input type="text" name="event" id="event" size="30" required="required">	
-		</p>
-			
-		<br>
-		
-		<p>Now, what theme would fit the party?</p>
+	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
+		<h2>Describe your party</h2>
+		<input class="w3-input" type="text" name="event" id="event" placeholder="My Party" autofocus="autofocus" required="required" style="width:100%;">	
+	</div>
+	<div class="w3-container w3-theme-l5">
+		<h2>Theme</h2>
 			
 		<div>
 			<p class="w3-btn">
@@ -94,14 +86,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<div class="parallax2"></div>
 		
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
-		<p>Hmmm, let's see how many paople you are partying with ...</p>
-		
-		<br>
-		
-		<p>
-			<label for="guest">Number of guests:</label>
-			<input type="text" name="guest" id="guest" size="4" required="required">	
-		</p>
+		<h2>Number of party-cipants</h2>		
+		  <input type="number" name="quantity" value="1" min="1" max="100" required="required">
 	</div>
 
 	<div class="parallax3"></div>
@@ -171,17 +157,17 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 		<div class="w3-display-container mySlides w3-animate-opacity">
 			<img id="foodpic1" src="food/western/1.jpg" class="w3-image slides">
-			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Affordable</div>
+			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Affordable (RM20 /pax)</div>
 		</div>
 
 		<div class="w3-display-container mySlides w3-animate-opacity">
 			<img id="foodpic2" src="food/western/2.jpg" class="w3-image slides">
-			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Regular</div>
+			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Regular (RM35 /pax)</div>
 		</div>
 
 		<div class="w3-display-container mySlides w3-animate-opacity">
 			<img id="foodpic3" src="food/western/3.jpg" class="w3-image slides">
-			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Prestigious</div>
+			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Prestigious (RM50 /pax)</div>
 		</div>
 		<button type="button" class="w3-button w3-theme w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
 		<button type="button" class="w3-button w3-theme w3-display-right" onclick="changeSlide(+1)">&#10095;</button>
@@ -295,23 +281,23 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <br/><br/><br/><br/><br/><br/><br/><br/>
 	
 <script>
-
-	var slideIndex = 0;
-	showSlides(slideIndex);
+	
+	var foodPack = 0; //for knowing which food price tier is selected
+	showSlides(foodPack);
 
 	function changeSlide(n){
-		showSlides(slideIndex += n);
+		showSlides(foodPack += n);
 	}
 
 	function showSlides(n) {
 		var i;
 		var x = document.getElementsByClassName("mySlides");
-		if (n > x.length) {slideIndex = 1}
-		if (n < 1) {slideIndex = x.length} ;
+		if (n > x.length) {foodPack = 1}
+		if (n < 1) {foodPack = x.length} ;
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
 		}
-		x[slideIndex-1].style.display = "block"; 
+		x[foodPack-1].style.display = "block"; 
 		
 	}
 

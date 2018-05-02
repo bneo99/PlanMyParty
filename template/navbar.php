@@ -109,7 +109,7 @@
 					</header>
 					<div class="w3-container w3-theme-light w3-padding ">
 						<label for="uname" >Username</label>
-						<input type="text" id="uname" name="uname" class="w3-input w3-border" autofocus required />
+						<input type="text" id="uname" name="uname" class="w3-input w3-border" required="required" />
 
 						<label for="passwd" >Password</label>
 						<input type="password" class="w3-input w3-border" id="passwd" name="passwd" required />
