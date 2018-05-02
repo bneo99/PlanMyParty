@@ -40,7 +40,7 @@
 				<a href="/" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
 				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/bookings'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
 				<a href="/admin" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Admin Dashboard</a>
@@ -83,7 +83,7 @@
 				<a href="/" class="w3-bar-item w3-button">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
 				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/bookings'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">My Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
 				<a href="/admin" class="w3-bar-item w3-button">Admin Dashboard</a>
