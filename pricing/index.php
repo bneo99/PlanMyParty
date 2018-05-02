@@ -39,13 +39,55 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<p>Now, what theme would fit the party?</p>
 			
 		<div>
-			<p class="w3-btn" title="Masquerade Party"><label style="display:block" for="masquerade"><img src="theme/1.jpg" alt="Masquerade Party"></label><input type="radio" id="masquerade" name="theme" value="masquerade"></p>
-			<p class="w3-btn" title="Pajamas Party"><label style="display:block" for="pajamas"><img src="theme/2.jpg" alt="Pajamas Party"></label><input type="radio" id="pajamas" name="theme" value="pajamas"></p>
-			<p class="w3-btn" title="Costume Party"><label style="display:block" for="costume"><img src="theme/3.jpg" alt="Costume Party"></label><input type="radio" id="costume" name="theme" value="costume"></p>
-			<p class="w3-btn" title="Casual Party"><label style="display:block" for="casual"><img src="theme/4.jpg" alt="Casual party"></label><input type="radio" id="casual" name="theme" value="casual"></p>
-			<p class="w3-btn" title="Formal Party"><label style="display:block" for="formal"><img src="theme/5.jpg" alt="Formal party"></label><input type="radio" id="formal" name="theme" value="formal"></p>
-			<p class="w3-btn" title="Kids Party (Boys)"><label style="display:block" for="boy_kid"><img src="theme/6.jpg" alt="Kids party (Boys)"></label><input type="radio" id="boy_kid" name="theme" value="boy_kid"></p>
-			<p class="w3-btn" title="Kids Party (Girls)"><label style="display:block" for="girl_kid"><img src="theme/7.jpg" alt="Kids party (Girls)"></label><input type="radio" id="girl_kid" name="theme" value="girl_kid"></p>
+			<p class="w3-btn">
+				<label style="display:block" for="masquerade">
+					<img src="theme/1.jpg" alt="Masquerade Party">
+				</label>
+				<label for="masquerade" style="display:block">Masquerade Party</label>
+				<input type="radio" id="masquerade" name="theme" value="masquerade">
+			</p>
+			<p class="w3-btn">
+				<label style="display:block" for="pajamas">
+					<img src="theme/2.jpg" alt="Pajamas Party">
+				</label>
+				<label for="pajamas" style="display:block">Pajamas Party</label>
+				<input type="radio" id="pajamas" name="theme" value="pajamas">
+			</p>
+			<p class="w3-btn">
+				<label style="display:block" for="costume">
+					<img src="theme/3.jpg" alt="Costume Party">
+				</label>
+				<label for="costume" style="display:block">Costume Party</label>
+				<input type="radio" id="costume" name="theme" value="costume">
+			</p>
+			<p class="w3-btn">
+				<label style="display:block" for="casual">
+					<img src="theme/4.jpg" alt="Casual party">
+				</label>
+				<label for="casual" style="display:block">Casual Party</label>
+				<input type="radio" id="casual" name="theme" value="casual">
+			</p>
+			<p class="w3-btn">
+				<label style="display:block" for="formal">
+					<img src="theme/5.jpg" alt="Formal party">
+				</label>
+				<label for="formal" style="display:block">Formal Party</label>
+				<input type="radio" id="formal" name="theme" value="formal">
+			</p>
+			<p class="w3-btn">
+				<label style="display:block" for="boy_kid">
+					<img src="theme/6.jpg" alt="Kids party (Boys)">
+				</label>
+				<label for="boy_kid" style="display:block">Kids Party (Boys)</label>
+				<input type="radio" id="boy_kid" name="theme" value="boy_kid">
+			</p>
+			<p class="w3-btn">
+				<label style="display:block" for="girl_kid">
+					<img src="theme/7.jpg" alt="Kids party (Girls)">
+				</label>
+				<label for="girl_kid" style="display:block">Kids Party (Girls)</label>
+				<input type="radio" id="girl_kid" name="theme" value="girl_kid">
+			</p>
 		</div>
 	</div>
 		
@@ -194,7 +236,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<p><input type="checkbox" id="strawberry_cup" name="desserts" value="strawberry_cup"><label for="strawberry_cup">Strawberry Cupcake</label></p>
 		<p><input type="checkbox" id="vanilla_cup" name="desserts" value="vanilla_cup"><label for="vanilla_cup">Vanilla Cupcake</label></p>
 		<p><input type="checkbox" id="matcha_cup" name="desserts" value="matcha_cup"><label for="matcha_cup">Matcha Cupcake</label></p><br />
-		<p><label for="d_quantity">Dessert Quantity:</label><input type="text" id="d_quantity" name="d_quantity" placeholder="Type in quantity for each dessert" size="30"></p>
+		<p><label for="m_quantity">Macaron Quantity:</label><input type="text" id="m_quantity" name="m_quantity" placeholder="Type in quantity for macarons" size="30"></p>
 		</div>
 		
 		<div class="equipment w3-panel w3-margin w3-theme-l3 w3-padding-16">
@@ -231,6 +273,48 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<p><label for="language">Language of each session:</label><input type="text" id="language" name="language" placeholder="Type in language of each individual session or all session(s)" size="60"></p>
 		</div>
 	
+	</div>
+	
+	<div>
+		<h2>Cost Break-down</h2>
+		<div class="w3-panel w3-margin w3-theme-l3 w3-padding-16">
+		<h3>All prices are based on Malaysian Currency (RM)</h3>
+		<table class="table">
+			<tr>
+				<td>Theme Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Venue Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Cuisine Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Dessert Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Equipment Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Ornaments Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Miscellaneous Cost:</td>
+				<td><span></span></td>
+			</tr>
+			<tr>
+				<td>Professional Personnel Cost:</td>
+				<td><span></span></td>
+			</tr>
+		</table>
+			<button class="w3-button w3-theme">Calculate</button>
+		</div>
 	</div>
 	
 	<div class="button">
