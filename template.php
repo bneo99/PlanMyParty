@@ -18,7 +18,9 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 
-LOL
+<h1>Sorry!</h1>
+
+<p style="text-align:center;">This function is not implemented yet. Sorry for the inconvenience caused.</p>
 
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';

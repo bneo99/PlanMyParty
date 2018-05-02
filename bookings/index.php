@@ -56,7 +56,7 @@ $result = mysqli_query($con, $query)or die(mysqli_error($con));
 		echo "	<td>$f_ordernum</td>";
 		echo "	<td>$desc</td>";
 		echo "	<td>$progress%</td>";
-		echo "	<td><a href=\"/bookings/progress.php?ordernum=$ordernum\">Check Progress</a> <a href=\"/bookings/amend.php\">Amend</a> <a href=\"/bookings/cancel.php\">Cancel</a></td>";
+		echo "	<td><a href=\"/bookings/progress.php?ordernum=$ordernum\">Check Progress</a> <a href=\"/template.php\">Amend</a> <a href=\"/template.php\">Cancel</a></td>";
 		echo "</tr>";
 	}
 ?>

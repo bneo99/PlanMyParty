@@ -152,76 +152,46 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<div class="parallax4"></div>
 	
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
-		<p>Time to choose what you would like to eat</p>
+		<h2>Food</h2>
 	
-		<br/>
-	
-		<div id="crazy">
-			<div class="dropdown">
-				<button onclick="myFunction()" class="w3-button w3-theme">Western Cuisine</button>
-				
-				<div id="myDropdown" class="dropdown-content">
-					<a href="western.html#affordable" target="_blank">Affordable Pack</a>
-					<a href="western.html#regular" target="_blank">Regular Pack</a>
-					<a href="western.html#prestigious" target="_blank">Prestigious Pack</a>
-				</div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction1()" class="w3-button w3-theme">Chinese Cuisine</button>
-				
-				<div id="myDropdown1" class="dropdown-content">
-					<a href="chinese.html#affordable" target="_blank">Affordable Pack</a>
-					<a href="chinese.html#regular" target="_blank">Regular Pack</a>
-					<a href="chinese.html#prestigious" target="_blank">Prestigious Pack</a>
-				</div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction2()" class="w3-button w3-theme">Malay Cuisine</button>
-				
-				<div id="myDropdown2" class="dropdown-content">
-					<a href="malay.html#affordable" target="_blank">Affordable Pack</a>
-					<a href="malay.html#regular" target="_blank">Regular Pack</a>
-					<a href="malay.html#prestigious" target="_blank">Prestigious Pack</a>
-				</div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction3()" class="w3-button w3-theme">Indian Cuisine</button>
-				
-				<div id="myDropdown3" class="dropdown-content">
-					<a href="indian.html#affordable" target="_blank">Affordable Pack</a>
-					<a href="indian.html#regular" target="_blank">Regular Pack</a>
-					<a href="indian.html#prestigious" target="_blank">Prestigious Pack</a>
-				</div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction4()" class="w3-button w3-theme">Japanese Cuisine</button>
-				
-				<div id="myDropdown4" class="dropdown-content">
-					<a href="japanese.html#affordable" target="_blank">Affordable Pack</a>
-					<a href="japanese.html#regular" target="_blank">Regular Pack</a>
-					<a href="japanese.html#prestigious" target="_blank">Prestigious Pack</a>
-				</div>
-			</div>
-
-			<div class="dropdown">
-				<button onclick="myFunction5()" class="w3-button w3-theme">Korean Cuisine</button>
-				
-				<div id="myDropdown5" class="dropdown-content">
-					<a href="korean.html#affordable" target="_blank">Affordable Pack</a>
-					<a href="korean.html#regular" target="_blank">Regular Pack</a>
-					<a href="korean.html#prestigious" target="_blank">Prestigious Pack</a>
-				</div>
-			</div>
+	<div class="w3-dropdown-click w3-margin-bottom" style="width:100%; max-width:10cm;">
+		<button type="button" onClick="showHideByID('cuisine_list')" id="selected_cuisine" class="w3-theme-d1 w3-button" style="width:100%; text-transform:capitalize;">Cuisine: Western</button>
+		<div id="cuisine_list" class="w3-dropdown-content w3-bar-block w3-border" style="width:100%;">
+			<a onClick="changeCuisine('western')" class="w3-bar-item w3-button">Western</a>
+			<a onClick="changeCuisine('chinese')" class="w3-bar-item w3-button">Chinese</a>
+			<a onClick="changeCuisine('japanese')" class="w3-bar-item w3-button">Japanese</a>
+			<a onClick="changeCuisine('korean')" class="w3-bar-item w3-button">Korean</a>
+			<a onClick="changeCuisine('malay')" class="w3-bar-item w3-button">Malay</a>
+			<a onClick="changeCuisine('indian')" class="w3-bar-item w3-button">Indian</a>
 		</div>
+	</div> 
+	
+<div class="w3-display-container slideshow" style="margin:auto; max-width:10cm;">		
+	<div class="w3-black" style="text-align:center;" >
+	
+		<div class="w3-display-container mySlides w3-animate-opacity">
+			<img id="foodpic1" src="food/western/1.jpg" class="w3-image slides">
+			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Affordable</div>
+		</div>
+
+		<div class="w3-display-container mySlides w3-animate-opacity">
+			<img id="foodpic2" src="food/western/2.jpg" class="w3-image slides">
+			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Regular</div>
+		</div>
+
+		<div class="w3-display-container mySlides w3-animate-opacity">
+			<img id="foodpic3" src="food/western/3.jpg" class="w3-image slides">
+			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Prestigious</div>
+		</div>
+		<button type="button" class="w3-button w3-theme w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
+		<button type="button" class="w3-button w3-theme w3-display-right" onclick="changeSlide(+1)">&#10095;</button>
+	</div>
+</div>
 	</div>
 	
 	<!-- Lester, do the parallax thing for here too -->
 	<div class="accesories">
-		<h2>Additional Accesories</h2>
+		<h2>Additional Accessories</h2>
 	
 		<div class="dessert w3-panel w3-margin w3-theme-l3 w3-padding-16">
 		<h3>Additional desserts</h3><br />
@@ -325,6 +295,38 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <br/><br/><br/><br/><br/><br/><br/><br/>
 	
 <script>
+
+	var slideIndex = 0;
+	showSlides(slideIndex);
+
+	function changeSlide(n){
+		showSlides(slideIndex += n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length} ;
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		x[slideIndex-1].style.display = "block"; 
+		
+	}
+
+	function changeCuisine(cuisine){
+		button = document.getElementById("selected_cuisine");
+		
+		button.innerText = "Cuisine: " + cuisine;
+		
+		$("#foodpic1").attr("src", "food/"+ cuisine +"/1.jpg")
+		$("#foodpic2").attr("src", "food/"+ cuisine +"/2.jpg")
+		$("#foodpic3").attr("src", "food/"+ cuisine +"/3.jpg")
+		
+		showHideByID("cuisine_list");
+	}
+	
 	function cardShowBox(){
 		var x = document.getElementById("card");
 		var text1 = document.getElementById("text1");

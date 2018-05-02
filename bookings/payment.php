@@ -7,7 +7,27 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 // TODO: MAKE PAGE ONLY ACCESSIBLE WHEN LOGGED IN
 // but theres no need to make the form work. coz to make it work for real there would be too much effort that we might as well sell the site to someone looking to start a business
 </script>
-	
+
+<?php
+$ordernum = intval($_GET['ordernum']);
+
+$mysqli_db_hostname = "localhost";
+$mysqli_db_user = "root";
+$mysqli_db_passwd = "";
+$mysqli_db_database = "test";
+
+$con = mysqli_connect($mysqli_db_hostname, $mysqli_db_user, $mysqli_db_passwd) or die("Could not connect to database");
+mysqli_select_db($con, $mysqli_db_database) or die("Could not select database");
+
+//get name of party
+$query = "SELECT price FROM orders WHERE ordernum=$ordernum ";
+$result = mysqli_query($con, $query)or die(mysqli_error($con));
+$row = mysqli_fetch_array($result);
+$price = $row['price'];
+$depositpercent = 30;
+$deposit = $price * $depositpercent/100;
+?>
+
 <header class="w3-container w3-theme-d2">
 	<h1>Payment</h1>
 	<p style="text-align:center;">
@@ -21,9 +41,9 @@ TODO:
 - or just ditch the backend coz whats important is the UI
 -->
 <div class="w3-container w3-padding-16 w3-theme-d4">
-	<h3>Total amount: RM 100.00</h3>
-	<h3>Deposit(50%): RM 50.00</h3>
-	<h2>To pay: RM 50.00</h2>
+	<?php echo "<h3>Total amount: RM " . number_format($price, 2, '.', '') . "</h3>"; ?>
+	<?php echo "<h3>Deposit(".$depositpercent."%): RM " . number_format($deposit, 2, '.', '') . "</h3>"; ?>
+	<h2>To pay: RM <?php echo number_format($deposit, 2, '.', ''); ?></h2>
 	<p style="text-align:center;">
 	Please note that you have to pay the deposit in full before we can start processing your order.
 	</p>
