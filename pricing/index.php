@@ -25,7 +25,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<h2>Describe your party</h2>
-		<input class="w3-input" type="text" name="event" id="event" placeholder="My Party" autofocus="autofocus" required="required" style="width:100%;">	
+		<input class="w3-input" type="text" name="event" id="event" placeholder="My Party" required="required" style="width:100%;">	
 	</div>
 	<div class="w3-container w3-theme-l5">
 		<h2>Theme</h2>
@@ -87,7 +87,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<h2>Number of party-cipants</h2>		
-		  <input type="number" name="quantity" value="1" min="1" max="100" required="required">
+		 <input type="number" name="guest" id="guest" value="1" min="1" max="100" required="required">
 	</div>
 
 	<div class="parallax3"></div>
@@ -153,7 +153,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	</div> 
 	
 <div class="w3-display-container slideshow" style="margin:auto; max-width:10cm;">		
-	<div class="w3-black" style="text-align:center;" >
+	<div class="w3-black" style="text-align:center;">
 	
 		<div class="w3-display-container mySlides w3-animate-opacity">
 			<img id="foodpic1" src="food/western/1.jpg" class="w3-image slides">
@@ -181,54 +181,54 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 		<div class="dessert w3-panel w3-margin w3-theme-l3 w3-padding-16">
 		<h3>Additional desserts</h3><br />
-		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5">
+		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5 w3-centered">
 			<tr>
 				<th>Types of desserts</th>
 				<th>Quantity</th>
 			</tr>
 			<tr>
 				<td>Chocolate Cake (RM40/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="5"></td>
+				<td><input type="number" name="choco_cake" id="choco_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Red Velvet Cake (RM40/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="5"></td>
+				<td><input type="number" name="rvelvet_cake" id="rvelvet_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Vanilla Cake (RM40/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="5"></td>
+				<td><input type="number" name="vanilla_cake" id="vanilla_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Carrot Cake (RM40/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="5"></td>
+				<td><input type="number" name="carrot_cake" id="carrot_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Coffee Cake (RM40/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="5"></td>
+				<td><input type="number" name="coffee_cake" id="coffee_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Matcha Cake (RM40/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="5"></td>
+				<td><input type="number" name="matcha_cake" id="matcha_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Macarons (RM5/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="100"></td>
+				<td><input type="number" name="macarons" id="macarons" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Chocolate Cupcake (RM5/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="100"></td>
+				<td><input type="number" name="choco_cup" id="choco_cup" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Strawberry Cupcake (RM5/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="100"></td>
+				<td><input type="number" name="straw_cup" id="straw_cup" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Vanilla Cupcake (RM5/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="100"></td>
+				<td><input type="number" name="vanilla_cup" id="vanilla_cup" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Matcha Cupcake (RM5/unit)</td>
-				<td><input type="number" name="quantity" min="0" max="100"></td>
+				<td><input type="number" name="matcha_cup" id="matcha_cup" min="0" max="100" value="0"></td>
 			</tr>
 		</table>
 		</div>
@@ -272,42 +272,49 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<div class="w3-theme-l4 w3-padding-16">
 		<h2>Cost Break-down</h2>
 		<div class="w3-panel w3-margin w3-theme-l3 w3-padding-16">
-		<h3>All prices are based on Malaysian Currency (RM)</h3>
-		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5">
+		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5 w3-centered">
 			<tr>
-				<td>Theme Cost:</td>
-				<td><span></span></td>
+				<th>Cost Description</th>
+				<th>Cost (RM)</th>
 			</tr>
 			<tr>
-				<td>Venue Cost:</td>
-				<td><span></span></td>
+				<td>Theme:</td>
+				<td><span id="c_theme">0</span></td>
 			</tr>
 			<tr>
-				<td>Cuisine Cost:</td>
-				<td><span></span></td>
+				<td>Venue:</td>
+				<td><span id="c_venue">0</span></td>
 			</tr>
 			<tr>
-				<td>Dessert Cost:</td>
-				<td><span></span></td>
+				<td>Cuisine:</td>
+				<td><span id="c_cuisine">0</span></td>
 			</tr>
 			<tr>
-				<td>Equipment Cost:</td>
-				<td><span></span></td>
+				<td>Dessert:</td>
+				<td><span id="c_dessert">0</span></td>
 			</tr>
 			<tr>
-				<td>Ornaments Cost:</td>
-				<td><span></span></td>
+				<td>Equipment:</td>
+				<td><span id="c_equipment">0</span></td>
 			</tr>
 			<tr>
-				<td>Miscellaneous Cost:</td>
-				<td><span></span></td>
+				<td>Ornaments:</td>
+				<td><span id="c_ornaments">0</span></td>
 			</tr>
 			<tr>
-				<td>Professional Personnel Cost:</td>
-				<td><span></span></td>
+				<td>Miscellaneous:</td>
+				<td><span id="c_misc">0</span></td>
+			</tr>
+			<tr>
+				<td>Professional Personnel:</td>
+				<td><span id="c_personnel">0</span></td>
+			</tr>
+			<tr>
+				<td><strong>Grand Total:</strong></td>
+				<td><span id="c_total">0</span></td>
 			</tr>
 		</table>
-			<button class="w3-button w3-theme" style="margin-top: 1%;">Calculate</button>
+			<button type="button" class="w3-button w3-theme" style="margin-top: 1%;" onclick="getPrice()">Calculate</button>
 		</div>
 	</div>
 	
@@ -319,10 +326,238 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <br/><br/><br/><br/><br/><br/><br/><br/>
 	
 <script>
-	
 	var foodPack = 0; //for knowing which food price tier is selected
 	showSlides(foodPack);
-
+	
+	function getPrice()
+	{
+		var theme_cost = getTheme();
+		var venue_cost = 0;
+		var food_cost = getFood();
+		var dessert_cost = getDessert();
+		var equip_cost = getEquipment();
+		var ornament_cost = getOrnament();
+		var misc_cost = getOrnament();
+		var p_cost = getPersonnel();
+		
+		var total_cost = 0;
+		
+		var theme = document.getElementById("c_theme");
+		var venue = document.getElementById("c_venue");
+		var food = document.getElementById("c_cuisine");
+		var dessert = document.getElementById("c_dessert");
+		var equipment = document.getElementById("c_equipment");
+		var ornament = document.getElementById("c_ornaments");
+		var misc = document.getElementById("c_misc");
+		var personnel = document.getElementById("c_personnel");
+		
+		theme.textContent = theme_cost;
+		venue.textContent = venue_cost;
+		food.textContent = food_cost;
+		dessert.textContent = dessert_cost;
+		equipment.textContent = equip_cost;
+		ornament.textContent = ornament_cost;
+		misc.textContent = misc_cost;
+		personnel.textContent = p_cost;
+		
+		var total = document.getElementById("c_total");
+		total_cost = theme_cost + venue_cost + food_cost + dessert_cost + equip_cost + ornament_cost + misc_cost + p_cost
+		total.textContent = total_cost;
+	}
+		
+	function getTheme()
+	{
+		var theme1 = document.getElementById("masquerade").checked;
+		var theme2 = document.getElementById("pajamas").checked;
+		var theme3 = document.getElementById("costume").checked;
+		var theme4 = document.getElementById("casual").checked;
+		var theme5 = document.getElementById("formal").checked;
+		var theme6 = document.getElementById("boy_kid").checked;
+		var theme7 = document.getElementById("girl_kid").checked;
+		
+		var theme_cost = 0;
+		
+		if ((theme1 == true) || (theme2 == true) || (theme3 == true) || (theme4 == true) || (theme5 == true) || (theme6 == true) || (theme7 == true))
+		{
+			theme_cost = 200;
+		}
+		
+		else
+		{
+			theme_cost = 0;
+		}
+		
+		return theme_cost;
+	}
+	
+	function getGuest()
+	{
+		var guest = document.getElementById("guest").value;
+		
+		return guest;
+	}
+	
+	function getFood()
+	{
+		var food_cost = 0;
+		var guest = getGuest();
+		
+		if (foodPack == 1)
+		{
+			food_cost = (20 * guest);
+		}
+		
+		else if(foodPack == 2)
+		{
+			food_cost = (35 * guest);
+		}
+		
+		else if(foodPack == 3)
+		{
+			food_cost = (50 * guest);
+		}
+		
+		return food_cost;
+	}
+	
+	function getDessert()
+	{
+		var d1 = document.getElementById("choco_cake").value;
+		var d2 = document.getElementById("rvelvet_cake").value;
+		var d3 = document.getElementById("vanilla_cake").value;
+		var d4 = document.getElementById("carrot_cake").value;
+		var d5 = document.getElementById("coffee_cake").value;
+		var d6 = document.getElementById("matcha_cake").value;
+		var d7 = document.getElementById("macarons").value;
+		var d8 = document.getElementById("choco_cup").value;
+		var d9 = document.getElementById("straw_cup").value;
+		var d10 = document.getElementById("vanilla_cup").value;
+		var d11 = document.getElementById("matcha_cup").value;
+		
+		var dessert_cost;
+		
+		dessert_cost = (40 * d1) + (40 * d2) + (40 * d3) + (40 * d4) + (40 * d5) + (40 * d6) + (5 * d7) + (5 * d8) + (5 * d9) + (5 * d10) + (5 * d11);
+		
+		return dessert_cost;
+	}
+	
+	function getEquipment()
+	{
+		var e1 = document.getElementById("sound").checked;
+		var e2 = document.getElementById("karaoke").checked;
+		var e3 = document.getElementById("spotlight").checked;
+		var e4 = document.getElementById("smoke").checked;
+		var e5 = document.getElementById("photo_booth").checked;
+		
+		var equip_cost = 0;
+		
+		if (e1 == true)
+		{
+			equip_cost = equip_cost + 200;
+		}
+		
+		if (e2 == true)
+		{
+			equip_cost = equip_cost + 200;
+		}
+		
+		if (e3 == true)
+		{
+			equip_cost = equip_cost + 200;
+		}
+		
+		if (e4 == true)
+		{
+			equip_cost = equip_cost + 200;
+		}
+		
+		if (e5 == true)
+		{
+			equip_cost = equip_cost + 200;
+		}
+		
+		return equip_cost;
+	}
+	
+	function getOrnament()
+	{
+		var o1 = document.getElementById("balloons").checked;
+		var o2 = document.getElementById("banners").checked;
+		var message = document.getElementById("message").value;
+		
+		var ornament_cost = 0;
+		
+		if (o1 == true)
+		{
+			ornament_cost = ornament_cost + 10;
+		}
+		
+		if (o2 == true)
+		{
+			ornament_cost = ornament_cost + 10;
+		}
+		
+		if (message != "")
+		{
+			ornament_cost = ornament_cost + 10;
+		}
+		
+		return ornament_cost;
+	}
+	
+	function getMisc()
+	{
+		var m1 = document.getElementById("confetti").checked;
+		var m2 = document.getElementById("card").checked;
+		var guest = getGuest();
+		
+		var misc_cost = 0;
+		
+		if (m1 == true)
+		{
+			misc_cost = misc_cost + 5;
+		}
+		
+		if (m2 == true)
+		{
+			misc_cost = misc_cost + (5 * guest);
+		}
+		
+		return misc_cost;
+	}
+	
+	function getPersonnel()
+	{
+		var p1 = document.getElementById("master").checked;
+		var p2 = document.getElementById("dj").checked;
+		var p3 = document.getElementById("band").checked;
+		var p4 = document.getElementById("comedian").checked;
+		
+		var p_cost = 0;
+		
+		if (p1 == true)
+		{
+			p_cost = p_cost + 800;
+		}
+		
+		if (p2 == true)
+		{
+			p_cost = p_cost + 800;
+		}
+		
+		if (p3 == true)
+		{
+			p_cost = p_cost + 800;
+		}
+		
+		if (p4 == true)
+		{
+			p_cost = p_cost + 800;
+		}
+		
+		return p_cost;
+	}
+	
 	function changeSlide(n){
 		showSlides(foodPack += n);
 	}
@@ -330,11 +565,21 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	function showSlides(n) {
 		var i;
 		var x = document.getElementsByClassName("mySlides");
-		if (n > x.length) {foodPack = 1}
-		if (n < 1) {foodPack = x.length} ;
+		
+		if (n > x.length)
+		{
+			foodPack = 1;
+		}
+		
+		if (n < 1)
+		{
+			foodPack = x.length;
+		}
+		
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
 		}
+		
 		x[foodPack-1].style.display = "block"; 
 		
 	}
