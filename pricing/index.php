@@ -18,7 +18,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 
-<form name="booking" method="post" action="#" enctype="text/plain">
+<form name="booking" method="post" action="/bookings/payment.php" enctype="text/plain">
 	<h1>Let's Start Customising !</h1>
 	
 	<div class="parallax1"></div>
