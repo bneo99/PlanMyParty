@@ -99,7 +99,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 					<div class="w3-display-container venueSlides w3-animate-opacity">
 						<img id="rvenue2" src="location/2.jpg" class="w3-image">
-						<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">De Jackie Insiprations</div>
+						<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">De Jackie Inspirations</div>
 					</div>
 
 					<div class="w3-display-container venueSlides w3-animate-opacity">
