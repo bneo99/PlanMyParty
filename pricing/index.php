@@ -18,7 +18,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	
 </script>
 
-<form name="booking" method="post" action="/bookings/payment.php" enctype="text/plain">
+<form name="booking" method="post" action="/bookings/payment.php" enctype="text/plain" style="text-align: center;">
 	<h1>Let's Start Customising !</h1>
 	
 	<div class="parallax1"></div>
@@ -732,10 +732,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 
 <style>
-form{
-	text-align: center;
-}
-
 .table{
 	max-width: 500px;
 	margin: 0 auto;
