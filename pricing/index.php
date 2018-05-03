@@ -5,27 +5,19 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <script>
 	/* modify this to change the title */
 	document.title = "Pricing | Plan My Party!";
-	
-	/* modify the href to link to whatever css you want */
-	var head = document.getElementsByTagName('head')[0];
-	var pageCss = document.createElement('link');
-	pageCss.id = 'pagecss';
-	pageCss.rel = 'stylesheet';
-	pageCss.type = 'text/css';
-	pageCss.href = '/index_style.css';
-	pageCss.media = 'all';
-	head.appendChild(pageCss);
-	
 </script>
 
 <form name="booking" method="post" action="/bookings/payment.php" enctype="text/plain" style="text-align: center;">
-	<h1>Let's Start Customising !</h1>
+	<h1>Customize your party</h1>
 	
 	<div class="parallax1"></div>
 
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<h2>Describe your party</h2>
-		<input class="w3-input" type="text" name="event" id="event" placeholder="My Party" required="required" style="width:100%;">	
+		<input class="w3-input" type="text" name="event" id="event" placeholder="Name your party" required="required" style="width:100%;">
+		<br/>
+		<h3>When is it happening?</h3>
+		<input class="w3-input" type="date" name="date" id="date" required="required" style="width:100%;">	
 	</div>
 	<div class="w3-container w3-theme-l5">
 		<h2>Theme</h2>
@@ -93,176 +85,54 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<div class="parallax3"></div>
 
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
-		<div id="center">
-			<div id="location">
-				<ul class="images">
-					<li><a href="https://www.google.com/maps/place/Zinc+Restaurant+%26+Bar/@1.5534758,110.3486531,15z/data=!4m2!3m1!1s0x0:0x81e82937c6e8c96d?sa=X&ved=2ahUKEwjO2-SnxMHaAhXKMY8KHRBxCWEQ_BIwDnoFCAAQtwE"><img src="location/1.jpg" target="_blank" alt="This is the Zinc Restaurant &amp; Bar"></a></li>
-					<li><img src="location/2.jpg" alt="This is the De Jackie Inspirations"></li>
-					<li><img src="location/3.jpg" alt="This is the See Good Food Centre Sdn Bhd"></li>
-					<li><img src="location/4.jpg" alt="This is the THE JUNK"></li>
-				</ul>
+		<h2>Venue</h2>
+		<div class="w3-bar-block w3-theme-l3">
+			<button type="button" onClick="showVenue('recom')" class="w3-bar-item w3-button">Use our recommended venues</button>
+			<div id="recom_venue" class="w3-container w3-padding-16 w3-theme-l4 w3-hide w3-show">
+				<div class="w3-display-container" style="margin:auto; max-width:10cm;">		
+					<div class="w3-black" style="text-align:center;">
+
+					<div class="w3-display-container venueSlides w3-animate-opacity">
+						<img id="rvenue1" src="location/1.jpg" class="w3-image">
+						<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">The Zinc</div>
+					</div>
+
+					<div class="w3-display-container venueSlides w3-animate-opacity">
+						<img id="rvenue2" src="location/2.jpg" class="w3-image">
+						<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">De Jackie Insiprations</div>
+					</div>
+
+					<div class="w3-display-container venueSlides w3-animate-opacity">
+						<img id="rvenue3" src="location/3.jpg" class="w3-image">
+						<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">See Good Food Centre</div>
+					</div>
+					
+					<div class="w3-display-container venueSlides w3-animate-opacity">
+						<img id="rvenue4" src="location/4.jpg" class="w3-image">
+						<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">The Junk</div>
+					</div>
+					<button type="button" class="w3-button w3-theme w3-display-left" onclick="changeSlide('rvenue', -1)">&#10094;</button>
+					<button type="button" class="w3-button w3-theme w3-display-right" onclick="changeSlide('rvenue', +1)">&#10095;</button>
+					</div>
+				</div>
+			</div>
+			
+			<button type="button" onClick="showVenue('self')" class="w3-bar-item w3-button">or... Choose your own!</button>
+			<div id="self_venue" class="w3-container w3-padding-16 w3-theme-l4 w3-hide">
+				
+				<input id="searchInput" class="controls" type="text" placeholder="Search with Google Maps">
+				<div id="map" class="w3-margin-bottom w3-margin-top"></div>
+				
+				<label for="address">Address: </label><input id="address" class="w3-input" placeholder="Select from the map or enter your own!"></input>
+				<!--the map-->
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi0GWwSbuuAbe6SLjrtZJF78p5_3EEQJ4&libraries=places&callback=initMap" async defer></script>
 			</div>
 		</div>
-		
-		<br/>
-		
-		<table align="center">
-			<tr>
-				<td><input type="radio" name="venue" class="ven"/>Use recomemended venues</td>
-			<tr>
-				<td id="text" style="display: none">
-				<select>
-						<option>Select</option>
-					<option value="Zinc Restaurant">Zinc Restaurant</option>
-					<option value="De Jackie">De Jackie</option>
-						</select>
-				</td>
-			</tr>
-		</table>
-	
-		<br/>
-	
-		<p>Do not like our recommendations?</p>
-	
-		<br/>
-	
-		<p>Choose your own!</p>
-
-		</br>
-	
-		<div id="mapCenter"><input id="searchInput" class="controls" type="text" placeholder="Enter a location">
-<div id="map"></div></div>
-<ul id="geoData">
-    <li>Full Address: <span id="location"></span></li>
-    <li>Postal Code: <span id="postal_code"></span></li>
-    <li>Country: <span id="country"></span></li>
-    <li>Latitude: <span id="lat"></span></li>
-    <li>Longitude: <span id="lon"></span></li>
-</ul>
-
-<style>
-#map {
-    width: 100%;
-    height: 600px;
-}
-
-#mapCenter{
-margin-left: 18%;
-margin-right: 18%;
-
-}
-
-.controls {
-    margin-top: 10px;
-    border: 1px solid transparent;
-    border-radius: 2px 0 0 2px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    height: 32px;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-#searchInput {
-    background-color: #fff;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 12px;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 50%;
-}
-#searchInput:focus {
-    border-color: #4d90fe;
-}
-</style>
-
-<script>
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 1.5535, lng: 110.3593},
-      zoom: 13
-    });
-    var input = document.getElementById('searchInput');
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-    var autocomplete = new google.maps.places.Autocomplete(input);
-    autocomplete.bindTo('bounds', map);
-
-    var infowindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({
-        map: map,
-        anchorPoint: new google.maps.Point(0, -29)
-    });
-
-    autocomplete.addListener('place_changed', function() {
-        infowindow.close();
-        marker.setVisible(false);
-        var place = autocomplete.getPlace();
-        if (!place.geometry) {
-            window.alert("Autocomplete's returned place contains no geometry");
-            return;
-        }
-  
-        // If the place has a geometry, then present it on a map.
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-        } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);
-        }
-        marker.setIcon(({
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(35, 35)
-        }));
-        marker.setPosition(place.geometry.location);
-        marker.setVisible(true);
-    
-        var address = '';
-        if (place.address_components) {
-            address = [
-              (place.address_components[0] && place.address_components[0].short_name || ''),
-              (place.address_components[1] && place.address_components[1].short_name || ''),
-              (place.address_components[2] && place.address_components[2].short_name || '')
-            ].join(' ');
-        }
-    
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-        infowindow.open(map, marker);
-      
-        //Location details
-        for (var i = 0; i < place.address_components.length; i++) {
-            if(place.address_components[i].types[0] == 'postal_code'){
-                document.getElementById('postal_code').innerHTML = place.address_components[i].long_name;
-            }
-            if(place.address_components[i].types[0] == 'country'){
-                document.getElementById('country').innerHTML = place.address_components[i].long_name;
-            }
-        }
-        document.getElementById('location').innerHTML = place.formatted_address;
-        document.getElementById('lat').innerHTML = place.geometry.location.lat();
-        document.getElementById('lon').innerHTML = place.geometry.location.lng();
-    });
-	
-	var myCenter = new google.maps.LatLng(1.5535, 110.3593);
-	var mapCanvas = document.getElementById("map");
-	var mapOptions = {center: myCenter, zoom: 13};
-	var map = new google.maps.Map(mapCanvas, mapOptions);
-	var marker = new google.maps.Marker({position:myCenter});
-	marker.setMap(map);
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" async defer></script>
-	
-		<br/>
 	</div>
 	
-	<div class="parallax4"></div>
+<div class="parallax4"></div>
 	
-	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
+<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<h2>Food</h2>
 	
 	<div class="w3-dropdown-click w3-margin-bottom" style="width:100%; max-width:10cm;">
@@ -277,35 +147,30 @@ function initMap() {
 		</div>
 	</div> 
 	
-<div class="w3-display-container slideshow" style="margin:auto; max-width:10cm;">		
-	<div class="w3-black" style="text-align:center;">
-	
-		<div class="w3-display-container mySlides w3-animate-opacity">
-			<img id="foodpic1" src="food/western/1.jpg" class="w3-image slides">
-			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Affordable (RM20 /pax)</div>
-		</div>
+	<div class="w3-display-container" style="margin:auto; max-width:10cm;">		
+		<div class="w3-black" style="text-align:center;">
+		
+			<div class="w3-display-container foodSlides w3-animate-opacity">
+				<img id="foodpic1" src="food/western/1.jpg" class="w3-image">
+				<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Affordable (RM20 /pax)</div>
+			</div>
 
-		<div class="w3-display-container mySlides w3-animate-opacity">
-			<img id="foodpic2" src="food/western/2.jpg" class="w3-image slides">
-			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Regular (RM35 /pax)</div>
-		</div>
+			<div class="w3-display-container foodSlides w3-animate-opacity">
+				<img id="foodpic2" src="food/western/2.jpg" class="w3-image">
+				<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Regular (RM35 /pax)</div>
+			</div>
 
-		<div class="w3-display-container mySlides w3-animate-opacity">
-			<img id="foodpic3" src="food/western/3.jpg" class="w3-image slides">
-			<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Prestigious (RM50 /pax)</div>
+			<div class="w3-display-container foodSlides w3-animate-opacity">
+				<img id="foodpic3" src="food/western/3.jpg" class="w3-image">
+				<div class="w3-display-bottom w3-container w3-padding-16 w3-theme-dark">Prestigious (RM50 /pax)</div>
+			</div>
+			<button type="button" class="w3-button w3-theme w3-display-left" onclick="changeSlide('food', -1)">&#10094;</button>
+			<button type="button" class="w3-button w3-theme w3-display-right" onclick="changeSlide('food', +1)">&#10095;</button>
 		</div>
-		<button type="button" class="w3-button w3-theme w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
-		<button type="button" class="w3-button w3-theme w3-display-right" onclick="changeSlide(+1)">&#10095;</button>
-	</div>
-</div>
 	</div>
 	
-	<!-- Lester, do the parallax thing for here too -->
-	<div class="accesories">
-		<h2>Additional Accessories</h2>
-	
-		<div class="dessert w3-panel w3-margin w3-theme-l3 w3-padding-16">
-		<h3>Additional desserts</h3><br />
+	<div class="dessert w3-panel w3-theme-l3 w3-padding-16">
+		<h3>Desserts</h3><br />
 		<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5 w3-centered">
 			<tr>
 				<th>Types of desserts</th>
@@ -357,39 +222,44 @@ function initMap() {
 			</tr>
 		</table>
 		</div>
+</div>
+	
+	<!-- Lester, do the parallax thing for here too -->
+	<div class="accesories">
+		<h2>Additional Stuff</h2>
 		
 		<div class="equipment w3-panel w3-margin w3-theme-l3 w3-padding-16">
-		<h3>Equipment</h3><br />
-		<p><input type="checkbox" id="sound" name="equipment" value="sound"><label for="sound">Sound System</label></p>
-		<p><input type="checkbox" id="karaoke" name="equipment" value="karaoke"><label for="karaoke">Karaoke Machine</label></p>
-		<p><input type="checkbox" id="spotlight" name="equipment" value="spotlight"><label for="spotlight">Spotlights</label></p>
-		<p><input type="checkbox" id="smoke" name="equipment" value="smoke"><label for="smoke">Smoke Machine</label></p>
-		<p><input type="checkbox" id="photo_booth" name="equipment" value="photo_booth"><label for="photo_booth">Photo Booth with Backdrop</label></p>
+			<h3>Equipment</h3><br />
+			<p><input class="w3-check" type="checkbox" id="sound" name="equipment" value="sound"><label for="sound"> Sound System</label></p>
+			<p><input class="w3-check" type="checkbox" id="karaoke" name="equipment" value="karaoke"><label for="karaoke"> Karaoke Machine</label></p>
+			<p><input class="w3-check" type="checkbox" id="spotlight" name="equipment" value="spotlight"><label for="spotlight"> Spotlights</label></p>
+			<p><input class="w3-check" type="checkbox" id="smoke" name="equipment" value="smoke"><label for="smoke"> Smoke Machine</label></p>
+			<p><input class="w3-check" type="checkbox" id="photo_booth" name="equipment" value="photo_booth"><label for="photo_booth"> Photo Booth with Backdrop</label></p>
 		</div>
 		
 		<div class="ornaments w3-panel w3-margin w3-theme-l3 w3-padding-16">
-		<h3>Ornaments</h3><br />
-		<p><input type="checkbox" id="balloons" name="ornaments" value="balloons"><label for="balloons">Balloons</label></p>
-		<p><input type="checkbox" id="banners" name="oranments" value="banners"><label for="banners">Banners</label></p><br />
-		<p><label for="message">Message on balloon and/or banner:</label><input type="text" id="message" name="message"></p>
+			<h3>Ornaments</h3><br />
+			<p><input class="w3-check" class="w3-check" type="checkbox" id="balloons" name="ornaments" value="balloons"><label for="balloons"> Balloons</label></p>
+			<p><input class="w3-check" type="checkbox" id="banners" name="oranments" value="banners"><label for="banners"> Banners</label></p><br />
+			<p><label for="message">Message on balloon and/or banner: </label><input class="w3-input" type="text" id="message" name="message"></p>
 		</div>
 		
 		<div class="misc w3-panel w3-margin w3-theme-l3 w3-padding-16">
-		<h3>Miscellaneous</h3><br />
-		<p><input type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti">Confetti</label></p>
-		<p onclick="cardShowBox()"><input type="checkbox" id="card" name="misc" value="card"><label for="card">Invitational cards</label></p><br />
-		<p style="visibility:hidden" id="text1"><label for="cover">Message in cover:</label><br /><textarea id="cover"></textarea></p>
-		<p style="visibility:hidden" id="text2"><label for="content">Content in card:</label><br /><textarea id="content"></textarea></p>
-		<p style="visibility:hidden" id="text3"><label for="address">Address to be sent (sample card):</label><br /><textarea id="address"></textarea></p>
+			<h3>Miscellaneous</h3><br />
+			<p><input class="w3-check" type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti"> Confetti</label></p>
+			<p onclick="cardShowBox()"><input class="w3-check" type="checkbox" id="card" name="misc" value="card"><label for="card"> Invitational cards</label></p><br />
+			<p style="visibility:hidden" id="text1"><label for="cover">Message in cover: </label><br /><textarea class="w3-input" id="cover"></textarea></p>
+			<p style="visibility:hidden" id="text2"><label for="content">Content in card: </label><br /><textarea class="w3-input" id="content"></textarea></p>
+			<p style="visibility:hidden" id="text3"><label for="address">Address to be sent (sample card): </label><br /><textarea class="w3-input" id="address"></textarea></p>
 		</div>
 		
 		<div class="personnel w3-panel w3-margin w3-theme-l3 w3-padding-16">
-		<h3>Professional personnel</h3><br />
-		<p><input type="checkbox" id="master" name="personnel" value="master"><label for="master">Master of ceremonies</label></p>
-		<p><input type="checkbox" id="dj" name="personnel" value="dj"><label for="dj">DJ</p>
-		<p><input type="checkbox" id="band" name="personnel" value="band"><label for="band">Live Band</label></p>
-		<p><input type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian">Stand-up Comedian</label></p><br />
-		<p><label for="language">Language of each session:</label><input type="text" id="language" name="language" placeholder="Type in language of each individual session or all session(s)" size="60"></p>
+			<h3>Professional personnel</h3><br />
+			<p><input class="w3-check" type="checkbox" id="master" name="personnel" value="master"><label for="master"> Master of ceremonies</label></p>
+			<p><input class="w3-check" type="checkbox" id="dj" name="personnel" value="dj"><label for="dj"> DJ</p>
+			<p><input class="w3-check" type="checkbox" id="band" name="personnel" value="band"><label for="band"> Live Band</label></p>
+			<p><input class="w3-check" type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian"> Stand-up Comedian</label></p><br />
+			<p><label for="language">Language of each/all session(s): </label><input class="w3-input" type="text" id="language" name="language" placeholder="Saparate by commas" style="width:100%;"></p>
 		</div>
 	
 	</div>
@@ -411,7 +281,7 @@ function initMap() {
 				<td><span id="c_venue">0</span></td>
 			</tr>
 			<tr>
-				<td>Cuisine:</td>
+				<td>Food:</td>
 				<td><span id="c_cuisine">0</span></td>
 			</tr>
 			<tr>
@@ -447,12 +317,72 @@ function initMap() {
 		<p><input class="w3-button w3-theme" type="submit" value="Submit"></p><p><input class="w3-button w3-theme" type="reset" value="Reset"></p>
 	</div>
 </form>
-
-<br/><br/><br/><br/><br/><br/><br/><br/>
 	
 <script>
+	var venueType = 0; //for knowing which venue type is selected (for recommended venues)
 	var foodPack = 0; //for knowing which food price tier is selected
-	showSlides(foodPack);
+	showSlides('food', foodPack);
+	showSlides('rvenue', venueType);
+	
+	function changeSlide(type, n){
+		if (type == 'rvenue'){
+			showSlides(type, venueType += n);
+		}
+		else if (type == 'food'){
+			showSlides(type, foodPack += n);
+		}
+	}
+
+	function showSlides(type, n) {
+		var i;
+		if (type == 'rvenue'){
+			var x = document.getElementsByClassName("venueSlides");
+		}
+		else if (type == 'food'){
+			var x = document.getElementsByClassName("foodSlides");
+		}
+		
+		if (n > x.length){
+			if (type == 'rvenue'){
+				venueType = 1;
+			}
+			else if (type == 'food'){
+				foodPack = 1;
+			}
+		}
+		
+		if (n < 1){
+			if (type == 'rvenue'){
+				venueType = x.length;
+			}
+			else if (type == 'food'){
+				foodPack = x.length;
+			}
+		}
+		
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		
+		if (type == 'rvenue'){
+				x[venueType-1].style.display = "block"; 
+			}
+			else if (type == 'food'){
+				x[foodPack-1].style.display = "block"; 
+			}
+	}
+
+	function changeCuisine(cuisine){
+		button = document.getElementById("selected_cuisine");
+		
+		button.innerText = "Cuisine: " + cuisine;
+		
+		$("#foodpic1").attr("src", "food/"+ cuisine +"/1.jpg")
+		$("#foodpic2").attr("src", "food/"+ cuisine +"/2.jpg")
+		$("#foodpic3").attr("src", "food/"+ cuisine +"/3.jpg")
+		
+		showHideByID("cuisine_list");
+	}
 	
 	function getPrice()
 	{
@@ -683,44 +613,6 @@ function initMap() {
 		return p_cost;
 	}
 	
-	function changeSlide(n){
-		showSlides(foodPack += n);
-	}
-
-	function showSlides(n) {
-		var i;
-		var x = document.getElementsByClassName("mySlides");
-		
-		if (n > x.length)
-		{
-			foodPack = 1;
-		}
-		
-		if (n < 1)
-		{
-			foodPack = x.length;
-		}
-		
-		for (i = 0; i < x.length; i++) {
-			x[i].style.display = "none";
-		}
-		
-		x[foodPack-1].style.display = "block"; 
-		
-	}
-
-	function changeCuisine(cuisine){
-		button = document.getElementById("selected_cuisine");
-		
-		button.innerText = "Cuisine: " + cuisine;
-		
-		$("#foodpic1").attr("src", "food/"+ cuisine +"/1.jpg")
-		$("#foodpic2").attr("src", "food/"+ cuisine +"/2.jpg")
-		$("#foodpic3").attr("src", "food/"+ cuisine +"/3.jpg")
-		
-		showHideByID("cuisine_list");
-	}
-	
 	function cardShowBox(){
 		var x = document.getElementById("card");
 		var text1 = document.getElementById("text1");
@@ -853,8 +745,92 @@ function initMap() {
 		}
 	  }
 	}
-</script>
+	
+	function showVenue(type) {
+		var recomVenue = document.getElementById("recom_venue");
+		var selfVenue = document.getElementById("self_venue");
+		
+		if (type == 'recom'){
+			showHideByID("recom_venue");
+			if (selfVenue.className.indexOf("w3-show") != -1) {
+				selfVenue.className = selfVenue.className.replace(" w3-show", "");
+			}
+		}
+		if (type == 'self'){
+			showHideByID("self_venue");
+			if (recomVenue.className.indexOf("w3-show") != -1) {
+				recomVenue.className = recomVenue.className.replace(" w3-show", "");
+			}
+		}
+	}
+	
+	
+	//map stuff
+	function initMap() {
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: 1.5535, lng: 110.3593},
+			zoom: 13
+		});
+		var input = document.getElementById('searchInput');
+		map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
+		var autocomplete = new google.maps.places.Autocomplete(input);
+		autocomplete.bindTo('bounds', map);
+
+		var infowindow = new google.maps.InfoWindow();
+		var marker = new google.maps.Marker({
+			map: map,
+			anchorPoint: new google.maps.Point(0, -29)
+		});
+
+		autocomplete.addListener('place_changed', function() {
+			infowindow.close();
+			marker.setVisible(false);
+			var place = autocomplete.getPlace();
+			if (!place.geometry) {
+				window.alert("Autocomplete's returned place contains no geometry");
+				return;
+			}
+
+			// If the place has a geometry, then present it on a map.
+			if (place.geometry.viewport) {
+				map.fitBounds(place.geometry.viewport);
+			} else {
+				map.setCenter(place.geometry.location);
+				map.setZoom(17);
+			}
+			marker.setIcon(({
+				url: place.icon,
+				size: new google.maps.Size(71, 71),
+				origin: new google.maps.Point(0, 0),
+				anchor: new google.maps.Point(17, 34),
+				scaledSize: new google.maps.Size(35, 35)
+			}));
+			marker.setPosition(place.geometry.location);
+			marker.setVisible(true);
+
+			var address = '';
+			if (place.address_components) {
+				address = [
+				(place.address_components[0] && place.address_components[0].short_name || ''),
+				(place.address_components[1] && place.address_components[1].short_name || ''),
+				(place.address_components[2] && place.address_components[2].short_name || '')
+				].join(' ');
+			}
+
+			infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+			document.getElementById('address').value = place.formatted_address;
+			infowindow.open(map, marker);
+		});
+
+		var myCenter = new google.maps.LatLng(1.5535, 110.3593);
+		var mapCanvas = document.getElementById("map");
+		var mapOptions = {center: myCenter, zoom: 13};
+		var map = new google.maps.Map(mapCanvas, mapOptions);
+		var marker = new google.maps.Marker({position:myCenter});
+		marker.setMap(map);
+	}
+</script>
 
 <style>
 .table{
@@ -882,15 +858,6 @@ ul.images {
 ul.images li {
   display: inline-block;
   margin-right: 10px;
-}
-
-div #location{
-	margin-left: 25%;
-	margin-right: 25%;
-}
-
-div #center{
-	text-align: center;
 }
 
 table tr td{
@@ -995,7 +962,36 @@ div #right{
     background-repeat: no-repeat;
     background-size: fit;
 }
+
+#map {
+	width: 100%;
+	height: 600px;
+}
+
+.controls {
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#searchInput {
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+#searchInput:focus {
+	border-color: #4d90fe;
+}
 </style>
+
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/footer.php';
 include $_SERVER["DOCUMENT_ROOT"].'/template/script.php';
