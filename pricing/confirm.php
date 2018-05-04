@@ -1,24 +1,67 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
+
+$event_name = $_POST['event_name'];
+$date = $_POST['date'];
+$theme = ucfirst($_POST['theme']);
+$pax = $_POST['pax'];
+$venue = $_POST['venue'];
+$food = ucfirst($_POST['food']);
+$dessert = str_replace(",", "<br/>", $_POST['dessert']);
+$equipment = str_replace(",", "<br/>", $_POST['equipment']);
+$decor = str_replace(",", "<br/>", $_POST['decor']);
+$misc = str_replace(",", "<br/>", $_POST['misc']);
+$personnel = str_replace(",", "<br/>", $_POST['personnel']);
+$price = "RM " . $_POST['price'];
+
 ?>
 <script>
 	/* modify this to change the title */
 	document.title = "Confirm Order | Plan My Party!";
-// TODO: MAKE PAGE ONLY ACCESSIBLE WHEN LOGGED IN
-// ALSO ONLY DISPLAY FOR NEW CUSTOMERS, OLD CUSTOMERS WILL BE GIVEN A LINK TO THE WHOLE THING/MINIMIZE THIS AND JUST SHOW THE SMS PART
-// but theres no need to make the form work. coz to make it work for real there would be too much effort that we might as well sell the site to someone looking to start a business
 </script>
 	
 <header class="w3-container w3-theme-d2">
 	<h1>Confirm Your Order</h1>
 	<p style="text-align:center;">
 	Please read our Terms of Service before you confirm your order.</p>
-	<p class="showfornewcustomers" style="text-align:center;">
-	This will not show up anymore on your future orders. No one has time to read this.</p>
 </header>
 
 <div class="w3-theme-l4">
-	<button type="button" onclick="showHideByID('tos')" class="w3-button w3-block w3-theme-l3 showfornewcustomers">View Terms of Service</button>
+	<button type="button" onclick="showHideByID('summary')" class="w3-button w3-block w3-theme-l3">Show Booking Summary</button>
+	<div id="summary" class="w3-container w3-padding-16 w3-hide">
+	
+	<form id="confirm_booking" method="post" action="process.php">
+	<input type="hidden" name="event_name" value="<?php echo $event_name; ?>"/>
+	<input type="hidden" name="date" value="<?php echo $date; ?>"/>
+	<input type="hidden" name="theme" value="<?php echo $theme; ?>"/>
+	<input type="hidden" name="pax" value="<?php echo $pax; ?>"/>
+	<input type="hidden" name="venue" value="<?php echo $venue; ?>"/>
+	<input type="hidden" name="food" value="<?php echo $food; ?>"/>
+	<input type="hidden" name="dessert" value="<?php echo $dessert; ?>"/>
+	<input type="hidden" name="equipment" value="<?php echo $equipment; ?>"/>
+	<input type="hidden" name="decor" value="<?php echo $decor; ?>"/>
+	<input type="hidden" name="misc" value="<?php echo $misc; ?>"/>
+	<input type="hidden" name="personnel" value="<?php echo $personnel; ?>"/>
+	<input type="hidden" name="price" value="<?php echo $price; ?>"/>
+	
+	<table class="w3-table w3-theme-l3 w3-striped w3-bordered w3-border">
+		<th></th>
+		<th>Description</th>
+		<tr><td>Name of party</td><td><?php echo $event_name; ?></td></tr>
+		<tr><td>Date</td><td><?php echo $date; ?></td></tr>
+		<tr><td>Party theme</td><td><?php echo $theme; ?></td></tr>
+		<tr><td>No. of participants</td><td><?php echo $pax; ?></td></tr>
+		<tr><td>Venue</td><td><?php echo $venue; ?></td></tr>
+		<tr><td>Food</td><td><?php echo $food; ?></td></tr>
+		<tr><td>Desserts</td><td><?php echo $dessert; ?></td></tr>
+		<tr><td>Equipment</td><td><?php echo $equipment; ?></td></tr>
+		<tr><td>Decors</td><td><?php echo $decor; ?></td></tr>
+		<tr><td>Miscellaneous</td><td><?php echo $misc; ?></td></tr>
+		<tr><td>Professional personnel</td><td><?php echo $personnel; ?></td></tr>
+		<tr><td>Total price</td><td><?php echo $price; ?></td></tr>
+	</table>
+	</div>
+	<button type="button" onclick="showHideByID('tos')" class="w3-button w3-block w3-theme-l3">View Terms of Service</button>
 	<div id="tos" class="w3-container w3-padding-16 w3-hide">
 	<h2>Terms of Service</h2>
 	<h3 style="text-align:left;">AGREEMENT TO TERMS</h3>
