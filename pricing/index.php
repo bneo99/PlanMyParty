@@ -399,7 +399,7 @@ function changeCuisine(cuisine){
 function getPrice()
 {
 	var theme_cost = getTheme();
-	var venue_cost = 0;
+	var venue_cost = getVenue();
 	var food_cost = getFood();
 	var dessert_cost = getDessert();
 	var equip_cost = getEquipment();
@@ -455,6 +455,42 @@ function getTheme()
 	}
 	
 	return theme_cost;
+}
+
+function getVenue()
+{
+	var venue_cost = 0;
+	var customeVenue = document.getElementById("searchInput").value;
+	
+	if (customeVenue != "")
+	{
+		venue_cost = 150;
+	}
+	
+	else
+	{
+		if (recomVenueNo == 0)
+		{
+			venue_cost = 300;
+		}
+	
+		else if (recomVenueNo == 1)
+		{
+			venue_cost = 50;
+		}
+	
+		else if (recomVenueNo == 2)
+		{
+			venue_cost = 100;
+		}
+	
+		else if (recomVenueNo == 3)
+		{
+			venue_cost = 200;
+		}
+	}
+	
+	return venue_cost;
 }
 
 function getGuest()
