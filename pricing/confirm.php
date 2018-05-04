@@ -19,7 +19,6 @@ $decor = $_POST['decor'];
 $misc = $_POST['misc'];
 $personnel = $_POST['personnel'];
 $price = $_POST['price'];
-
 ?>
 <header class="w3-container w3-theme-d2">
 	<h1>Confirm Your Order</h1>

@@ -83,7 +83,7 @@ TODO:
 		<p>Note: Please pay to the address above and enter your paying wallet address and the transaction id.</p>
 	</div>
 	
-	<div id="creditcard" class=" paymentmethod" style="display:none;">
+	<div id="creditcard" class=" paymentmethod" style="display:block;">
 		<label>Name on card:</label><input class="w3-input" type="text" name="card_name">
 		<label>Card Number:</label><input class="w3-input" type="text" name="number">
 		<label>CVV2:</label><input class="w3-input" type="text" name="CW">

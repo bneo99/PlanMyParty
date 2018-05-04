@@ -72,7 +72,7 @@ th, td {
 <script>
 	/* Function for announcement button */
 	function submitAnnouncement(){
-		alert("Announcement details have been submitted and the sever will process the information. ETA for announcement to be displayed on website: 10-20 minutes.");
+		alert("Announcement details have been submitted and the server will process the information. ETA for announcement to be displayed on website: 10-20 minutes.");
 	}
 	
 	/* Function for CMS button */
