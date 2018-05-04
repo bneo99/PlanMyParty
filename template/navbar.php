@@ -39,7 +39,7 @@
 				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large" onclick="showHideByID('navbar')">&#9776;</a>
 				<a href="/" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
-				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
+				<a <a <?php if(isset($_SESSION['userName'])) { echo "href='/pricing'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?>  class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
 				<a <?php if(isset($_SESSION['userName'])) { echo "href='/bookings'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
@@ -63,8 +63,6 @@
 					<div class="w3-dropdown-click w3-right">
 						<a id="userbutton" onclick="showHideByID('usermenu')" class="w3-button w3-theme w3-hide w3-show"><?php echo $_SESSION['userName']; ?></a>
 						<div id="usermenu" class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
-							<a href="/myaccount" class="w3-bar-item w3-button">My Account</a>
-							<a href="/settings" class="w3-bar-item w3-button">Settings</a>
 							<a onclick="showHideByID('themepicker')" class="w3-bar-item w3-button">Themes</a>
 							<a href="/logout.php" class="w3-bar-item w3-button">Logout</a>
 						</div>
@@ -82,7 +80,7 @@
 			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large">
 				<a href="/" class="w3-bar-item w3-button">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
-				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/pricing'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">Pricing</a>
 				<a <?php if(isset($_SESSION['userName'])) { echo "href='/bookings'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">My Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
