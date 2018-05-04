@@ -13,6 +13,22 @@ $ordernum = intval($_GET['ordernum']);
 </script>
 
 <?php
+$jsonfile = file_get_contents("../orders/order_".$ordernum.".json");
+$json = json_decode($jsonfile, true); // decode the JSON into an associative array
+
+$event_name = $json["details"][0]['event_name'];
+$date = $json["details"][0]['event_date'];
+$theme = $json["details"][0]['theme'];
+$pax = $json["details"][0]['pax'];
+$venue = $json["details"][0]['venue'];
+$food = $json["details"][0]['food'];
+$dessert = $json["details"][0]['dessert'];
+$equipment = $json["details"][0]['equipment'];
+$decor = $json["details"][0]['decor'];
+$misc = $json["details"][0]['misc'];
+$personnel = $json["details"][0]['personnel'];
+$price = $json["details"][0]['price'];
+
 date_default_timezone_set('Asia/Kuching'); // set timezone
 
 $mysqli_db_hostname = "localhost";
@@ -28,10 +44,6 @@ $query = "SELECT description FROM orders WHERE ordernum=$ordernum ";
 $result = mysqli_query($con, $query)or die(mysqli_error($con));
 $row = mysqli_fetch_array($result);
 $description = $row['description'];
-
-//get data from JSON file
-$jsonfile = file_get_contents("http://localhost/orders/order_".$ordernum.".json");
-$json = json_decode($jsonfile, true); // decode the JSON into an associative array
 
 //count the progress of the party based on the data on the JSON file
 $progress = 0;

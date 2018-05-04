@@ -40,7 +40,7 @@ $result = mysqli_query($con, $query)or die(mysqli_error($con));
 $jsonfile = file_get_contents("../orders/template.json");
 $json = json_decode($jsonfile, true); // decode the JSON into an associative array
 
-$details = array("event_name"=>$$event_name, "event_date"=>$date, "theme"=>$theme, "pax"=>$pax, "venue"=>$venue, "food"=>$food, "dessert"=>$dessert, "equipment"=>$equipment, "decor"=>$decor, "misc"=>$misc, "personnel"=>$personnel, "price"=>$price);
+$details = array("event_name"=>$event_name, "event_date"=>$date, "theme"=>$theme, "pax"=>$pax, "venue"=>$venue, "food"=>$food, "dessert"=>$dessert, "equipment"=>$equipment, "decor"=>$decor, "misc"=>$misc, "personnel"=>$personnel, "price"=>$price);
 
 $new_update = array("time"=>$timestamp, "percent"=>0, "desc"=>"You just placed your order!");
 
