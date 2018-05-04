@@ -4,8 +4,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <script>
 	/* modify this to change the title */
 	document.title = "Payment | Plan My Party!";
-// TODO: MAKE PAGE ONLY ACCESSIBLE WHEN LOGGED IN
-// but theres no need to make the form work. coz to make it work for real there would be too much effort that we might as well sell the site to someone looking to start a business
 </script>
 
 <?php
@@ -49,7 +47,7 @@ TODO:
 	</p>
 </div>
 
-<form name="payment_details" class="" method="post">
+<form name="payment_details" method="post" action="payment_complete.php">
 <div class="w3-container w3-padding-16 w3-theme-l4">
 	<h4>Choose Payment Method</h4>
 	Click on your preferred payment method
@@ -154,9 +152,9 @@ TODO:
 <div class="w3-container w3-padding-16 w3-theme-l4">
 	<h2>Terms & Conditions</h2>
 	<p style="text-align:justify;">PMP is not responsible for any damage that may occur during the party planning process. This also includes the time when the party is being conducted. Any claim financially towards PMP will be rejected immediately without reason. If attempt to threaten, PMP will attempt to sue the prosecutor without hesitation. Your understanding is highly appreciated.</p>
-	<input type="checkbox" name="tnc" class="w3-check"><label> Yes, I have read the terms and conditions.</label>
-
-
+	<input type="checkbox" name="tnc" class="w3-check" required="required"><label> Yes, I have read the terms and conditions.</label>
+	
+	<input name="ordernum" type="hidden" value="<?php echo $ordernum; ?>"></input>
 	<p>
 	<input type="submit" value="Proceed" class="w3-button w3-theme-d3">
 	<input type="button" value="Cancel booking" class="w3-button w3-theme-l2">

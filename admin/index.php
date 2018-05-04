@@ -110,8 +110,6 @@ $result = mysqli_query($con, $query)or die(mysqli_error($con));
 		$ordernum = $row['ordernum'];
 		$uname = $row['uname'];
 		$desc = $row['description'];
-		$ordernum = $row['ordernum'];
-		$desc = $row['description'];
 		//get data from JSON file
 		$jsonfile = file_get_contents("http://localhost/orders/order_".$ordernum.".json");
 		$json = json_decode($jsonfile, true); // decode the JSON into an associative array

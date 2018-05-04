@@ -1,25 +1,26 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
-
-$event_name = $_POST['event_name'];
-$date = $_POST['date'];
-$theme = ucfirst($_POST['theme']);
-$pax = $_POST['pax'];
-$venue = $_POST['venue'];
-$food = ucfirst($_POST['food']);
-$dessert = str_replace(",", "<br/>", $_POST['dessert']);
-$equipment = str_replace(",", "<br/>", $_POST['equipment']);
-$decor = str_replace(",", "<br/>", $_POST['decor']);
-$misc = str_replace(",", "<br/>", $_POST['misc']);
-$personnel = str_replace(",", "<br/>", $_POST['personnel']);
-$price = "RM " . $_POST['price'];
-
 ?>
 <script>
 	/* modify this to change the title */
 	document.title = "Confirm Order | Plan My Party!";
 </script>
-	
+
+<?php
+$event_name = $_POST['event_name'];
+$date = $_POST['date'];
+$theme = $_POST['theme'];
+$pax = $_POST['pax'];
+$venue = $_POST['venue'];
+$food = $_POST['food'];
+$dessert = $_POST['dessert'];
+$equipment = $_POST['equipment'];
+$decor = $_POST['decor'];
+$misc = $_POST['misc'];
+$personnel = $_POST['personnel'];
+$price = $_POST['price'];
+
+?>
 <header class="w3-container w3-theme-d2">
 	<h1>Confirm Your Order</h1>
 	<p style="text-align:center;">
@@ -30,35 +31,21 @@ $price = "RM " . $_POST['price'];
 	<button type="button" onclick="showHideByID('summary')" class="w3-button w3-block w3-theme-l3">Show Booking Summary</button>
 	<div id="summary" class="w3-container w3-padding-16 w3-hide">
 	
-	<form id="confirm_booking" method="post" action="process.php">
-	<input type="hidden" name="event_name" value="<?php echo $event_name; ?>"/>
-	<input type="hidden" name="date" value="<?php echo $date; ?>"/>
-	<input type="hidden" name="theme" value="<?php echo $theme; ?>"/>
-	<input type="hidden" name="pax" value="<?php echo $pax; ?>"/>
-	<input type="hidden" name="venue" value="<?php echo $venue; ?>"/>
-	<input type="hidden" name="food" value="<?php echo $food; ?>"/>
-	<input type="hidden" name="dessert" value="<?php echo $dessert; ?>"/>
-	<input type="hidden" name="equipment" value="<?php echo $equipment; ?>"/>
-	<input type="hidden" name="decor" value="<?php echo $decor; ?>"/>
-	<input type="hidden" name="misc" value="<?php echo $misc; ?>"/>
-	<input type="hidden" name="personnel" value="<?php echo $personnel; ?>"/>
-	<input type="hidden" name="price" value="<?php echo $price; ?>"/>
-	
 	<table class="w3-table w3-theme-l3 w3-striped w3-bordered w3-border">
 		<th></th>
 		<th>Description</th>
 		<tr><td>Name of party</td><td><?php echo $event_name; ?></td></tr>
 		<tr><td>Date</td><td><?php echo $date; ?></td></tr>
-		<tr><td>Party theme</td><td><?php echo $theme; ?></td></tr>
+		<tr><td>Party theme</td><td><?php echo ucfirst($theme); ?></td></tr>
 		<tr><td>No. of participants</td><td><?php echo $pax; ?></td></tr>
 		<tr><td>Venue</td><td><?php echo $venue; ?></td></tr>
-		<tr><td>Food</td><td><?php echo $food; ?></td></tr>
-		<tr><td>Desserts</td><td><?php echo $dessert; ?></td></tr>
-		<tr><td>Equipment</td><td><?php echo $equipment; ?></td></tr>
-		<tr><td>Decors</td><td><?php echo $decor; ?></td></tr>
-		<tr><td>Miscellaneous</td><td><?php echo $misc; ?></td></tr>
-		<tr><td>Professional personnel</td><td><?php echo $personnel; ?></td></tr>
-		<tr><td>Total price</td><td><?php echo $price; ?></td></tr>
+		<tr><td>Food</td><td><?php echo ucfirst($food); ?></td></tr>
+		<tr><td>Desserts</td><td><?php echo str_replace(",", "<br/>", $dessert); ?></td></tr>
+		<tr><td>Equipment</td><td><?php echo str_replace(",", "<br/>", $equipment); ?></td></tr>
+		<tr><td>Decors</td><td><?php echo str_replace(",", "<br/>", $decor); ?></td></tr>
+		<tr><td>Miscellaneous</td><td><?php echo str_replace(",", "<br/>", $misc); ?></td></tr>
+		<tr><td>Professional personnel</td><td><?php echo str_replace(",", "<br/>", $personnel); ?></td></tr>
+		<tr><td>Total price</td><td><?php echo "RM " . $price; ?></td></tr>
 	</table>
 	</div>
 	<button type="button" onclick="showHideByID('tos')" class="w3-button w3-block w3-theme-l3">View Terms of Service</button>
@@ -200,11 +187,25 @@ $price = "RM " . $_POST['price'];
 	</div>
 </div>
 <div class="w3-container w3-padding-16 w3-theme-l4">
-	<form>
+	<form action="submit_order.php" method="post">
 	<input type="checkbox" name="tnc" class="w3-check" required="required" ><label> Yes, I have read the Terms of Service.</label>
 
 	<p>Once the order is confirmed, a summary will be sent to your email and your phone via SMS. The email and SMS will contain the link to check the progress of your party.</p>
 	<p>
+	
+	<input type="hidden" name="event_name" value="<?php echo $event_name; ?>"/>
+	<input type="hidden" name="date" value="<?php echo $date; ?>"/>
+	<input type="hidden" name="theme" value="<?php echo $theme; ?>"/>
+	<input type="hidden" name="pax" value="<?php echo $pax; ?>"/>
+	<input type="hidden" name="venue" value="<?php echo $venue; ?>"/>
+	<input type="hidden" name="food" value="<?php echo $food; ?>"/>
+	<input type="hidden" name="dessert" value="<?php echo $dessert; ?>"/>
+	<input type="hidden" name="equipment" value="<?php echo $equipment; ?>"/>
+	<input type="hidden" name="decor" value="<?php echo $decor; ?>"/>
+	<input type="hidden" name="misc" value="<?php echo $misc; ?>"/>
+	<input type="hidden" name="personnel" value="<?php echo $personnel; ?>"/>
+	<input type="hidden" name="price" value="<?php echo $price; ?>"/>
+	
 	<input type="submit" value="Confirm Order" class="w3-button w3-theme-d3">
 	<input type="button" value="Go Back" class="w3-button w3-theme-l2">
 	</p>
