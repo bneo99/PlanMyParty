@@ -28,49 +28,49 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 					<img src="theme/1.jpg" alt="Masquerade Party">
 				</label>
 				<label for="masquerade" style="display:block">Masquerade Party</label>
-				<input type="radio" id="masquerade" name="theme" value="masquerade">
+				<input type="radio" id="masquerade" name="theme" value="masquerade" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="pajamas">
 					<img src="theme/2.jpg" alt="Pajamas Party">
 				</label>
 				<label for="pajamas" style="display:block">Pajamas Party</label>
-				<input type="radio" id="pajamas" name="theme" value="pajamas">
+				<input type="radio" id="pajamas" name="theme" value="pajamas" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="costume">
 					<img src="theme/3.jpg" alt="Costume Party">
 				</label>
 				<label for="costume" style="display:block">Costume Party</label>
-				<input type="radio" id="costume" name="theme" value="costume">
+				<input type="radio" id="costume" name="theme" value="costume" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="casual">
 					<img src="theme/4.jpg" alt="Casual party">
 				</label>
 				<label for="casual" style="display:block">Casual Party</label>
-				<input type="radio" id="casual" name="theme" value="casual">
+				<input type="radio" id="casual" name="theme" value="casual" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="formal">
 					<img src="theme/5.jpg" alt="Formal party">
 				</label>
 				<label for="formal" style="display:block">Formal Party</label>
-				<input type="radio" id="formal" name="theme" value="formal">
+				<input type="radio" id="formal" name="theme" value="formal" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="boy_kid">
 					<img src="theme/6.jpg" alt="Kids party (Boys)">
 				</label>
 				<label for="boy_kid" style="display:block">Kids Party (Boys)</label>
-				<input type="radio" id="boy_kid" name="theme" value="boy_kid">
+				<input type="radio" id="boy_kid" name="theme" value="boy_kid" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="girl_kid">
 					<img src="theme/7.jpg" alt="Kids party (Girls)">
 				</label>
 				<label for="girl_kid" style="display:block">Kids Party (Girls)</label>
-				<input type="radio" id="girl_kid" name="theme" value="girl_kid">
+				<input type="radio" id="girl_kid" name="theme" value="girl_kid" required="required">
 			</p>
 		</div>
 	</div>
@@ -252,9 +252,9 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<h3>Miscellaneous</h3><br />
 			<p><input class="w3-check" type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti"> Confetti</label></p>
 			<p onclick="cardShowBox()"><input class="w3-check" type="checkbox" id="card" name="misc" value="card"><label for="card"> Invitational cards</label></p><br />
-			<p style="visibility:hidden" id="text1"><label for="cover">Message in cover: </label><br /><textarea class="w3-input" id="cover"></textarea></p>
-			<p style="visibility:hidden" id="text2"><label for="content">Content in card: </label><br /><textarea class="w3-input" id="content"></textarea></p>
-			<p style="visibility:hidden" id="text3"><label for="address">Address to be sent (sample card): </label><br /><textarea class="w3-input" id="address"></textarea></p>
+			<p style="visibility:hidden" id="text1"><label for="card_cover">Message in cover: </label><br /><textarea class="w3-input" id="card_cover"></textarea></p>
+			<p style="visibility:hidden" id="text2"><label for="card_content">Content in card: </label><br /><textarea class="w3-input" id="card_content"></textarea></p>
+			<p style="visibility:hidden" id="text3"><label for="card_address">Address to send the cards: </label><br /><textarea class="w3-input" id="card_address"></textarea></p>
 			<input id="misc" name="misc" type="hidden"></input>
 		</div>
 		
@@ -264,7 +264,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<p><input class="w3-check" type="checkbox" id="dj" name="personnel" value="dj"><label for="dj"> DJ</p>
 			<p><input class="w3-check" type="checkbox" id="band" name="personnel" value="band"><label for="band"> Live Band</label></p>
 			<p><input class="w3-check" type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian"> Stand-up Comedian</label></p><br />
-			<p><label for="language">Language of each/all session(s): </label><input class="w3-input" type="text" id="language" name="language" placeholder="Saparate by commas" style="width:100%;"></p>
+			<p><label for="language">Language of each/all session(s): </label><input class="w3-input" type="text" id="language" name="language" placeholder="Saparate with space"></p>
 			<input id="personnel" name="personnel" type="hidden"></input>
 		</div>
 	
@@ -992,6 +992,64 @@ function formatPost(){
 	}
 	decorDesc = decorDesc.replace(/,\s*$/, "");
 	decor.value = decorDesc;
+	
+	
+	//format misc
+	var m1 = document.getElementById("confetti").checked;
+	var m2 = document.getElementById("card").checked;
+	var card_cover = document.getElementById("card_cover");
+	var card_content = document.getElementById("card_content");
+	var card_address = document.getElementById("card_address");
+	var pax = getGuest();
+	
+	var misc = document.getElementById("misc");
+	var miscDesc =  "";
+	
+	if (m1 == true){
+		miscDesc = miscDesc + "Confetti,";
+	}
+	if (m2 == true){
+		miscDesc = miscDesc + "Invitational Cards x" + pax + ",";
+		miscDesc = miscDesc + "Message in cover: " + card_cover.value + ",";
+		miscDesc = miscDesc + "Content in card: " + card_content.value + ",";
+		miscDesc = miscDesc + "Address to send the cards: " + card_address.value + ",";
+	}
+	miscDesc = miscDesc.replace(/,\s*$/, "");
+	misc.value = miscDesc;
+	
+	
+	//format personnel
+	var p1 = document.getElementById("master").checked;
+	var p2 = document.getElementById("dj").checked;
+	var p3 = document.getElementById("band").checked;
+	var p4 = document.getElementById("comedian").checked;
+	var lang = document.getElementById("language");
+	
+	var personnel = document.getElementById("personnel");
+	var personnelDesc =  "";
+	
+	if (p1 == true){
+		personnelDesc = personnelDesc + "Master of Ceremonies,";
+	}
+	
+	if (p2 == true){
+		personnelDesc = personnelDesc + "DJ,";
+	}
+	
+	if (p3 == true){
+		personnelDesc = personnelDesc + "Live Band,";
+	}
+	
+	if (p4 == true){
+		personnelDesc = personnelDesc + "Stand Up Comedian,";
+	}
+	
+	if (lang.value != ""){
+		personnelDesc = personnelDesc + "Language: " + lang.value + ",";
+	}
+	
+	personnelDesc = personnelDesc.replace(/,\s*$/, "");
+	personnel.value = personnelDesc;
 }
 	
 </script>
