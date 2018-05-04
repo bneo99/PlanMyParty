@@ -61,6 +61,27 @@ foreach ($json["update"] as $value) {
 <h1>Check Party Progress</h1>
 </div>
 
+<button type="button" onclick="showHideByID('summary')" class="w3-button w3-block w3-theme-l3">Show Booking Summary</button>
+<div id="summary" class="w3-container w3-padding-16 w3-hide">
+
+<table class="w3-table w3-theme-l3 w3-striped w3-bordered w3-border">
+	<th></th>
+	<th>Description</th>
+	<tr><td>Name of party</td><td><?php echo $event_name; ?></td></tr>
+	<tr><td>Date</td><td><?php echo $date; ?></td></tr>
+	<tr><td>Party theme</td><td><?php echo ucfirst($theme); ?></td></tr>
+	<tr><td>No. of participants</td><td><?php echo $pax; ?></td></tr>
+	<tr><td>Venue</td><td><?php echo $venue; ?></td></tr>
+	<tr><td>Food</td><td><?php echo ucfirst($food); ?></td></tr>
+	<tr><td>Desserts</td><td><?php echo str_replace(",", "<br/>", $dessert); ?></td></tr>
+	<tr><td>Equipment</td><td><?php echo str_replace(",", "<br/>", $equipment); ?></td></tr>
+	<tr><td>Decors</td><td><?php echo str_replace(",", "<br/>", $decor); ?></td></tr>
+	<tr><td>Miscellaneous</td><td><?php echo str_replace(",", "<br/>", $misc); ?></td></tr>
+	<tr><td>Professional personnel</td><td><?php echo str_replace(",", "<br/>", $personnel); ?></td></tr>
+	<tr><td>Total price</td><td><?php echo "RM " . $price; ?></td></tr>
+</table>
+</div>
+
 <div class="w3-container w3-padding w3-theme-l4">
 <h2>Event Name: <?php echo $description; ?></h2>
 
