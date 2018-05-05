@@ -14,10 +14,10 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<h2>Describe your party</h2>
-		<input class="w3-input" type="text" name="event_name" id="event_name" placeholder="Name your party" required="required" style="width:100%;">
+		<input onkeypress="return noenter()" class="w3-input" type="text" name="event_name" id="event_name" placeholder="Name your party" required="required" style="width:100%;">
 		<br/>
 		<h3>When is it happening?</h3>
-		<input class="w3-input" type="date" name="date" id="date" required="required" style="width:100%;">	
+		<input onkeypress="return noenter()" class="w3-input" type="date" name="date" id="date" required="required" style="width:100%;">	
 	</div>
 	<div class="w3-container w3-theme-l5">
 		<h2>Theme</h2>
@@ -35,42 +35,42 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 					<img src="theme/2.jpg" alt="Pajamas Party">
 				</label>
 				<label for="pajamas" style="display:block">Pajamas Party</label>
-				<input type="radio" id="pajamas" name="theme" value="pajamas" required="required">
+				<input onkeypress="return noenter()" type="radio" id="pajamas" name="theme" value="pajamas" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="costume">
 					<img src="theme/3.jpg" alt="Costume Party">
 				</label>
 				<label for="costume" style="display:block">Costume Party</label>
-				<input type="radio" id="costume" name="theme" value="costume" required="required">
+				<input onkeypress="return noenter()" type="radio" id="costume" name="theme" value="costume" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="casual">
 					<img src="theme/4.jpg" alt="Casual party">
 				</label>
 				<label for="casual" style="display:block">Casual Party</label>
-				<input type="radio" id="casual" name="theme" value="casual" required="required">
+				<input onkeypress="return noenter()" type="radio" id="casual" name="theme" value="casual" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="formal">
 					<img src="theme/5.jpg" alt="Formal party">
 				</label>
 				<label for="formal" style="display:block">Formal Party</label>
-				<input type="radio" id="formal" name="theme" value="formal" required="required">
+				<input onkeypress="return noenter()" type="radio" id="formal" name="theme" value="formal" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="boy_kid">
 					<img src="theme/6.jpg" alt="Kids party (Boys)">
 				</label>
 				<label for="boy_kid" style="display:block">Kids Party (Boys)</label>
-				<input type="radio" id="boy_kid" name="theme" value="boy_kid" required="required">
+				<input onkeypress="return noenter()" type="radio" id="boy_kid" name="theme" value="boy_kid" required="required">
 			</p>
 			<p class="w3-btn">
 				<label style="display:block" for="girl_kid">
 					<img src="theme/7.jpg" alt="Kids party (Girls)">
 				</label>
 				<label for="girl_kid" style="display:block">Kids Party (Girls)</label>
-				<input type="radio" id="girl_kid" name="theme" value="girl_kid" required="required">
+				<input onkeypress="return noenter()" type="radio" id="girl_kid" name="theme" value="girl_kid" required="required">
 			</p>
 		</div>
 	</div>
@@ -79,7 +79,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		
 	<div class="parallax w3-container w3-padding-16 w3-theme-l4">
 		<h2>Number of party-cipants</h2>		
-		 <input type="number" name="pax" id="pax" value="1" min="1" max="100" required="required">
+		 <input onkeypress="return noenter()" type="number" name="pax" id="pax" value="1" min="1" max="100" required="required">
 	</div>
 
 	<div class="parallax3"></div>
@@ -115,13 +115,13 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 						<button type="button" class="w3-button w3-theme w3-display-right" onclick="changeSlide('rvenue', 1)">&#10095;</button>
 					</div>
 				</div>
-				<input id="recom_address" name="recom_address" type="hidden"></input>
+				<input onkeypress="return noenter()" id="recom_address" name="recom_address" type="hidden"></input>
 			</div>
 			
 			<button type="button" onClick="showVenue('self')" class="w3-bar-item w3-button">or... Choose your own!</button>
 			<div id="self_venue" class="w3-container w3-padding-16 w3-theme-l4 w3-hide">
 				
-				<input id="searchInput" class="controls" type="text" placeholder="Search with Google Maps or enter your own venue address!">
+				<input onkeypress="return noenter()" id="searchInput" class="controls" type="text" placeholder="Search with Google Maps or enter your own venue address!">
 				<div id="map" class="w3-margin-bottom w3-margin-top"></div>
 				<script>
 				//map stuff
@@ -211,7 +211,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<a onClick="changeCuisine('malay')" class="w3-bar-item w3-button">Malay</a>
 			<a onClick="changeCuisine('indian')" class="w3-bar-item w3-button">Indian</a>
 		</div>
-		<input id="food" name="food" type="hidden"></input>
+		<input onkeypress="return noenter()" id="food" name="food" type="hidden"></input>
 	</div> 
 	
 	<div class="w3-display-container" style="margin:auto; max-width:10cm;">		
@@ -245,51 +245,51 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			</tr>
 			<tr>
 				<td>Chocolate Cake (RM40/unit)</td>
-				<td><input type="number" name="choco_cake" id="choco_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="choco_cake" id="choco_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Red Velvet Cake (RM40/unit)</td>
-				<td><input type="number" name="rvelvet_cake" id="rvelvet_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="rvelvet_cake" id="rvelvet_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Vanilla Cake (RM40/unit)</td>
-				<td><input type="number" name="vanilla_cake" id="vanilla_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="vanilla_cake" id="vanilla_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Carrot Cake (RM40/unit)</td>
-				<td><input type="number" name="carrot_cake" id="carrot_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="carrot_cake" id="carrot_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Coffee Cake (RM40/unit)</td>
-				<td><input type="number" name="coffee_cake" id="coffee_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="coffee_cake" id="coffee_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Matcha Cake (RM40/unit)</td>
-				<td><input type="number" name="matcha_cake" id="matcha_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="matcha_cake" id="matcha_cake" min="0" max="5" value="0"></td>
 			</tr>
 			<tr>
 				<td>Macarons (RM5/unit)</td>
-				<td><input type="number" name="macarons" id="macarons" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="macarons" id="macarons" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Chocolate Cupcake (RM5/unit)</td>
-				<td><input type="number" name="choco_cup" id="choco_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="choco_cup" id="choco_cup" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Strawberry Cupcake (RM5/unit)</td>
-				<td><input type="number" name="straw_cup" id="straw_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="straw_cup" id="straw_cup" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Vanilla Cupcake (RM5/unit)</td>
-				<td><input type="number" name="vanilla_cup" id="vanilla_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="vanilla_cup" id="vanilla_cup" min="0" max="100" value="0"></td>
 			</tr>
 			<tr>
 				<td>Matcha Cupcake (RM5/unit)</td>
-				<td><input type="number" name="matcha_cup" id="matcha_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="matcha_cup" id="matcha_cup" min="0" max="100" value="0"></td>
 			</tr>
 		</table>
 		</div>
-		<input id="dessert" name="dessert" type="hidden"></input>
+		<input onkeypress="return noenter()" id="dessert" name="dessert" type="hidden"></input>
 </div>
 	
 	<!-- Lester, do the parallax thing for here too -->
@@ -298,40 +298,40 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		
 		<div class="equipment w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Equipment</h3><br />
-			<p><input class="w3-check" type="checkbox" id="sound" name="equipment" value="sound"><label for="sound"> Sound System</label></p>
-			<p><input class="w3-check" type="checkbox" id="karaoke" name="equipment" value="karaoke"><label for="karaoke"> Karaoke Machine</label></p>
-			<p><input class="w3-check" type="checkbox" id="spotlight" name="equipment" value="spotlight"><label for="spotlight"> Spotlights</label></p>
-			<p><input class="w3-check" type="checkbox" id="smoke" name="equipment" value="smoke"><label for="smoke"> Smoke Machine</label></p>
-			<p><input class="w3-check" type="checkbox" id="photo_booth" name="equipment" value="photo_booth"><label for="photo_booth"> Photo Booth with Backdrop</label></p>
-			<input id="equipment" name="equipment" type="hidden"></input>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="sound" name="equipment" value="sound"><label for="sound"> Sound System</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="karaoke" name="equipment" value="karaoke"><label for="karaoke"> Karaoke Machine</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="spotlight" name="equipment" value="spotlight"><label for="spotlight"> Spotlights</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="smoke" name="equipment" value="smoke"><label for="smoke"> Smoke Machine</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="photo_booth" name="equipment" value="photo_booth"><label for="photo_booth"> Photo Booth with Backdrop</label></p>
+			<input onkeypress="return noenter()" id="equipment" name="equipment" type="hidden"></input>
 		</div>
 		
 		<div class="decor w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Decorations</h3><br />
-			<p><input class="w3-check" class="w3-check" type="checkbox" id="balloons" name="decor" value="balloons"><label for="balloons"> Balloons</label></p>
-			<p><input class="w3-check" type="checkbox" id="banners" name="decor" value="banners"><label for="banners"> Banners</label></p><br />
-			<p><label for="message">Message on balloon and/or banner: </label><input class="w3-input" type="text" id="message" name="message"></p>
-			<input id="decor" name="decor" type="hidden"></input>
+			<p><input onkeypress="return noenter()" class="w3-check" class="w3-check" type="checkbox" id="balloons" name="decor" value="balloons"><label for="balloons"> Balloons</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="banners" name="decor" value="banners"><label for="banners"> Banners</label></p><br />
+			<p><label for="message">Message on balloon and/or banner: </label><input onkeypress="return noenter()" class="w3-input" type="text" id="message" name="message"></p>
+			<input onkeypress="return noenter()" id="decor" name="decor" type="hidden"></input>
 		</div>
 		
 		<div class="misc w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Miscellaneous</h3><br />
-			<p><input class="w3-check" type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti"> Confetti</label></p>
-			<p onclick="cardShowBox()"><input class="w3-check" type="checkbox" id="card" name="misc" value="card"><label for="card"> Invitational cards</label></p><br />
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti"> Confetti</label></p>
+			<p onclick="cardShowBox()"><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="card" name="misc" value="card"><label for="card"> Invitational cards</label></p><br />
 			<p style="visibility:hidden" id="text1"><label for="card_cover">Message in cover: </label><br /><textarea class="w3-input" id="card_cover"></textarea></p>
 			<p style="visibility:hidden" id="text2"><label for="card_content">Content in card: </label><br /><textarea class="w3-input" id="card_content"></textarea></p>
 			<p style="visibility:hidden" id="text3"><label for="card_address">Address to send the cards: </label><br /><textarea class="w3-input" id="card_address"></textarea></p>
-			<input id="misc" name="misc" type="hidden"></input>
+			<input onkeypress="return noenter()" id="misc" name="misc" type="hidden"></input>
 		</div>
 		
 		<div class="personnel w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Professional personnel</h3><br />
-			<p><input class="w3-check" type="checkbox" id="master" name="personnel" value="master"><label for="master"> Master of ceremonies</label></p>
-			<p><input class="w3-check" type="checkbox" id="dj" name="personnel" value="dj"><label for="dj"> DJ</p>
-			<p><input class="w3-check" type="checkbox" id="band" name="personnel" value="band"><label for="band"> Live Band</label></p>
-			<p><input class="w3-check" type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian"> Stand-up Comedian</label></p><br />
-			<p><label for="language">Language of each/all session(s): </label><input class="w3-input" type="text" id="language" name="language" placeholder="Saparate with space"></p>
-			<input id="personnel" name="personnel" type="hidden"></input>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="master" name="personnel" value="master"><label for="master"> Master of ceremonies</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="dj" name="personnel" value="dj"><label for="dj"> DJ</p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="band" name="personnel" value="band"><label for="band"> Live Band</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian"> Stand-up Comedian</label></p><br />
+			<p><label for="language">Language of each/all session(s): </label><input onkeypress="return noenter()" class="w3-input" type="text" id="language" name="language" placeholder="Saparate with space"></p>
+			<input onkeypress="return noenter()" id="personnel" name="personnel" type="hidden"></input>
 		</div>
 	
 	</div>
@@ -378,7 +378,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			</tr>
 			<tr>
 				<td><strong>Grand Total:</strong></td>
-				<td><input type="text" id="c_total" name="price" readonly="readonly" class="w3-input" value="0" style="text-align:center;"></input></td>
+				<td><input onkeypress="return noenter()" type="text" id="c_total" name="price" readonly="readonly" class="w3-input" value="0" style="text-align:center;"></input></td>
 			</tr>
 		</table>
 			<button type="button" class="w3-button w3-theme" style="margin-top: 1%;" onclick="getPrice()">Calculate</button>
@@ -386,8 +386,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	</div>
 	
 	<div class="w3-container w3-padding">
-		<input class="w3-button w3-theme w3-margin" type="submit" value="Submit">
-		<input class="w3-button w3-theme-l4 w3-margin" type="reset" value="Reset">
+		<input onkeypress="return noenter()" class="w3-button w3-theme w3-margin" type="submit" value="Submit">
+		<input onkeypress="return noenter()" class="w3-button w3-theme-l4 w3-margin" type="reset" value="Reset">
 	</div>
 </form>
 	
@@ -1089,7 +1089,9 @@ function formatPost(){
 	personnelDesc = personnelDesc.replace(/,\s*$/, "");
 	personnel.value = personnelDesc;
 }
-	
+function noenter() {
+	return !(window.event && window.event.keyCode == 13); 
+}
 </script>
 
 <style>
