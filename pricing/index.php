@@ -121,7 +121,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<button type="button" onClick="showVenue('self')" class="w3-bar-item w3-button">or... Choose your own!</button>
 			<div id="self_venue" class="w3-container w3-padding-16 w3-theme-l4 w3-hide">
 				
-				<input id="searchInput" class="controls" type="text" placeholder="Search with Google Maps or enter your own venue address!"  onKeyPress="return noenter()">
+				<input id="searchInput" class="controls" type="text" placeholder="Search with Google Maps or enter your own venue address!">
 				<div id="map" class="w3-margin-bottom w3-margin-top"></div>
 				<script>
 				//map stuff
@@ -1089,9 +1089,7 @@ function formatPost(){
 	personnelDesc = personnelDesc.replace(/,\s*$/, "");
 	personnel.value = personnelDesc;
 }
-function noenter() {
-	return !(window.event && window.event.keyCode == 13);
-}
+	
 </script>
 
 <style>
