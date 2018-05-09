@@ -12,6 +12,6 @@ mysqli_select_db($con, $mysqli_db_database) or die("Could not select database");
 $query = "UPDATE `orders` SET `status`='processing' WHERE `ordernum`='$ordernum'";
 $result = mysqli_query($con, $query)or die(mysqli_error($con));
 
-header("Location: /bookings"); /* Redirect browser */
+header("Location: /customise"); /* Redirect browser */
 exit();
 ?>

@@ -4,7 +4,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <!-- Change some head values-->
 <script>
 	/* modify this to change the title */
-	document.title = "My Bookings | Plan My Party!";
+	document.title = "Manage | Plan My Party!";
 </script>
 
 <?php
@@ -23,7 +23,7 @@ $result = mysqli_query($con, $query)or die(mysqli_error($con));
 ?>
 
 <div class="w3-container w3-theme-l3">
-<h1>My Bookings</h1>
+<h1>Manage My Bookings</h1>
 </div>
 
 <div class="w3-container w3-padding-16 w3-theme-l4">

@@ -53,8 +53,6 @@ foreach ($json["update"] as $value) {
 	}
 }
 
-//for testing
-//echo '<pre>' . print_r($json, true) . '</pre>';
 ?>
 
 <div class="w3-container w3-theme-l3">

@@ -4,10 +4,10 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 <!-- Change some head values-->
 <script>
 	/* modify this to change the title */
-	document.title = "Pricing | Plan My Party!";
+	document.title = "Customise | Plan My Party!";
 </script>
 
-<form id="booking" onSubmit="formatPost()" method="post" action="/pricing/confirm.php" style="text-align: center;">
+<form id="booking" onSubmit="formatPost()" method="post" action="/customise/confirm.php" style="text-align: center;">
 	<h1>Customize your party</h1>
 	
 	<div class="parallax1"></div>
