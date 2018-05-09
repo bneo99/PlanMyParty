@@ -114,11 +114,12 @@
 						<br />
 						<div id="add_err"></div>
 						<br />
-						<button id="login" type="submit" class="w3-button w3-theme-d1" >Login</button>
 						
-						<span> <a href="#">Forgot password?</a> </span>
+						<a onclick="openSignupBox()" class="w3-button w3-theme-l4" >Sign Up</a>
 						
-						<a onclick="openSignupBox()" class="w3-button w3-theme-d1" style="float:right;" >Sign Up</a>
+						<button id="login" type="submit" class="w3-button w3-theme-d1" style="float:right;" >Login</button>
+						
+						<button class="w3-button" href="#" style="float:right;">Forgot password?</button>
 					</div>
 				</form>
 			</div> 
