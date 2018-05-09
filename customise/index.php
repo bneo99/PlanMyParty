@@ -386,6 +386,8 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	</div>
 	
 	<div class="w3-container w3-padding">
+		<input class="w3-check" type="checkbox" required="required"/><label> Confirm?</label>
+		<br/>
 		<input onkeypress="return noenter()" class="w3-button w3-theme w3-margin" type="submit" value="Submit">
 		<input onkeypress="return noenter()" class="w3-button w3-theme-l4 w3-margin" type="reset" value="Reset">
 	</div>
