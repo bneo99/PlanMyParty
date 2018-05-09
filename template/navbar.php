@@ -39,15 +39,15 @@
 				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large" onclick="showHideByID('navbar')">&#9776;</a>
 				<a href="/" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
-				<a <a <?php if(isset($_SESSION['userName'])) { echo "href='/pricing'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?>  class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
-				<a <?php if(isset($_SESSION['userName'])) { echo "href='/bookings'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
+				<a <a <?php if(isset($_SESSION['userName'])) { echo "href='/customise'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?>  class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Customise Party</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/manage'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Manage Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
 				<a href="/admin" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Admin Dashboard</a>
 				<?php }
 				else {?>
-				<a href="/pricing" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">My Bookings</a>
+				<a href="/customise" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Customise Party</a>
+				<a href="/manage" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Manage Bookings</a>
 				<?php }?>
 				<a href="/reviews" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Reviews</a>
 				<a href="/aboutus" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">About</a>
@@ -80,15 +80,15 @@
 			<div id="navbar" class="w3-dropdown-content w3-bar-block w3-theme w3-hide w3-hide-large">
 				<a href="/" class="w3-bar-item w3-button">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
-				<a <?php if(isset($_SESSION['userName'])) { echo "href='/pricing'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">Pricing</a>
-				<a <?php if(isset($_SESSION['userName'])) { echo "href='/bookings'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">My Bookings</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/customise'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">Customise Party</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/manage'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button">Manage Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
 				<a href="/admin" class="w3-bar-item w3-button">Admin Dashboard</a>
 				<?php }
 				else {?>
-				<a href="/pricing" class="w3-bar-item w3-button">Pricing</a>
-				<a href="/bookings" class="w3-bar-item w3-button">My Bookings</a>
+				<a href="/customise" class="w3-bar-item w3-button">Customise Party</a>
+				<a href="/manage" class="w3-bar-item w3-button">Manage Bookings</a>
 				<?php }?>
 				<a href="/reviews" class="w3-bar-item w3-button">Reviews</a>
 				<a href="/aboutus" class="w3-bar-item w3-button">About</a>
