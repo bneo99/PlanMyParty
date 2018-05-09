@@ -50,6 +50,6 @@ array_push($json["update"], $new_update);
 $jsonfile = json_encode($json, true);
 file_put_contents("../orders/order_".$ordernum.".json", $jsonfile);
 
-header("Location: /bookings"); /* Redirect browser */
+header("Location: /manage"); /* Redirect browser */
 exit();
 ?>
