@@ -56,12 +56,14 @@ foreach ($json["update"] as $value) {
 ?>
 
 <div class="w3-container w3-theme-l3">
-<h1>Check Party Progress</h1>
+	<h1>Check Party Progress</h1>
 </div>
 
-<button type="button" onclick="showHideByID('summary')" class="w3-button w3-block w3-theme-l3">Show Booking Summary</button>
+<div class="w3-container w3-padding w3-theme-l4">
+<div style="text-align:center">
+<button id="showHideButton" type="button" onclick="showHideSummary()" class="w3-button w3-theme-l3" >Show Booking Summary</button>
+</div>
 <div id="summary" class="w3-container w3-padding-16 w3-hide">
-
 <table class="w3-table w3-theme-l3 w3-striped w3-bordered w3-border">
 	<th></th>
 	<th>Description</th>
@@ -79,8 +81,6 @@ foreach ($json["update"] as $value) {
 	<tr><td>Total price</td><td><?php echo "RM " . $price; ?></td></tr>
 </table>
 </div>
-
-<div class="w3-container w3-padding w3-theme-l4">
 <h2>Event Name: <?php echo $description; ?></h2>
 
 <div class="w3-grey w3-margin">
@@ -110,6 +110,19 @@ foreach(array_reverse($json["update"]) as $array){
 </div>
 
 <script>
+function showHideSummary(){
+	var showHideButton = document.getElementById('showHideButton');
+	var summaryDiv = document.getElementById('summary');
+	
+	showHideByID("summary");
+	
+	if (summaryDiv.className.indexOf("w3-show") == -1) {
+		showHideButton.innerHTML = "Show Booking Summary";
+	} else { 
+		showHideButton.innerHTML = "Hide Booking Summary";
+	}
+}
+
 function moveBar() {
     var elem = document.getElementById("progress_bar");
 	var num = document.getElementById("progress_num");
