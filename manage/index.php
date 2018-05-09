@@ -57,10 +57,10 @@ $result = mysqli_query($con, $query)or die(mysqli_error($con));
 		echo "	<td>$desc</td>";
 		echo "	<td>$progress%</td>";
 		if ($row['status'] == "waiting for payment"){
-			echo "	<td><a href=\"/bookings/payment.php?ordernum=$ordernum\">Pay Deposit</a> ";
+			echo "	<td><a href=\"/manage/payment.php?ordernum=$ordernum\">Pay Deposit</a> ";
 		}
 		else {
-			echo "	<td><a href=\"/bookings/progress.php?ordernum=$ordernum\">Check Progress</a> ";
+			echo "	<td><a href=\"/manage/progress.php?ordernum=$ordernum\">Check Progress</a> ";
 		}
 		echo "</tr>";
 	}
