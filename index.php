@@ -44,17 +44,17 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 	<h3>Choose from our packages</h3>
 		
 		<span class="w3-button">
-		<a href="/pricing" title="Click image or text to book instantly"><img src="/images/pax_1.jpg" alt="Simple Plan Image" class="w3-image">
+		<a href="/customise" title="Click image or text to book instantly"><img src="/images/pax_1.jpg" alt="Simple Plan Image" class="w3-image">
 		<p>Simple (10-15 pax)</p></a>
 		</span>
 		
 		<span class="w3-button">
-		<a href="/pricing" title="Click image or text to book instantly"><img src="/images/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
+		<a href="/customise" title="Click image or text to book instantly"><img src="/images/pax_2.jpg" alt="Regular Plan Image" class="w3-image">
 		<p>Regular (16-30 pax)</p></a>
 		</span>
 		
 		<span class="w3-button">
-		<a href="/pricing" title="Click image or text to book instantly"><img src="/images/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
+		<a href="/customise" title="Click image or text to book instantly"><img src="/images/pax_3.jpg" alt="Extravagant Plan Image" class="w3-image">
 		<p>Extravagant (>30 pax)</p></a>
 		</span>
 </div>
