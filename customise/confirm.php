@@ -205,8 +205,8 @@ $price = $_POST['price'];
 	<input type="hidden" name="personnel" value="<?php echo $personnel; ?>"/>
 	<input type="hidden" name="price" value="<?php echo $price; ?>"/>
 	
-	<input type="submit" value="Confirm Order" class="w3-button w3-theme-d3">
 	<input type="button" value="Go Back" class="w3-button w3-theme-l2">
+	<input type="submit" value="Confirm Order" class="w3-button w3-theme-d3">
 	</p>
 	</form>
 </div>
