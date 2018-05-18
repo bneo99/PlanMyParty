@@ -381,7 +381,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 				<td><input onkeypress="return noenter()" type="text" id="c_total" name="price" readonly="readonly" class="w3-input" value="0" style="text-align:center;"></input></td>
 			</tr>
 		</table>
-			<button type="button" class="w3-button w3-theme" style="margin-top: 1%;" onclick="getPrice()">Calculate</button>
 		</div>
 	</div>
 	
@@ -397,7 +396,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 var recomVenueNo = 0; //for knowing which venue type is selected (for recommended venues)
 var foodPack = 0; //for knowing which food price tier is selected
 var selectedCuisine = "Western";
-
+document.getElementById("booking").addEventListener("click", getPrice);
 showSlides('food', foodPack);
 showSlides('rvenue', recomVenueNo);
 
