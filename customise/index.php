@@ -365,7 +365,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 				<td><span id="c_equipment">0</span></td>
 			</tr>
 			<tr>
-				<td>Ornaments:</td>
+				<td>Decorations:</td>
 				<td><span id="c_decor">0</span></td>
 			</tr>
 			<tr>
