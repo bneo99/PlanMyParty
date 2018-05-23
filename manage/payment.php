@@ -155,8 +155,8 @@ TODO:
 	
 	<input name="ordernum" type="hidden" value="<?php echo $ordernum; ?>"></input>
 	<p>
-	<input type="submit" value="Proceed" class="w3-button w3-theme-d3">
 	<input type="button" value="Cancel booking" class="w3-button w3-theme-l2">
+	<input type="submit" value="Proceed" class="w3-button w3-theme-d3">
 	</p>
 </div>
 </form>

@@ -245,47 +245,47 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			</tr>
 			<tr>
 				<td>Chocolate Cake (RM40/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="choco_cake" id="choco_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="choco_cake" id="choco_cake" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Red Velvet Cake (RM40/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="rvelvet_cake" id="rvelvet_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="rvelvet_cake" id="rvelvet_cake" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Vanilla Cake (RM40/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="vanilla_cake" id="vanilla_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="vanilla_cake" id="vanilla_cake" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Carrot Cake (RM40/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="carrot_cake" id="carrot_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="carrot_cake" id="carrot_cake" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Coffee Cake (RM40/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="coffee_cake" id="coffee_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="coffee_cake" id="coffee_cake" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Matcha Cake (RM40/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="matcha_cake" id="matcha_cake" min="0" max="5" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="matcha_cake" id="matcha_cake" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Macarons (RM5/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="macarons" id="macarons" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="macarons" id="macarons" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Chocolate Cupcake (RM5/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="choco_cup" id="choco_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="choco_cup" id="choco_cup" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Strawberry Cupcake (RM5/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="straw_cup" id="straw_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="straw_cup" id="straw_cup" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Vanilla Cupcake (RM5/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="vanilla_cup" id="vanilla_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="vanilla_cup" id="vanilla_cup" min="0" value="0"></td>
 			</tr>
 			<tr>
 				<td>Matcha Cupcake (RM5/unit)</td>
-				<td><input onkeypress="return noenter()" type="number" name="matcha_cup" id="matcha_cup" min="0" max="100" value="0"></td>
+				<td><input onkeypress="return noenter()" type="number" name="matcha_cup" id="matcha_cup" min="0" value="0"></td>
 			</tr>
 		</table>
 		</div>
@@ -381,7 +381,6 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 				<td><input onkeypress="return noenter()" type="text" id="c_total" name="price" readonly="readonly" class="w3-input" value="0" style="text-align:center;"></input></td>
 			</tr>
 		</table>
-			<button type="button" class="w3-button w3-theme" style="margin-top: 1%;" onclick="getPrice()">Calculate</button>
 		</div>
 	</div>
 	
@@ -397,7 +396,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 var recomVenueNo = 0; //for knowing which venue type is selected (for recommended venues)
 var foodPack = 0; //for knowing which food price tier is selected
 var selectedCuisine = "Western";
-
+document.getElementById("booking").addEventListener("click", getPrice);
 showSlides('food', foodPack);
 showSlides('rvenue', recomVenueNo);
 
