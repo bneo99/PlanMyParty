@@ -34,7 +34,6 @@ $deposit = $price * $depositpercent/100;
 
 <!-- this is supposed to read from database but we havent have the booking stuff setup so meh 
 TODO: 
-- read price from database
 - check for new customers (never booked)
 - or just ditch the backend coz whats important is the UI
 -->
@@ -86,7 +85,7 @@ TODO:
 	<div id="creditcard" class=" paymentmethod" style="display:block;">
 		<label>Name on card:</label><input class="w3-input" type="text" name="card_name">
 		<label>Card Number:</label><input class="w3-input" type="text" name="number">
-		<label>CVV2:</label><input class="w3-input" type="text" name="CW">
+		<label>CVV:</label><input class="w3-input" type="text" name="cvv">
 		<label>Expiry Date:</label><input class="w3-input" type="text" name="expiry" placeholder="MM/YY">
 		<p>
 		Note: When you click on Proceed, you will be redirected to your bank's transaction page to complete your payment.
