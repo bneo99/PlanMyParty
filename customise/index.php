@@ -292,32 +292,61 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		<input onkeypress="return noenter()" id="dessert" name="dessert" type="hidden"></input>
 </div>
 	
-	<!-- Lester, do the parallax thing for here too -->
+
 	<div class="accesories">
 		<h2>Additional Stuff</h2>
 		
 		<div class="equipment w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Equipment</h3><br />
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="sound" name="equipment" value="sound"><label for="sound"> Sound System</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="karaoke" name="equipment" value="karaoke"><label for="karaoke"> Karaoke Machine</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="spotlight" name="equipment" value="spotlight"><label for="spotlight"> Spotlights</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="smoke" name="equipment" value="smoke"><label for="smoke"> Smoke Machine</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="photo_booth" name="equipment" value="photo_booth"><label for="photo_booth"> Photo Booth with Backdrop</label></p>
+			<table class="table w3-table w3-striped w3-border w3-bordered w3-theme-l5 w3-centered">
+				<tr>
+					<th>Type of equipment</th>
+					<th>Quantity</th>
+				</th>
+				<tr>
+					<td>Sound System(RM200/unit)</td>
+					<td><input onkeypress="return noenter()" type="number" id="sound" min="0" name="equipment" value="0"></td>
+				</tr>
+				<tr>
+					<td>Karaoke Machine(RM200/unit)</td>
+					<td><input onkeypress="return noenter()" type="number" min="0" id="karaoke" name="equipment" value="0"></td>
+				</tr>
+				<tr>
+					<td>Spotlights(RM200/unit)</td>
+					<td><input onkeypress="return noenter()" type="number" min="0" id="spotlight" name="equipment" value="0"></td>
+				</tr>
+				<tr>
+					<td>Smoke Machine(RM200/unit)</td>
+					<td><input onkeypress="return noenter()" type="number" min="0" id="smoke" name="equipment" value="0"></td>
+				</tr>
+				<tr>
+					<td>Photo Booth with Backdrop(RM200/unit)</td>
+					<td><input onkeypress="return noenter()" min="0" type="number" id="photo_booth" name="equipment" value="0"></td>
+				</tr>
+			
+			</table>
 			<input onkeypress="return noenter()" id="equipment" name="equipment" type="hidden"></input>
 		</div>
 		
 		<div class="decor w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Decorations</h3><br />
-			<p><input onkeypress="return noenter()" class="w3-check" class="w3-check" type="checkbox" id="balloons" name="decor" value="balloons"><label for="balloons"> Balloons</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="banners" name="decor" value="banners"><label for="banners"> Banners</label></p><br />
-			<p><label for="message">Message on balloon and/or banner: </label><input onkeypress="return noenter()" class="w3-input" type="text" id="message" name="message"></p>
+			<p><label for="balloons">Balloons (RM5/unit): </label><input onkeypress="return noenter()" type="number" min="0" id="balloons" name="decor" value="0"></p>
+			<p><label for="banners">Banners (Quantity): </label><input onkeypress="return noenter()" type="number" min="0" id="banners" name="decor" value="0"></p><br />
+			
+			<p>Please select banner size:</p>
+			<p><input onkeypress="return noenter()" class="w3-radio" type="radio" id="b_size1" name="banner_size" value="small"><label for="b_size1">Small banner(s) (841x1189mm)</label></p>
+			<p><input onkeypress="return noenter()" class="w3-radio" type="radio" id="b_size2" name="banner_size" value="mid"><label for="b_size2">Medium banner(s) (1016x1524mm)</label></p>
+			<p><input onkeypress="return noenter()" class="w3-radio" type="radio" id="b_size3" name="banner_size" value="big"><label for="b_size3">Big banner(s) (1189x1682mm)</label></p><br />
+			
+			<p><label for="message">Message on balloons and/or banners: </label><input onkeypress="return noenter()" class="w3-input" type="text" id="message" name="message" placeholder="RM5 will be charged if there is a message." size="40"></p><br />
+			<p><strong>*Note:</strong> Small banners cost RM5/unit, medium banners cost RM10/unit, big banners cost RM15/unit.</p>
 			<input onkeypress="return noenter()" id="decor" name="decor" type="hidden"></input>
 		</div>
 		
 		<div class="misc w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Miscellaneous</h3><br />
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="confetti" name="misc" value="confetti"><label for="confetti"> Confetti</label></p>
-			<p onclick="cardShowBox()"><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="card" name="misc" value="card"><label for="card"> Invitational cards</label></p><br />
+			<p><label for="confetti">Confetti (RM5/unit):</label><input onkeypress="return noenter()" type="number" id="confetti" name="misc" min="0" value="confetti"></p>
+			<p onclick="cardShowBox()"><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="card" name="misc" value="card"><label for="card">Invitational cards(RM5/guest)</label></p><br />
 			<p style="visibility:hidden" id="text1"><label for="card_cover">Message in cover: </label><br /><textarea class="w3-input" id="card_cover"></textarea></p>
 			<p style="visibility:hidden" id="text2"><label for="card_content">Content in card: </label><br /><textarea class="w3-input" id="card_content"></textarea></p>
 			<p style="visibility:hidden" id="text3"><label for="card_address">Address to send the cards: </label><br /><textarea class="w3-input" id="card_address"></textarea></p>
@@ -326,11 +355,11 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 		
 		<div class="personnel w3-panel w3-margin w3-theme-l3 w3-padding-16">
 			<h3>Professional personnel</h3><br />
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="master" name="personnel" value="master"><label for="master"> Master of ceremonies</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="dj" name="personnel" value="dj"><label for="dj"> DJ</p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="band" name="personnel" value="band"><label for="band"> Live Band</label></p>
-			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian"> Stand-up Comedian</label></p><br />
-			<p><label for="language">Language of each/all session(s): </label><input onkeypress="return noenter()" class="w3-input" type="text" id="language" name="language" placeholder="Saparate with space"></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="master" name="personnel" value="master"><label for="master"> Master of ceremonies (RM800)</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="dj" name="personnel" value="dj"><label for="dj"> DJ (RM800)</p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="band" name="personnel" value="band"><label for="band"> Live Band (RM800)</label></p>
+			<p><input onkeypress="return noenter()" class="w3-check" type="checkbox" id="comedian" name="personnel" value="comedian"><label for="comedian"> Stand-up Comedian (RM800)</label></p><br />
+			<p><label for="language">Language of each/all session(s): </label><input onkeypress="return noenter()" class="w3-input" type="text" id="language" name="language" placeholder="Separate with space"></p>
 			<input onkeypress="return noenter()" id="personnel" name="personnel" type="hidden"></input>
 		</div>
 	
@@ -613,59 +642,48 @@ function getDessert()
 
 function getEquipment()
 {
-	var e1 = document.getElementById("sound").checked;
-	var e2 = document.getElementById("karaoke").checked;
-	var e3 = document.getElementById("spotlight").checked;
-	var e4 = document.getElementById("smoke").checked;
-	var e5 = document.getElementById("photo_booth").checked;
+	var e1 = document.getElementById("sound").value;
+	var e2 = document.getElementById("karaoke").value;
+	var e3 = document.getElementById("spotlight").value;
+	var e4 = document.getElementById("smoke").value;
+	var e5 = document.getElementById("photo_booth").value;
 	
 	var equip_cost = 0;
 	
-	if (e1 == true)
-	{
-		equip_cost = equip_cost + 200;
-	}
-	
-	if (e2 == true)
-	{
-		equip_cost = equip_cost + 200;
-	}
-	
-	if (e3 == true)
-	{
-		equip_cost = equip_cost + 200;
-	}
-	
-	if (e4 == true)
-	{
-		equip_cost = equip_cost + 200;
-	}
-	
-	if (e5 == true)
-	{
-		equip_cost = equip_cost + 200;
-	}
+	equip_cost = (200 * e1) + (200 * e2) + (200 * e3) + (200 * e4) + (200 * e5)
 	
 	return equip_cost;
 }
 
 function getOrnament()
 {
-	var o1 = document.getElementById("balloons").checked;
-	var o2 = document.getElementById("banners").checked;
+	var o1 = document.getElementById("balloons").value;
+	var o2 = document.getElementById("banners").value;
 	var message = document.getElementById("message").value;
 	
+	var small = document.getElementById("b_size1").checked;
+	var medium = document.getElementById("b_size2").checked;
+	var big = document.getElementById("b_size3").checked;
+	
 	var ornament_cost = 0;
+	var banner_price;
 	
-	if (o1 == true)
+	if (small == true)
 	{
-		ornament_cost = ornament_cost + 10;
+		banner_price = 5;
 	}
 	
-	if (o2 == true)
+	else if (medium == true)
 	{
-		ornament_cost = ornament_cost + 10;
+		banner_price = 10;
 	}
+	
+	else if (big == true)
+	{
+		banner_price = 15;
+	}
+	
+	ornament_cost = (o1 * 5) + (banner_price * o2);
 	
 	if (message != "")
 	{
@@ -677,16 +695,13 @@ function getOrnament()
 
 function getMisc()
 {
-	var m1 = document.getElementById("confetti").checked;
+	var m1 = document.getElementById("confetti").value;
 	var m2 = document.getElementById("card").checked;
 	var pax = getGuest();
 	
 	var misc_cost = 0;
 	
-	if (m1 == true)
-	{
-		misc_cost = misc_cost + 5;
-	}
+	misc_cost = (m1 * 5);
 	
 	if (m2 == true)
 	{
