@@ -471,7 +471,7 @@ function getPrice()
 	var dessert_cost = getDessert();
 	var equip_cost = getEquipment();
 	var ornament_cost = getOrnament();
-	var misc_cost = getOrnament();
+	var misc_cost = getMisc();
 	var p_cost = getPersonnel();
 	
 	var total_cost = 0;
