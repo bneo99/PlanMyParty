@@ -338,7 +338,7 @@ include $_SERVER["DOCUMENT_ROOT"].'/template/navbar.php';
 			<p><input onkeypress="return noenter()" class="w3-radio" type="radio" id="b_size2" name="banner_size" value="mid"><label for="b_size2">Medium banner(s) (1016x1524mm)</label></p>
 			<p><input onkeypress="return noenter()" class="w3-radio" type="radio" id="b_size3" name="banner_size" value="big"><label for="b_size3">Big banner(s) (1189x1682mm)</label></p><br />
 			
-			<p><label for="message">Message on balloons and/or banners: </label><input onkeypress="return noenter()" class="w3-input" type="text" id="message" name="message" placeholder="RM5 will be charged if there is a message." size="40"></p><br />
+			<p><label for="message">Message on balloons and/or banners: </label><input onkeypress="return noenter()" class="w3-input" type="text" id="message" name="message" placeholder="RM10 will be charged if there is a message." size="40"></p><br />
 			<p><strong>*Note:</strong> Small banners cost RM5/unit, medium banners cost RM10/unit, big banners cost RM15/unit.</p>
 			<input onkeypress="return noenter()" id="decor" name="decor" type="hidden"></input>
 		</div>
