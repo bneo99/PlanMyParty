@@ -81,7 +81,7 @@ TODO:
 		$pricebtc = $price*0.000032;
 		echo "<p>RM $price = $pricebtc BTC (23/5/18)</p>";
 		?>
-		<p>Pay to: 16wztd2HfKdzkxEg6jH8zh7FPZEcd7gpXW</p>
+		<p><strong>Pay to: 16wztd2HfKdzkxEg6jH8zh7FPZEcd7gpXW</strong></p>
 		<p>Note: Please pay to the address above and enter your paying wallet address and the transaction id.</p>
 	</div>
 	
