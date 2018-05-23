@@ -683,6 +683,11 @@ function getOrnament()
 		banner_price = 15;
 	}
 	
+	else
+	{
+		banner_price = 0;
+	}
+	
 	ornament_cost = (o1 * 5) + (banner_price * o2);
 	
 	if (message != "")
