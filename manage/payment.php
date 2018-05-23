@@ -77,7 +77,10 @@ TODO:
 	<div id="bitcoin" class=" paymentmethod" style="display:none;">
 		<label>Wallet Address:</label><input class="w3-input" type="text" name="bitcoin_addr">
 		<label>Transaction ID (txid):</label><input class="w3-input" type="text" name="bitcoin_txid">
-		<p>RM 50.00 = 0.0016BTC (17/4/18)</p>
+		<?php
+		$pricebtc = $price*0.000032;
+		echo "<p>RM $price = $pricebtc BTC (23/5/18)</p>";
+		?>
 		<p>Pay to: 16wztd2HfKdzkxEg6jH8zh7FPZEcd7gpXW</p>
 		<p>Note: Please pay to the address above and enter your paying wallet address and the transaction id.</p>
 	</div>
