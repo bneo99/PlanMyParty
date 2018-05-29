@@ -91,7 +91,6 @@ foreach ($json["update"] as $value) {
 <tr>
 	<th>Time</th>
 	<th>Description</th>
-	<th>Progress</th>
 </tr>
 <?php		
 foreach(array_reverse($json["update"]) as $array){
@@ -101,7 +100,6 @@ foreach(array_reverse($json["update"]) as $array){
 	echo "<tr>";
 	echo "	<td>". date("Y-m-d H:i:s", $timestamp) ."</td>";
 	echo "	<td>$desc</td>";
-	echo "	<td>$percent%</td>";
 	echo "</tr>";
 }
 ?>
