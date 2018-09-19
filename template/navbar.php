@@ -39,7 +39,7 @@
 				<a class="w3-dropdown-click w3-bar-item w3-button w3-hide-large" onclick="showHideByID('navbar')">&#9776;</a>
 				<a href="/" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Home</a>
 				<?php if(empty($_SESSION['accType'])){?>
-				<a <a <?php if(isset($_SESSION['userName'])) { echo "href='/customise'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?>  class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Customise Party</a>
+				<a <?php if(isset($_SESSION['userName'])) { echo "href='/customise'"; } else { echo "onClick=\"showHideByID('loginbox')\"";}?>  class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Customise Party</a>
 				<a <?php if(isset($_SESSION['userName'])) { echo "href='/manage'";} else { echo "onClick=\"showHideByID('loginbox')\"";}?> class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Manage Bookings</a>
 				<?php }
 				elseif($_SESSION['accType'] == "admin"){?>
